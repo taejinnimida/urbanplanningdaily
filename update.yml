@@ -1,10 +1,10 @@
-name: 도시계획일보 자동수집
+name: 도시계획일보 자동수집 V5
 
 on:
   workflow_dispatch:
   schedule:
-    # 한국시간 매일 오전 6시 17분 = UTC 전날 오후 9시 17분
-    - cron: "17 21 * * *"
+    - cron: "17 6 * * *"
+      timezone: "Asia/Seoul"
 
 permissions:
   contents: write
@@ -18,7 +18,7 @@ concurrency:
 jobs:
   collect-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 12
 
     environment:
       name: github-pages
@@ -33,17 +33,20 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 수집 프로그램 준비
+      - name: 수집기 실행
+        shell: bash
         run: |
-          pip install --quiet feedparser requests python-dateutil
-          cat > /tmp/urbanplanningdaily_collector.py <<'PY'
+          python -m pip install --quiet requests feedparser python-dateutil
+          cat > /tmp/urbanplanningdaily_v5.py <<'PY'
           from __future__ import annotations
 
           import hashlib
           import json
           import re
           import sys
+          import time
           from collections import Counter
+          from concurrent.futures import ThreadPoolExecutor, as_completed
           from datetime import date, datetime, timedelta, timezone
           from pathlib import Path
           from typing import Any
@@ -51,7 +54,9 @@ jobs:
 
           import feedparser
           import requests
-          from dateutil.relativedelta import relativedelta
+          from dateutil import parser as dateparser
+          from requests.adapters import HTTPAdapter
+          from urllib3.util.retry import Retry
 
           ROOT = Path.cwd()
           DATA = ROOT / "data"
@@ -61,7 +66,7 @@ jobs:
           LATEST_PATH = DATA / "latest.json"
           KEYWORDS_PATH = DATA / "keywords.json"
           ISSUES_PATH = DATA / "issues.json"
-          BACKFILL_PATH = DATA / "backfill_complete.json"
+          STATE_PATH = DATA / "backfill_v5_state.json"
 
           KST = timezone(timedelta(hours=9))
           NOW = datetime.now(KST)
@@ -71,87 +76,147 @@ jobs:
 
           HEADERS = {
               "User-Agent": (
-                  "Mozilla/5.0 (compatible; UrbanPlanningDaily/4.0; "
-                  "+https://taejinnimida.github.io/urbanplanningdaily/)"
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 Chrome/149 Safari/537.36"
               )
           }
 
-          SEARCH_GROUPS = [
+          OFFICIAL_FEEDS = [
+              {
+                  "name": "국토교통부",
+                  "category": "정책",
+                  "urls": [
+                      "https://www.molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS",
+                      "https://molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS",
+                  ],
+                  "fallback": (
+                      "site:molit.go.kr/USR/NEWS/m_71 "
+                      "(도시 OR 국토 OR 주택 OR 건축 OR 교통 OR 철도 OR 지역)"
+                  ),
+              },
+              {
+                  "name": "서울특별시",
+                  "category": "정책",
+                  "urls": [
+                      "https://seoulboard.seoul.go.kr/rss/RSSGenerator?bbsNo=158",
+                  ],
+                  "fallback": (
+                      "site:seoul.go.kr/news/news_report.do "
+                      "(도시 OR 주택 OR 건축 OR 교통 OR 환경 OR 안전 OR 상권)"
+                  ),
+              },
+              {
+                  "name": "경기도",
+                  "category": "정책",
+                  "urls": [
+                      "https://gnews.gg.go.kr/rss/gnewsRssBodo.do",
+                  ],
+                  "fallback": (
+                      "site:gnews.gg.go.kr/briefing "
+                      "(도시 OR 주택 OR 건축 OR 교통 OR 환경 OR 산업단지 OR 지역)"
+                  ),
+              },
+          ]
+
+          CURRENT_SEARCHES = [
               (
                   "기사",
-                  "(도시계획 OR 국토계획 OR 용도지역 OR 지구단위계획 "
-                  "OR 개발제한구역 OR 도시개발)",
-              ),
-              (
-                  "기사",
-                  "(주택공급 OR 공공주택 OR 재건축 OR 재개발 OR 정비사업 "
-                  "OR 노후계획도시)",
-              ),
-              (
-                  "기사",
-                  "(지역소멸 OR 지방소멸 OR 균형발전 OR 생활인구 "
-                  "OR 도시재생 OR 빈집 OR 원도심)",
-              ),
-              (
-                  "기사",
-                  "(철도 OR GTX OR 광역교통 OR 역세권 OR 철도지하화 "
-                  "OR 도시철도)",
-              ),
-              (
-                  "기사",
-                  "(산업단지 OR 국가산단 OR 스마트시티 OR 스마트도시 "
-                  "OR 도시데이터 OR 도시혁신)",
-              ),
-              (
-                  "기사",
-                  "(기후위기 OR 탄소중립 OR 녹색건축 OR 도시침수 "
-                  "OR 기후적응 OR 폭염)",
-              ),
-              (
-                  "정책",
-                  "(국토교통부 OR 정부) (도시 OR 주택 OR 국토 OR 교통) "
-                  "(정책 OR 발표 OR 대책 OR 보도자료)",
+                  "(도시계획 OR 국토계획 OR 지구단위계획 OR 용도지역 "
+                  "OR 도시개발 OR 도시재생 OR 재개발 OR 재건축 "
+                  "OR 지역소멸 OR 균형발전 OR 공공주택 OR 철도지하화 "
+                  "OR 스마트시티) when:14d",
               ),
               (
                   "법령",
-                  "(입법예고 OR 법령개정 OR 시행령 OR 시행규칙) "
-                  "(국토 OR 도시 OR 주택 OR 건축 OR 교통)",
+                  "(site:opinion.lawmaking.go.kr OR site:law.go.kr) "
+                  "(도시 OR 국토 OR 주택 OR 건축 OR 교통) when:30d",
               ),
               (
                   "연구",
-                  "(국토연구원 OR 서울연구원 OR 건축공간연구원 OR AURI) "
-                  "(보고서 OR 연구 OR 브리프)",
+                  "(site:krihs.re.kr OR site:si.re.kr OR site:auri.re.kr) "
+                  "(도시 OR 국토 OR 주택 OR 건축 OR 지역 OR 교통) when:30d",
               ),
           ]
 
+          BACKFILL_SEARCHES = [
+              (
+                  "정책",
+                  "site:molit.go.kr/USR/NEWS/m_71 "
+                  "(도시 OR 국토 OR 주택 OR 건축 OR 교통 OR 철도 OR 지역)",
+              ),
+              (
+                  "정책",
+                  "site:seoul.go.kr/news/news_report.do "
+                  "(도시 OR 주택 OR 건축 OR 교통 OR 환경 OR 안전 OR 상권)",
+              ),
+              (
+                  "정책",
+                  "site:gnews.gg.go.kr/briefing "
+                  "(도시 OR 주택 OR 건축 OR 교통 OR 환경 OR 산업단지 OR 지역)",
+              ),
+              (
+                  "기사",
+                  "(도시계획 OR 국토계획 OR 도시재생 OR 재개발 OR 재건축 "
+                  "OR 지역소멸 OR 균형발전 OR 공공주택 OR 철도지하화 "
+                  "OR 스마트시티)",
+              ),
+              (
+                  "법령",
+                  "(site:opinion.lawmaking.go.kr OR site:law.go.kr) "
+                  "(도시 OR 국토 OR 주택 OR 건축 OR 교통)",
+              ),
+              (
+                  "연구",
+                  "(site:krihs.re.kr OR site:si.re.kr OR site:auri.re.kr) "
+                  "(도시 OR 국토 OR 주택 OR 건축 OR 지역 OR 교통)",
+              ),
+          ]
+
+          RELEVANT_WORDS = (
+              "도시", "국토", "주택", "건축", "부동산", "토지", "교통",
+              "철도", "도로", "지역", "재생", "정비", "개발", "계획",
+              "공간", "생활권", "상권", "빈집", "인구", "소멸", "균형발전",
+              "스마트시티", "스마트도시", "산업단지", "공공주택", "재개발",
+              "재건축", "경관", "농촌", "기반시설", "광역", "역세권",
+              "기후", "탄소중립", "녹색건축", "용도지역", "지구단위",
+              "공공건축", "도심", "택지", "국가산단", "상업지역", "GTX",
+              "생활인구", "도심융합", "노후계획도시", "철도지하화",
+              "산업전환", "도시혁신", "주거복지", "공실", "침수", "폭염",
+          )
+
+          STOPWORDS = {
+              "연구", "방안", "위한", "관련", "대한", "통한", "기반",
+              "추진", "발표", "개최", "결과", "입법예고", "보도자료",
+              "보고서", "서울시", "경기도", "국토교통부", "국토연구원",
+              "서울연구원", "건축공간연구원", "정책", "계획", "마련",
+              "강화", "지원", "개선", "확대", "제도", "사업", "대응",
+              "활성화", "종합", "새로운", "최근", "전국", "정부",
+              "분석", "방향", "현황", "통해", "관한", "기자", "뉴스",
+              "지역", "도시", "국토", "올해", "내년", "한국", "대상",
+          }
+
           TOPICS = {
               "주택공급·공공주택": (
-                  "주택공급", "공공주택", "공급대책", "택지", "임대주택",
-                  "주거복지", "분양"
+                  "주택공급", "공공주택", "택지", "임대주택", "주거복지", "분양"
               ),
               "재건축·재개발·정비사업": (
-                  "재건축", "재개발", "정비사업", "노후계획도시",
-                  "1기 신도시", "도시정비"
+                  "재건축", "재개발", "정비사업", "노후계획도시", "1기 신도시"
               ),
               "지역소멸·균형발전": (
-                  "지역소멸", "지방소멸", "균형발전", "생활인구",
-                  "인구감소", "기회발전특구"
+                  "지역소멸", "지방소멸", "균형발전", "생활인구", "인구감소"
               ),
               "철도·광역교통·역세권": (
-                  "철도", "GTX", "광역교통", "역세권", "철도지하화",
-                  "도시철도", "환승"
+                  "철도", "GTX", "광역교통", "역세권", "철도지하화", "도시철도"
               ),
               "도시재생·빈집·원도심": (
-                  "도시재생", "빈집", "원도심", "구도심", "유휴공간",
-                  "폐건물"
+                  "도시재생", "빈집", "원도심", "구도심", "유휴공간", "공실"
               ),
               "국토계획·용도지역·규제": (
                   "국토계획", "도시계획", "용도지역", "지구단위계획",
                   "개발제한구역", "그린벨트", "용적률"
               ),
               "산업단지·지역산업 전환": (
-                  "산업단지", "국가산단", "산업전환", "기업도시",
-                  "첨단산업", "지역산업"
+                  "산업단지", "국가산단", "산업전환", "기업도시", "첨단산업"
               ),
               "스마트시티·AI·디지털전환": (
                   "스마트시티", "스마트도시", "인공지능", "디지털트윈",
@@ -166,8 +231,7 @@ jobs:
                   "젠트리피케이션"
               ),
               "농촌공간·농촌재생": (
-                  "농촌공간", "농촌재생", "농촌마을", "농촌소멸",
-                  "농촌협약"
+                  "농촌공간", "농촌재생", "농촌마을", "농촌소멸", "농촌협약"
               ),
               "건축정책·공공건축": (
                   "건축정책", "공공건축", "건축물관리", "노후건축물",
@@ -187,18 +251,24 @@ jobs:
               ),
           }
 
-          STOPWORDS = {
-              "연구", "방안", "위한", "관련", "대한", "통한", "기반",
-              "추진", "발표", "개최", "결과", "입법예고", "보도자료",
-              "보고서", "서울시", "국토교통부", "국토연구원",
-              "서울연구원", "건축공간연구원", "정책", "계획", "마련",
-              "강화", "지원", "개선", "확대", "제도", "사업", "대응",
-              "활성화", "종합", "새로운", "최근", "전국", "정부",
-              "분석", "방향", "현황", "통해", "관한", "기자", "뉴스",
-              "지역", "도시", "국토", "올해", "내년", "한국", "대상",
-          }
-
           TOKEN_RE = re.compile(r"[가-힣]{2,}|[A-Za-z]{2,}")
+
+          def session() -> requests.Session:
+              s = requests.Session()
+              retry = Retry(
+                  total=3,
+                  connect=3,
+                  read=3,
+                  backoff_factor=1.0,
+                  status_forcelist=(429, 500, 502, 503, 504),
+                  allowed_methods=("GET",),
+              )
+              s.mount("https://", HTTPAdapter(max_retries=retry))
+              s.mount("http://", HTTPAdapter(max_retries=retry))
+              s.headers.update(HEADERS)
+              return s
+
+          HTTP = session()
 
           def clean(value: Any) -> str:
               return re.sub(r"\s+", " ", str(value or "")).strip()
@@ -211,12 +281,25 @@ jobs:
               except Exception:
                   return default
 
-          def parse_entry_date(entry: Any) -> date | None:
-              for key in ("published_parsed", "updated_parsed"):
-                  parsed = entry.get(key)
+          def parse_date(value: Any) -> date | None:
+              if not value:
+                  return None
+              try:
+                  dt = dateparser.parse(str(value))
+                  return dt.date() if dt else None
+              except Exception:
+                  return None
+
+          def entry_date(entry: Any) -> date | None:
+              for key in ("published", "updated", "dc_date"):
+                  parsed = parse_date(entry.get(key))
                   if parsed:
+                      return parsed
+              for key in ("published_parsed", "updated_parsed"):
+                  value = entry.get(key)
+                  if value:
                       try:
-                          return date(parsed.tm_year, parsed.tm_mon, parsed.tm_mday)
+                          return date(value.tm_year, value.tm_mon, value.tm_mday)
                       except Exception:
                           pass
               return None
@@ -226,157 +309,220 @@ jobs:
               value = re.sub(r"\s*[-–—]\s*[^-–—]{2,40}$", "", value)
               return re.sub(r"[^0-9a-z가-힣]+", "", value)
 
-          def source_name(entry: Any) -> str:
-              source = entry.get("source") or {}
-              if isinstance(source, dict):
-                  return clean(source.get("title")) or "Google 뉴스"
-              return "Google 뉴스"
+          def is_relevant(title: str) -> bool:
+              lower = title.lower()
+              return any(word.lower() in lower for word in RELEVANT_WORDS)
 
-          def google_news(query: str, category: str) -> list[dict[str, str]]:
+          def make_item(
+              title: str,
+              url: str,
+              source: str,
+              category: str,
+              published: date | None,
+          ) -> dict[str, str] | None:
+              title = clean(title)
+              url = clean(url)
+              if len(title) < 5 or not url or not published:
+                  return None
+              if published < KEEP_START or published > TODAY + timedelta(days=1):
+                  return None
+              key = f"{published.isoformat()}|{title_key(title)}"
+              return {
+                  "id": hashlib.sha1(key.encode("utf-8")).hexdigest()[:16],
+                  "title": title,
+                  "url": url,
+                  "source": source,
+                  "category": category,
+                  "date": published.isoformat(),
+              }
+
+          def parse_feed_bytes(
+              content: bytes,
+              source: str,
+              category: str,
+              filter_relevant: bool = True,
+          ) -> list[dict[str, str]]:
+              parsed = feedparser.parse(content)
+              rows: list[dict[str, str]] = []
+              for entry in parsed.entries[:200]:
+                  title = clean(entry.get("title"))
+                  if filter_relevant and not is_relevant(title):
+                      continue
+                  row = make_item(
+                      title=title,
+                      url=entry.get("link", ""),
+                      source=source,
+                      category=category,
+                      published=entry_date(entry),
+                  )
+                  if row:
+                      rows.append(row)
+              return rows
+
+          def fetch_official_feed(spec: dict[str, Any]) -> tuple[list[dict[str, str]], str]:
+              errors: list[str] = []
+              for url in spec["urls"]:
+                  try:
+                      response = HTTP.get(
+                          url,
+                          timeout=(12, 35),
+                          allow_redirects=True,
+                      )
+                      response.raise_for_status()
+                      rows = parse_feed_bytes(
+                          response.content,
+                          source=spec["name"],
+                          category=spec["category"],
+                          filter_relevant=True,
+                      )
+                      if rows:
+                          return rows, f"RSS {len(rows)}건"
+                      errors.append(f"{url}: 0건")
+                  except Exception as exc:
+                      errors.append(f"{url}: {type(exc).__name__}")
+              return [], " / ".join(errors)
+
+          def google_news(
+              query: str,
+              category: str,
+              source_hint: str | None = None,
+          ) -> list[dict[str, str]]:
               url = (
                   "https://news.google.com/rss/search?q="
                   + quote(query)
                   + "&hl=ko&gl=KR&ceid=KR:ko"
               )
-              response = requests.get(url, headers=HEADERS, timeout=30)
+              response = HTTP.get(url, timeout=(12, 35))
               response.raise_for_status()
               parsed = feedparser.parse(response.content)
-
               rows: list[dict[str, str]] = []
+
               for entry in parsed.entries[:100]:
-                  published = parse_entry_date(entry)
-                  if not published or published < KEEP_START or published > TODAY + timedelta(days=1):
-                      continue
-
                   title = clean(entry.get("title"))
-                  link = clean(entry.get("link"))
-                  if len(title) < 5 or not link:
-                      continue
-
-                  rows.append(
-                      {
-                          "id": hashlib.sha1(
-                              f"{category}|{published.isoformat()}|{title_key(title)}".encode("utf-8")
-                          ).hexdigest()[:16],
-                          "title": title,
-                          "url": link,
-                          "source": source_name(entry),
-                          "category": category,
-                          "date": published.isoformat(),
-                      }
+                  published = entry_date(entry)
+                  source_data = entry.get("source") or {}
+                  source = (
+                      clean(source_data.get("title"))
+                      if isinstance(source_data, dict)
+                      else ""
                   )
+                  source = source_hint or source or "Google 뉴스"
+
+                  row = make_item(
+                      title=title,
+                      url=entry.get("link", ""),
+                      source=source,
+                      category=category,
+                      published=published,
+                  )
+                  if row:
+                      rows.append(row)
               return rows
 
-          def molit_rss() -> list[dict[str, str]]:
-              url = "https://www.molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS"
-              response = requests.get(url, headers=HEADERS, timeout=30)
-              response.raise_for_status()
-              parsed = feedparser.parse(response.content)
-
+          def collect_current() -> tuple[list[dict[str, str]], dict[str, str]]:
               rows: list[dict[str, str]] = []
-              for entry in parsed.entries[:100]:
-                  published = parse_entry_date(entry) or TODAY
-                  title = clean(entry.get("title"))
-                  link = clean(entry.get("link"))
-                  if len(title) < 5 or not link:
+              status: dict[str, str] = {}
+
+              for spec in OFFICIAL_FEEDS:
+                  official_rows, message = fetch_official_feed(spec)
+                  if official_rows:
+                      rows.extend(official_rows)
+                      status[spec["name"]] = message
                       continue
-                  rows.append(
-                      {
-                          "id": hashlib.sha1(
-                              f"정책|{published.isoformat()}|{title_key(title)}".encode("utf-8")
-                          ).hexdigest()[:16],
-                          "title": title,
-                          "url": link,
-                          "source": "국토교통부",
-                          "category": "정책",
-                          "date": published.isoformat(),
-                      }
-                  )
-              return rows
+
+                  try:
+                      fallback_query = spec["fallback"] + " when:14d"
+                      fallback_rows = google_news(
+                          fallback_query,
+                          category="정책",
+                          source_hint=spec["name"],
+                      )
+                      fallback_rows = [
+                          row for row in fallback_rows
+                          if is_relevant(row["title"])
+                      ]
+                      rows.extend(fallback_rows)
+                      status[spec["name"]] = (
+                          f"공식 RSS 연결 실패, 공식 누리집 검색 {len(fallback_rows)}건"
+                      )
+                  except Exception as exc:
+                      status[spec["name"]] = (
+                          f"수집 실패: {message}; {type(exc).__name__}"
+                      )
+
+              for category, query in CURRENT_SEARCHES:
+                  try:
+                      rows.extend(google_news(query, category))
+                  except Exception as exc:
+                      status[f"추가 {category}"] = f"실패: {type(exc).__name__}"
+
+              return rows, status
 
           def month_windows() -> list[tuple[date, date]]:
               windows: list[tuple[date, date]] = []
               end = TODAY + timedelta(days=1)
               for _ in range(12):
-                  start = max(YEAR_START, end - relativedelta(months=1))
+                  start = max(YEAR_START, end - timedelta(days=31))
                   windows.append((start, end))
                   end = start
                   if end <= YEAR_START:
                       break
               return windows
 
+          def one_backfill_job(
+              category: str,
+              base_query: str,
+              start: date,
+              end: date,
+          ) -> list[dict[str, str]]:
+              query = (
+                  f"{base_query} after:{start.isoformat()} "
+                  f"before:{end.isoformat()}"
+              )
+              return google_news(query, category)
+
           def collect_backfill() -> tuple[list[dict[str, str]], list[str]]:
+              jobs = [
+                  (category, query, start, end)
+                  for start, end in month_windows()
+                  for category, query in BACKFILL_SEARCHES
+              ]
               rows: list[dict[str, str]] = []
               errors: list[str] = []
 
-              for start, end in month_windows():
-                  for category, base_query in SEARCH_GROUPS:
-                      query = (
-                          f"{base_query} after:{start.isoformat()} "
-                          f"before:{end.isoformat()}"
-                      )
+              with ThreadPoolExecutor(max_workers=6) as executor:
+                  futures = {
+                      executor.submit(one_backfill_job, *job): job
+                      for job in jobs
+                  }
+                  for future in as_completed(futures):
+                      category, _, start, end = futures[future]
                       try:
-                          found = google_news(query, category)
+                          found = future.result()
                           rows.extend(found)
                           print(
-                              f"[BACKFILL] {start}~{end} "
-                              f"{category}: {len(found)}"
+                              f"[역수집] {category} {start}~{end}: {len(found)}건"
                           )
                       except Exception as exc:
-                          message = (
-                              f"{start}~{end} {category}: "
-                              f"{type(exc).__name__}: {exc}"
+                          errors.append(
+                              f"{category} {start}~{end}: {type(exc).__name__}"
                           )
-                          errors.append(message)
-                          print(f"[WARN] {message}", file=sys.stderr)
-              return rows, errors
-
-          def collect_recent() -> tuple[list[dict[str, str]], list[str]]:
-              rows: list[dict[str, str]] = []
-              errors: list[str] = []
-              start = TODAY - timedelta(days=14)
-              end = TODAY + timedelta(days=1)
-
-              for category, base_query in SEARCH_GROUPS:
-                  query = (
-                      f"{base_query} after:{start.isoformat()} "
-                      f"before:{end.isoformat()}"
-                  )
-                  try:
-                      rows.extend(google_news(query, category))
-                  except Exception as exc:
-                      errors.append(
-                          f"최근 {category}: {type(exc).__name__}: {exc}"
-                      )
-
-              try:
-                  rows.extend(molit_rss())
-              except Exception as exc:
-                  errors.append(
-                      f"국토교통부 RSS: {type(exc).__name__}: {exc}"
-                  )
-
               return rows, errors
 
           def deduplicate(rows: list[dict[str, str]]) -> list[dict[str, str]]:
               result: dict[str, dict[str, str]] = {}
               for row in rows:
-                  try:
-                      published = date.fromisoformat(row["date"])
-                  except Exception:
-                      continue
-                  if published < KEEP_START or published > TODAY + timedelta(days=1):
-                      continue
-                  key = (
-                      f"{row.get('category','')}|{row['date']}|"
-                      f"{title_key(row.get('title',''))}"
-                  )
-                  current = result.get(key)
-                  if current is None:
+                  key = f"{row.get('date','')}|{title_key(row.get('title',''))}"
+                  old = result.get(key)
+                  if old is None:
                       result[key] = row
-                  elif (
-                      "news.google.com" in current.get("url", "")
-                      and "news.google.com" not in row.get("url", "")
+                      continue
+
+                  # 공식 기관 표시가 붙은 항목을 우선합니다.
+                  official_names = {"국토교통부", "서울특별시", "경기도"}
+                  if (
+                      row.get("source") in official_names
+                      and old.get("source") not in official_names
                   ):
                       result[key] = row
               return list(result.values())
@@ -426,7 +572,7 @@ jobs:
                   for word, count in counter.most_common(20)
               ]
 
-          def match_score(title: str, words: tuple[str, ...]) -> int:
+          def match_count(title: str, words: tuple[str, ...]) -> int:
               lower = title.lower()
               return sum(1 for word in words if word.lower() in lower)
 
@@ -436,7 +582,6 @@ jobs:
           ) -> list[dict[str, Any]]:
               current_start = TODAY - timedelta(days=days - 1)
               previous_start = current_start - timedelta(days=days)
-
               current = [
                   row for row in rows
                   if row_date(row) and row_date(row) >= current_start
@@ -451,22 +596,21 @@ jobs:
               for topic, words in TOPICS.items():
                   matched = [
                       row for row in current
-                      if match_score(row["title"], words) > 0
+                      if match_count(row["title"], words) > 0
                   ]
                   if not matched:
                       continue
 
                   matched.sort(
                       key=lambda row: (
-                          match_score(row["title"], words),
+                          match_count(row["title"], words),
                           row["date"],
                       ),
                       reverse=True,
                   )
-
                   previous_count = sum(
                       1 for row in previous
-                      if match_score(row["title"], words) > 0
+                      if match_count(row["title"], words) > 0
                   )
                   difference = len(matched) - previous_count
 
@@ -482,12 +626,11 @@ jobs:
                   examples: list[str] = []
                   seen: set[str] = set()
                   for row in matched:
-                      title = clean(row["title"])
-                      normalized = title_key(title)
-                      if normalized in seen:
+                      key = title_key(row["title"])
+                      if key in seen:
                           continue
-                      seen.add(normalized)
-                      examples.append(title)
+                      seen.add(key)
+                      examples.append(row["title"])
                       if len(examples) == 3:
                           break
 
@@ -500,10 +643,7 @@ jobs:
                       }
                   )
 
-              output.sort(
-                  key=lambda row: row["count"],
-                  reverse=True,
-              )
+              output.sort(key=lambda row: row["count"], reverse=True)
               return output[:10]
 
           def coverage(rows: list[dict[str, str]]) -> dict[str, Any]:
@@ -522,14 +662,14 @@ jobs:
 
               oldest = min(dates)
               newest = max(dates)
-              covered = (newest - oldest).days + 1
+              days_covered = (newest - oldest).days + 1
               return {
                   "items": len(yearly),
                   "oldest": oldest.isoformat(),
                   "newest": newest.isoformat(),
-                  "days_covered": covered,
+                  "days_covered": days_covered,
                   "complete": (
-                      len(yearly) >= 300
+                      len(yearly) >= 180
                       and oldest <= TODAY - timedelta(days=330)
                   ),
               }
@@ -539,22 +679,27 @@ jobs:
               if not isinstance(old_archive, list):
                   old_archive = []
 
-              recent, errors = collect_recent()
-              combined = old_archive + recent
+              current, source_status = collect_current()
+              combined = old_archive + current
 
-              previous_state = load_json(BACKFILL_PATH, {})
-              previous_coverage = coverage(old_archive)
+              old_coverage = coverage(old_archive)
+              state = load_json(STATE_PATH, {})
               need_backfill = (
-                  not previous_state.get("complete")
-                  or not previous_coverage.get("complete")
+                  not state.get("complete")
+                  or not old_coverage.get("complete")
               )
 
+              backfill_errors: list[str] = []
               if need_backfill:
-                  historical, history_errors = collect_backfill()
+                  historical, backfill_errors = collect_backfill()
                   combined.extend(historical)
-                  errors.extend(history_errors)
 
               archive = deduplicate(combined)
+              archive = [
+                  row for row in archive
+                  if row_date(row)
+                  and KEEP_START <= row_date(row) <= TODAY + timedelta(days=1)
+              ]
               archive.sort(
                   key=lambda row: (
                       row.get("date", ""),
@@ -565,11 +710,29 @@ jobs:
 
               report = coverage(archive)
               yearly = period_rows(archive, 365)
-              latest = yearly[:100]
+              latest = yearly[:120]
               updated_at = NOW.strftime("%Y-%m-%d %H:%M KST")
 
+              official_recent = [
+                  row for row in period_rows(archive, 14)
+                  if row.get("source") in {
+                      "국토교통부", "서울특별시", "경기도"
+                  }
+              ]
+
+              # 세 기관이 모두 실패하고 공식 자료도 하나도 없으면
+              # 기존 데이터를 0건으로 덮어쓰지 않고 작업을 실패시킵니다.
+              successful_sources = sum(
+                  1 for message in source_status.values()
+                  if "실패" not in message
+              )
+              if successful_sources == 0 and not official_recent:
+                  raise RuntimeError(
+                      "국토부·서울시·경기도 공식자료 수집이 모두 실패했습니다."
+                  )
+
               if report["complete"]:
-                  BACKFILL_PATH.write_text(
+                  STATE_PATH.write_text(
                       json.dumps(
                           {
                               "complete": True,
@@ -583,14 +746,9 @@ jobs:
                   )
 
               ARCHIVE_PATH.write_text(
-                  json.dumps(
-                      archive,
-                      ensure_ascii=False,
-                      indent=2,
-                  ),
+                  json.dumps(archive, ensure_ascii=False, indent=2),
                   encoding="utf-8",
               )
-
               LATEST_PATH.write_text(
                   json.dumps(
                       {
@@ -604,7 +762,8 @@ jobs:
                           "counts_period": "최근 1년",
                           "archive_size": len(yearly),
                           "coverage": report,
-                          "errors": errors,
+                          "source_status": source_status,
+                          "backfill_errors": backfill_errors,
                           "items": latest,
                       },
                       ensure_ascii=False,
@@ -612,7 +771,6 @@ jobs:
                   ),
                   encoding="utf-8",
               )
-
               KEYWORDS_PATH.write_text(
                   json.dumps(
                       {
@@ -626,7 +784,6 @@ jobs:
                   ),
                   encoding="utf-8",
               )
-
               ISSUES_PATH.write_text(
                   json.dumps(
                       {
@@ -642,6 +799,9 @@ jobs:
                   encoding="utf-8",
               )
 
+              print("=== 공식자료 수집 상태 ===")
+              for name, message in source_status.items():
+                  print(f"{name}: {message}")
               print(
                   "RESULT "
                   f"items={report['items']} "
@@ -649,17 +809,17 @@ jobs:
                   f"newest={report['newest']} "
                   f"days={report['days_covered']} "
                   f"complete={report['complete']} "
-                  f"errors={len(errors)}"
+                  f"official14d={len(official_recent)}"
               )
 
           if __name__ == "__main__":
               main()
           PY
 
-      - name: 최근 1년 자료 수집 및 분석
-        run: python /tmp/urbanplanningdaily_collector.py
+          python /tmp/urbanplanningdaily_v5.py
 
-      - name: 결과를 저장소에 기록
+      - name: 결과 저장
+        shell: bash
         run: |
           git config user.name "urbanplanningdaily-bot"
           git config user.email "urbanplanningdaily-bot@users.noreply.github.com"
@@ -672,6 +832,7 @@ jobs:
           fi
 
       - name: 배포용 홈페이지 만들기
+        shell: bash
         run: |
           mkdir -p _site/data
           cp index.html _site/
@@ -680,8 +841,11 @@ jobs:
           cp data/keywords.json _site/data/
           cp data/issues.json _site/data/
 
+      - name: GitHub Pages 설정
+        uses: actions/configure-pages@v6
+
       - name: 홈페이지 파일 업로드
-        uses: actions/upload-pages-artifact@v5.0.0
+        uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
