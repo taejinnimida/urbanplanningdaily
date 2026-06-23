@@ -32,15 +32,30 @@
     .news-shell{border-radius:22px;overflow:hidden}.news-row{display:grid;grid-template-columns:110px 1fr auto;gap:20px;align-items:center;padding:22px 26px;border-bottom:1px solid var(--line)}.news-row:last-child{border-bottom:0}.news-row:hover{background:#fbfcfd}
     .label{display:inline-flex;width:fit-content;padding:6px 10px;border-radius:999px;background:#edf2f5;color:#41515d;font-size:.76rem;font-weight:800}.news-row strong{display:block;margin-bottom:4px;letter-spacing:-.03em}.news-row p{margin:0;color:var(--muted);font-size:.86rem}.source{color:var(--accent);font-weight:800;font-size:.8rem;white-space:nowrap}.empty{padding:34px;color:var(--muted)}
     .keyword-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.panel{border-radius:22px;padding:25px}.panel h3{margin:0 0 14px;font-size:1.06rem}.chips{display:flex;flex-wrap:wrap;gap:9px}.chip{padding:8px 11px;border:1px dashed #bfccd4;border-radius:999px;color:#51616b;font-size:.82rem;background:#fafcfd}.chip b{color:var(--accent);margin-left:5px}
+
+    .issue-toolbar{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:16px}
+    .period-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;font-weight:800;color:#52616b;cursor:pointer}
+    .period-btn.active{background:var(--navy);border-color:var(--navy);color:#fff}
+    .issue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .issue-card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+    .issue-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+    .issue-rank{color:var(--gold);font-weight:900;font-size:.78rem;letter-spacing:.06em}
+    .issue-card h3{margin:7px 0 5px;font-size:1.08rem;letter-spacing:-.04em}
+    .issue-meta{color:var(--accent);font-weight:800;font-size:.82rem;white-space:nowrap}
+    .issue-examples{margin:15px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+    .issue-examples li{padding:10px 0;border-bottom:1px dashed var(--line);font-size:.85rem;color:#53626c}
+    .issue-examples li:last-child{border-bottom:0;padding-bottom:0}
+    .issue-trend{display:inline-flex;margin-top:10px;padding:5px 9px;border-radius:999px;background:var(--accent-soft);color:#275a62;font-size:.76rem;font-weight:800}
+
     footer{padding:30px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:860px){nav{display:none}.hero-grid,.keyword-grid{grid-template-columns:1fr}.category-grid{grid-template-columns:repeat(2,1fr)}.hero-main{padding:34px}.news-row{grid-template-columns:90px 1fr}}
+    @media(max-width:860px){nav{display:none}.hero-grid,.keyword-grid,.issue-grid{grid-template-columns:1fr}.category-grid{grid-template-columns:repeat(2,1fr)}.hero-main{padding:34px}.news-row{grid-template-columns:90px 1fr}}
     @media(max-width:560px){.wrap{width:min(100% - 24px,1120px)}.hero{padding-top:34px}.category-grid{grid-template-columns:1fr}.news-row{grid-template-columns:1fr;gap:9px}.source{justify-self:start}.hero-note{flex-direction:column;gap:6px}}
   </style>
 </head>
 <body>
 <header><div class="wrap header-inner">
   <a class="brand" href="#"><div class="mark">도계</div><div class="brand-text"><strong>도시계획일보</strong><span>Urban Planning Daily</span></div></a>
-  <nav><a href="#daily">오늘의 이슈</a><a href="#categories">분야별 자료</a><a href="#keywords">키워드 분석</a></nav>
+  <nav><a href="#issues">기간별 이슈</a><a href="#daily">오늘의 자료</a><a href="#categories">분야별 자료</a><a href="#keywords">키워드 분석</a></nav>
 </div></header>
 
 <section class="hero"><div class="wrap hero-grid">
@@ -60,6 +75,24 @@
   <article class="category-card"><div class="num">03</div><h3>연구·보고서</h3><p>국책·지방 연구기관 발간물</p><span class="count" id="count-research">0건</span></article>
   <article class="category-card"><div class="num">04</div><h3>기사·현장 이슈</h3><p>도시계획 관련 주요 기사</p><span class="count" id="count-news">0건</span></article>
 </div></section>
+
+
+<section id="issues">
+  <div class="section-head">
+    <div>
+      <h2>현시점 기간별 핵심 이슈</h2>
+      <p>제목 출현 빈도와 관련 기사 묶음을 기준으로 1주·1개월·1년의 흐름을 정리합니다.</p>
+    </div>
+  </div>
+  <div class="issue-toolbar" id="period-buttons">
+    <button class="period-btn active" data-period="weekly">최근 1주</button>
+    <button class="period-btn" data-period="monthly">최근 1개월</button>
+    <button class="period-btn" data-period="yearly">최근 1년</button>
+  </div>
+  <div class="issue-grid" id="issue-grid">
+    <div class="empty">과거 자료를 수집하고 있습니다.</div>
+  </div>
+</section>
 
 <section id="daily"><div class="section-head"><div><h2>오늘의 주요 이슈</h2><p>제목을 누르면 원문으로 이동합니다.</p></div></div>
 <div class="filters" id="filters">
@@ -83,6 +116,7 @@ const now=new Date();
 document.getElementById('today').textContent=new Intl.DateTimeFormat('ko-KR',{year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(now);
 document.getElementById('year').textContent=now.getFullYear();
 let allItems=[];
+let allIssues={weekly:[],monthly:[],yearly:[]};
 
 function escapeHtml(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));}
 function renderItems(category='전체'){
@@ -96,6 +130,30 @@ function renderItems(category='전체'){
       <span class="source">원문 보기</span>
     </a>`).join('');
 }
+
+function renderIssues(period='weekly'){
+  const grid=document.getElementById('issue-grid');
+  const rows=allIssues[period]||[];
+  if(!rows.length){
+    grid.innerHTML='<div class="empty">과거자료 역수집이 끝나면 이슈가 표시됩니다.</div>';
+    return;
+  }
+  grid.innerHTML=rows.slice(0,8).map((x,i)=>`
+    <article class="issue-card">
+      <div class="issue-top">
+        <div>
+          <div class="issue-rank">ISSUE ${String(i+1).padStart(2,'0')}</div>
+          <h3>${escapeHtml(x.topic)}</h3>
+        </div>
+        <div class="issue-meta">${x.count}건</div>
+      </div>
+      ${x.trend_label?`<span class="issue-trend">${escapeHtml(x.trend_label)}</span>`:''}
+      <ul class="issue-examples">
+        ${(x.examples||[]).slice(0,3).map(e=>`<li>${escapeHtml(e)}</li>`).join('')}
+      </ul>
+    </article>`).join('');
+}
+
 function renderKeywords(id,rows){
   const el=document.getElementById(id);
   el.innerHTML=(rows||[]).length?(rows||[]).map(x=>`<span class="chip">${escapeHtml(x.word)}<b>${x.count}</b></span>`).join(''):'<span class="chip">자료 축적 중</span>';
@@ -103,12 +161,15 @@ function renderKeywords(id,rows){
 async function loadData(){
   try{
     const stamp=Date.now();
-    const [latest,keywords]=await Promise.all([
+    const [latest,keywords,issues]=await Promise.all([
       fetch(`data/latest.json?t=${stamp}`).then(r=>{if(!r.ok)throw new Error('latest');return r.json()}),
-      fetch(`data/keywords.json?t=${stamp}`).then(r=>{if(!r.ok)throw new Error('keywords');return r.json()})
+      fetch(`data/keywords.json?t=${stamp}`).then(r=>{if(!r.ok)throw new Error('keywords');return r.json()}),
+      fetch(`data/issues.json?t=${stamp}`).then(r=>{if(!r.ok)throw new Error('issues');return r.json()})
     ]);
     allItems=latest.items||[];
+    allIssues=issues||{weekly:[],monthly:[],yearly:[]};
     renderItems();
+    renderIssues('weekly');
     const counts=latest.counts||{};
     document.getElementById('count-policy').textContent=`${counts['정책']||0}건`;
     document.getElementById('count-law').textContent=`${counts['법령']||0}건`;
@@ -126,6 +187,11 @@ async function loadData(){
     renderKeywords('weekly-keywords',[]);renderKeywords('monthly-keywords',[]);renderKeywords('yearly-keywords',[]);
   }
 }
+document.getElementById('period-buttons').addEventListener('click',e=>{
+  const b=e.target.closest('.period-btn');if(!b)return;
+  document.querySelectorAll('.period-btn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');renderIssues(b.dataset.period);
+});
 document.getElementById('filters').addEventListener('click',e=>{
   const b=e.target.closest('.filter');if(!b)return;
   document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderItems(b.dataset.category);
