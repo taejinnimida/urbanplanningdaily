@@ -1,14 +1,11 @@
 {
-  "updated_at": "2026-06-23 16:24 KST",
+  "updated_at": "2026-06-23 16:33 KST",
   "counts": {
     "법령": 18,
-    "기사": 44,
+    "기사": 45,
     "연구": 8
   },
-  "errors": [
-    "부처 입법예고: ConnectTimeout: HTTPSConnectionPool(host='opinion.lawmaking.go.kr', port=443): Max retries exceeded with url: /gcom/ogLmPp (Caused by ConnectTimeoutError(<HTTPSConnection(host='opinion.lawmaking.go.kr', port=443) at 0x7f1392fc9940>, 'Connection to opinion.lawmaking.go.kr timed out. (connect timeout=25)'))",
-    "최근 공포법령: ConnectionError: HTTPSConnectionPool(host='www.law.go.kr', port=443): Max retries exceeded with url: /nwRvsLsPop.do?chrIdx=0&cptOfi=1613000&lsKndCd=&pg=1 (Caused by NameResolutionError(\"HTTPSConnection(host='www.law.go.kr', port=443): Failed to resolve 'www.law.go.kr' ([Errno -3] Temporary failure in name resolution)\"))"
-  ],
+  "errors": [],
   "items": [
     {
       "id": "e533fb8621ff144f",
@@ -126,6 +123,14 @@
       "id": "e91c54c9ce0d2ef7",
       "title": "월계시영고층, 재건축 추진위원장에 김태연씨 - 한국주택경제신문",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBtRmRIQnN5M2dxeU5TT05QQVFWOVJEN3NpMDFla0F1eWxQeXptVXRyNlYtRmxpR083UHRMVEpZMm8xaWJIVTV0dGdXTUxfTDlYRGMxcVR1NkRQV2lfd2MyM1NQSURDX1Ay?oc=5",
+      "source": "Google 뉴스",
+      "category": "기사",
+      "date": "2026-06-23"
+    },
+    {
+      "id": "46a636f945e26798",
+      "title": "경실련 “서울 아파트 전세 1년 새 31% 줄어…무분별 재개발 탓” - 한겨레",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE90eHg2Q2RiV3d0enMzSHhjdVZsM010dks1MV9sTzNndnVNQ0w5UDZ0ZnBmb0wyYjQ0c3dKdHVySXdBdmZlclhvR1NmVm1SRXhWbW44cVdmWE9EZ1VKTGFwLWMwdklhTXJ5RE1YZ3VzZlc1Zw?oc=5",
       "source": "Google 뉴스",
       "category": "기사",
       "date": "2026-06-23"
