@@ -1,249 +1,249 @@
 {
-  "updated_at": "2026-06-23 16:33 KST",
+  "updated_at": "2026-06-24 08:41 KST",
   "weekly": [
     {
-      "word": "재건축",
-      "count": 21
+      "word": "경기도뉴스포털",
+      "count": 55
     },
     {
-      "word": "재개발",
-      "count": 14
+      "word": "재건축",
+      "count": 42
     },
     {
       "word": "한국주택경제신문",
+      "count": 35
+    },
+    {
+      "word": "선정",
+      "count": 35
+    },
+    {
+      "word": "재개발",
+      "count": 33
+    },
+    {
+      "word": "구역",
+      "count": 29
+    },
+    {
+      "word": "국가법령정보센터",
+      "count": 23
+    },
+    {
+      "word": "kr",
+      "count": 22
+    },
+    {
+      "word": "seoul",
+      "count": 21
+    },
+    {
+      "word": "go",
+      "count": 21
+    },
+    {
+      "word": "하우징헤럴드",
+      "count": 20
+    },
+    {
+      "word": "입찰공고",
+      "count": 16
+    },
+    {
+      "word": "석간",
+      "count": 15
+    },
+    {
+      "word": "서울",
+      "count": 12
+    },
+    {
+      "word": "재개발조합",
+      "count": 10
+    },
+    {
+      "word": "전자도서관",
       "count": 10
     },
     {
       "word": "시행령",
-      "count": 8
-    },
-    {
-      "word": "구역",
-      "count": 8
-    },
-    {
-      "word": "하우징헤럴드",
-      "count": 8
-    },
-    {
-      "word": "선정",
-      "count": 5
-    },
-    {
-      "word": "서울",
-      "count": 5
+      "count": 10
     },
     {
       "word": "시행규칙",
-      "count": 4
+      "count": 10
     },
     {
-      "word": "아파트",
-      "count": 4
+      "word": "서울특별시",
+      "count": 10
     },
     {
-      "word": "매일경제",
-      "count": 4
-    },
-    {
-      "word": "입찰공고",
-      "count": 3
-    },
-    {
-      "word": "조선비즈",
-      "count": 3
-    },
-    {
-      "word": "chosunbiz",
-      "count": 3
-    },
-    {
-      "word": "특별법",
-      "count": 3
-    },
-    {
-      "word": "통합심의",
-      "count": 3
-    },
-    {
-      "word": "땅집고",
-      "count": 3
-    },
-    {
-      "word": "건설산업기본법",
-      "count": 2
-    },
-    {
-      "word": "주택법",
-      "count": 2
-    },
-    {
-      "word": "현장",
-      "count": 2
+      "word": "ai",
+      "count": 9
     }
   ],
   "monthly": [
     {
+      "word": "국가법령정보센터",
+      "count": 131
+    },
+    {
+      "word": "경기도뉴스포털",
+      "count": 103
+    },
+    {
+      "word": "kr",
+      "count": 78
+    },
+    {
+      "word": "seoul",
+      "count": 76
+    },
+    {
+      "word": "go",
+      "count": 76
+    },
+    {
       "word": "재건축",
-      "count": 23
+      "count": 62
+    },
+    {
+      "word": "서울특별시",
+      "count": 50
     },
     {
       "word": "재개발",
-      "count": 14
-    },
-    {
-      "word": "한국주택경제신문",
-      "count": 10
-    },
-    {
-      "word": "시행령",
-      "count": 8
-    },
-    {
-      "word": "구역",
-      "count": 8
-    },
-    {
-      "word": "하우징헤럴드",
-      "count": 8
-    },
-    {
-      "word": "서울",
-      "count": 7
+      "count": 48
     },
     {
       "word": "선정",
-      "count": 5
+      "count": 46
+    },
+    {
+      "word": "한국주택경제신문",
+      "count": 37
+    },
+    {
+      "word": "구역",
+      "count": 32
+    },
+    {
+      "word": "석간",
+      "count": 31
+    },
+    {
+      "word": "서울소식",
+      "count": 30
+    },
+    {
+      "word": "하우징헤럴드",
+      "count": 24
     },
     {
       "word": "시행규칙",
-      "count": 4
+      "count": 21
     },
     {
-      "word": "아파트",
-      "count": 4
+      "word": "시행령",
+      "count": 20
     },
     {
-      "word": "매일경제",
-      "count": 4
+      "word": "소식",
+      "count": 20
     },
     {
-      "word": "입찰공고",
-      "count": 3
+      "word": "자치법규",
+      "count": 20
     },
     {
-      "word": "조선비즈",
-      "count": 3
+      "word": "조례",
+      "count": 20
     },
     {
-      "word": "chosunbiz",
-      "count": 3
-    },
-    {
-      "word": "daum",
-      "count": 3
-    },
-    {
-      "word": "net",
-      "count": 3
-    },
-    {
-      "word": "특별법",
-      "count": 3
-    },
-    {
-      "word": "속도전",
-      "count": 3
-    },
-    {
-      "word": "통합심의",
-      "count": 3
-    },
-    {
-      "word": "땅집고",
-      "count": 3
+      "word": "서울",
+      "count": 19
     }
   ],
   "yearly": [
     {
+      "word": "국가법령정보센터",
+      "count": 791
+    },
+    {
+      "word": "경기도뉴스포털",
+      "count": 697
+    },
+    {
       "word": "재건축",
-      "count": 23
+      "count": 579
     },
     {
       "word": "재개발",
-      "count": 14
+      "count": 508
+    },
+    {
+      "word": "kr",
+      "count": 423
+    },
+    {
+      "word": "go",
+      "count": 398
+    },
+    {
+      "word": "seoul",
+      "count": 394
+    },
+    {
+      "word": "조례",
+      "count": 327
+    },
+    {
+      "word": "자치법규",
+      "count": 321
+    },
+    {
+      "word": "서울특별시",
+      "count": 286
     },
     {
       "word": "한국주택경제신문",
-      "count": 10
+      "count": 275
     },
     {
-      "word": "시행령",
-      "count": 8
+      "word": "서울연구데이터서비스",
+      "count": 220
     },
     {
       "word": "구역",
-      "count": 8
+      "count": 208
     },
     {
       "word": "하우징헤럴드",
-      "count": 8
-    },
-    {
-      "word": "서울",
-      "count": 7
+      "count": 190
     },
     {
       "word": "선정",
-      "count": 5
+      "count": 164
     },
     {
-      "word": "시행규칙",
-      "count": 4
+      "word": "국민참여입법센터",
+      "count": 154
     },
     {
-      "word": "아파트",
-      "count": 4
+      "word": "서울",
+      "count": 118
     },
     {
-      "word": "매일경제",
-      "count": 4
+      "word": "연합뉴스",
+      "count": 107
     },
     {
-      "word": "입찰공고",
-      "count": 3
+      "word": "석간",
+      "count": 101
     },
     {
-      "word": "조선비즈",
-      "count": 3
-    },
-    {
-      "word": "chosunbiz",
-      "count": 3
-    },
-    {
-      "word": "daum",
-      "count": 3
-    },
-    {
-      "word": "net",
-      "count": 3
-    },
-    {
-      "word": "특별법",
-      "count": 3
-    },
-    {
-      "word": "속도전",
-      "count": 3
-    },
-    {
-      "word": "통합심의",
-      "count": 3
-    },
-    {
-      "word": "땅집고",
-      "count": 3
+      "word": "서울소식",
+      "count": 101
     }
   ]
 }
