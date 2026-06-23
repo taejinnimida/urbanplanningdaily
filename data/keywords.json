@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-23 15:10 KST",
+  "updated_at": "2026-06-23 16:24 KST",
   "weekly": [
     {
       "word": "재건축",
-      "count": 19
+      "count": 21
     },
     {
       "word": "재개발",
@@ -11,7 +11,7 @@
     },
     {
       "word": "한국주택경제신문",
-      "count": 9
+      "count": 10
     },
     {
       "word": "시행령",
@@ -23,7 +23,7 @@
     },
     {
       "word": "하우징헤럴드",
-      "count": 7
+      "count": 8
     },
     {
       "word": "선정",
@@ -31,6 +31,10 @@
     },
     {
       "word": "시행규칙",
+      "count": 4
+    },
+    {
+      "word": "서울",
       "count": 4
     },
     {
@@ -42,15 +46,19 @@
       "count": 3
     },
     {
-      "word": "특별법",
-      "count": 3
-    },
-    {
-      "word": "서울",
-      "count": 3
-    },
-    {
       "word": "아파트",
+      "count": 3
+    },
+    {
+      "word": "조선비즈",
+      "count": 3
+    },
+    {
+      "word": "chosunbiz",
+      "count": 3
+    },
+    {
+      "word": "특별법",
       "count": 3
     },
     {
@@ -70,22 +78,14 @@
       "count": 2
     },
     {
-      "word": "세무",
-      "count": 2
-    },
-    {
-      "word": "co",
-      "count": 2
-    },
-    {
-      "word": "kr",
+      "word": "현장",
       "count": 2
     }
   ],
   "monthly": [
     {
       "word": "재건축",
-      "count": 21
+      "count": 23
     },
     {
       "word": "재개발",
@@ -93,7 +93,7 @@
     },
     {
       "word": "한국주택경제신문",
-      "count": 9
+      "count": 10
     },
     {
       "word": "시행령",
@@ -105,14 +105,14 @@
     },
     {
       "word": "하우징헤럴드",
-      "count": 7
-    },
-    {
-      "word": "선정",
-      "count": 5
+      "count": 8
     },
     {
       "word": "서울",
+      "count": 6
+    },
+    {
+      "word": "선정",
       "count": 5
     },
     {
@@ -128,15 +128,31 @@
       "count": 3
     },
     {
+      "word": "아파트",
+      "count": 3
+    },
+    {
+      "word": "조선비즈",
+      "count": 3
+    },
+    {
+      "word": "chosunbiz",
+      "count": 3
+    },
+    {
+      "word": "daum",
+      "count": 3
+    },
+    {
+      "word": "net",
+      "count": 3
+    },
+    {
       "word": "특별법",
       "count": 3
     },
     {
       "word": "속도전",
-      "count": 3
-    },
-    {
-      "word": "아파트",
       "count": 3
     },
     {
@@ -146,28 +162,12 @@
     {
       "word": "땅집고",
       "count": 3
-    },
-    {
-      "word": "건설산업기본법",
-      "count": 2
-    },
-    {
-      "word": "주택법",
-      "count": 2
-    },
-    {
-      "word": "세무",
-      "count": 2
-    },
-    {
-      "word": "co",
-      "count": 2
     }
   ],
   "yearly": [
     {
       "word": "재건축",
-      "count": 21
+      "count": 23
     },
     {
       "word": "재개발",
@@ -175,7 +175,7 @@
     },
     {
       "word": "한국주택경제신문",
-      "count": 9
+      "count": 10
     },
     {
       "word": "시행령",
@@ -187,14 +187,14 @@
     },
     {
       "word": "하우징헤럴드",
-      "count": 7
-    },
-    {
-      "word": "선정",
-      "count": 5
+      "count": 8
     },
     {
       "word": "서울",
+      "count": 6
+    },
+    {
+      "word": "선정",
       "count": 5
     },
     {
@@ -210,15 +210,31 @@
       "count": 3
     },
     {
+      "word": "아파트",
+      "count": 3
+    },
+    {
+      "word": "조선비즈",
+      "count": 3
+    },
+    {
+      "word": "chosunbiz",
+      "count": 3
+    },
+    {
+      "word": "daum",
+      "count": 3
+    },
+    {
+      "word": "net",
+      "count": 3
+    },
+    {
       "word": "특별법",
       "count": 3
     },
     {
       "word": "속도전",
-      "count": 3
-    },
-    {
-      "word": "아파트",
       "count": 3
     },
     {
@@ -228,22 +244,6 @@
     {
       "word": "땅집고",
       "count": 3
-    },
-    {
-      "word": "중심으로",
-      "count": 3
-    },
-    {
-      "word": "건설산업기본법",
-      "count": 2
-    },
-    {
-      "word": "주택법",
-      "count": 2
-    },
-    {
-      "word": "세무",
-      "count": 2
     }
   ]
 }
