@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- V2 확인표시: 최근 1주·1개월·1년 핵심 이슈 기능 -->
+<!-- V3 긴급복구: 분석파일이 없어도 기존 자료를 표시 -->
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
@@ -69,7 +69,7 @@
 </div></section>
 
 <main class="wrap">
-<section id="categories"><div class="section-head"><div><h2>분야별 자료</h2><p>최근 수집 자료의 분야별 건수입니다.</p></div></div>
+<section id="categories"><div class="section-head"><div><h2>분야별 자료</h2><p id="category-period-label">현재 저장된 자료의 분야별 건수입니다.</p></div></div>
 <div class="category-grid">
   <article class="category-card"><div class="num">01</div><h3>정책·보도자료</h3><p>국토교통부 등 공식 발표</p><span class="count" id="count-policy">0건</span></article>
   <article class="category-card"><div class="num">02</div><h3>법령·입법예고</h3><p>입법예고와 최근 공포법령</p><span class="count" id="count-law">0건</span></article>
@@ -159,33 +159,68 @@ function renderKeywords(id,rows){
   const el=document.getElementById(id);
   el.innerHTML=(rows||[]).length?(rows||[]).map(x=>`<span class="chip">${escapeHtml(x.word)}<b>${x.count}</b></span>`).join(''):'<span class="chip">자료 축적 중</span>';
 }
-async function loadData(){
+async function fetchJsonOptional(url){
   try{
-    const stamp=Date.now();
-    const [latest,keywords,issues]=await Promise.all([
-      fetch(`data/latest.json?t=${stamp}`).then(r=>{if(!r.ok)throw new Error('latest');return r.json()}),
-      fetch(`data/keywords.json?t=${stamp}`).then(r=>{if(!r.ok)throw new Error('keywords');return r.json()}),
-      fetch(`data/issues.json?t=${stamp}`).then(r=>{if(!r.ok)throw new Error('issues');return r.json()})
-    ]);
+    const response=await fetch(url);
+    if(!response.ok) return null;
+    return await response.json();
+  }catch(e){
+    return null;
+  }
+}
+
+async function loadData(){
+  const stamp=Date.now();
+
+  // 핵심 자료와 보조 분석파일을 따로 불러옵니다.
+  // issues.json 하나가 없어도 기존 기사·법령·연구자료는 정상 표시됩니다.
+  const latest=await fetchJsonOptional(`data/latest.json?t=${stamp}`);
+  const keywords=await fetchJsonOptional(`data/keywords.json?t=${stamp}`);
+  const issues=await fetchJsonOptional(`data/issues.json?t=${stamp}`);
+
+  if(latest){
     allItems=latest.items||[];
-    allIssues=issues||{weekly:[],monthly:[],yearly:[]};
     renderItems();
-    renderIssues('weekly');
+
     const counts=latest.counts||{};
     document.getElementById('count-policy').textContent=`${counts['정책']||0}건`;
     document.getElementById('count-law').textContent=`${counts['법령']||0}건`;
     document.getElementById('count-research').textContent=`${counts['연구']||0}건`;
     document.getElementById('count-news').textContent=`${counts['기사']||0}건`;
-    document.getElementById('update-status').textContent=`최근 자료 ${allItems.length}건`;
+
+    const coverage=latest.coverage||{};
+    const total=latest.archive_size ?? allItems.length;
+    const period=latest.counts_period||'현재 저장된 자료';
+    document.getElementById('category-period-label').textContent=`${period}의 분야별 건수입니다.`;
+
+    if(coverage.days_covered){
+      document.getElementById('update-status').textContent=`자료 ${total}건 · ${coverage.days_covered}일 범위`;
+    }else{
+      document.getElementById('update-status').textContent=`현재 자료 ${total}건`;
+    }
     document.getElementById('last-updated').textContent=`마지막 갱신: ${latest.updated_at||'-'}`;
+  }else{
+    document.getElementById('news-list').innerHTML='<div class="empty">latest.json을 불러오지 못했습니다. 자동수집 실행 결과를 확인해야 합니다.</div>';
+    document.getElementById('update-status').textContent='핵심 자료파일 확인 필요';
+    document.getElementById('last-updated').textContent='latest.json이 배포되지 않았습니다.';
+  }
+
+  if(keywords){
     renderKeywords('weekly-keywords',keywords.weekly);
     renderKeywords('monthly-keywords',keywords.monthly);
     renderKeywords('yearly-keywords',keywords.yearly);
-  }catch(e){
-    document.getElementById('news-list').innerHTML='<div class="empty">자동수집을 처음 실행하면 실제 자료가 이곳에 표시됩니다.</div>';
-    document.getElementById('update-status').textContent='자동수집 실행 대기';
-    document.getElementById('last-updated').textContent='GitHub Actions에서 한 번 실행해 주세요.';
-    renderKeywords('weekly-keywords',[]);renderKeywords('monthly-keywords',[]);renderKeywords('yearly-keywords',[]);
+  }else{
+    renderKeywords('weekly-keywords',[]);
+    renderKeywords('monthly-keywords',[]);
+    renderKeywords('yearly-keywords',[]);
+  }
+
+  if(issues){
+    allIssues=issues;
+    renderIssues('weekly');
+  }else{
+    allIssues={weekly:[],monthly:[],yearly:[]};
+    document.getElementById('issue-grid').innerHTML='<div class="empty">기간별 이슈 분석파일을 생성 중입니다. 기존 수집자료는 아래에서 계속 볼 수 있습니다.</div>';
   }
 }
 document.getElementById('period-buttons').addEventListener('click',e=>{
