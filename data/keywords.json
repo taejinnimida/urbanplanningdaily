@@ -1,87 +1,249 @@
 {
-  "updated_at": "2026-06-23 15:02 KST",
-  "weekly": [],
-  "monthly": [],
+  "updated_at": "2026-06-23 15:10 KST",
+  "weekly": [
+    {
+      "word": "재건축",
+      "count": 19
+    },
+    {
+      "word": "재개발",
+      "count": 13
+    },
+    {
+      "word": "한국주택경제신문",
+      "count": 9
+    },
+    {
+      "word": "시행령",
+      "count": 8
+    },
+    {
+      "word": "구역",
+      "count": 8
+    },
+    {
+      "word": "하우징헤럴드",
+      "count": 7
+    },
+    {
+      "word": "선정",
+      "count": 5
+    },
+    {
+      "word": "시행규칙",
+      "count": 4
+    },
+    {
+      "word": "매일경제",
+      "count": 4
+    },
+    {
+      "word": "입찰공고",
+      "count": 3
+    },
+    {
+      "word": "특별법",
+      "count": 3
+    },
+    {
+      "word": "서울",
+      "count": 3
+    },
+    {
+      "word": "아파트",
+      "count": 3
+    },
+    {
+      "word": "통합심의",
+      "count": 3
+    },
+    {
+      "word": "땅집고",
+      "count": 3
+    },
+    {
+      "word": "건설산업기본법",
+      "count": 2
+    },
+    {
+      "word": "주택법",
+      "count": 2
+    },
+    {
+      "word": "세무",
+      "count": 2
+    },
+    {
+      "word": "co",
+      "count": 2
+    },
+    {
+      "word": "kr",
+      "count": 2
+    }
+  ],
+  "monthly": [
+    {
+      "word": "재건축",
+      "count": 21
+    },
+    {
+      "word": "재개발",
+      "count": 13
+    },
+    {
+      "word": "한국주택경제신문",
+      "count": 9
+    },
+    {
+      "word": "시행령",
+      "count": 8
+    },
+    {
+      "word": "구역",
+      "count": 8
+    },
+    {
+      "word": "하우징헤럴드",
+      "count": 7
+    },
+    {
+      "word": "선정",
+      "count": 5
+    },
+    {
+      "word": "서울",
+      "count": 5
+    },
+    {
+      "word": "시행규칙",
+      "count": 4
+    },
+    {
+      "word": "매일경제",
+      "count": 4
+    },
+    {
+      "word": "입찰공고",
+      "count": 3
+    },
+    {
+      "word": "특별법",
+      "count": 3
+    },
+    {
+      "word": "속도전",
+      "count": 3
+    },
+    {
+      "word": "아파트",
+      "count": 3
+    },
+    {
+      "word": "통합심의",
+      "count": 3
+    },
+    {
+      "word": "땅집고",
+      "count": 3
+    },
+    {
+      "word": "건설산업기본법",
+      "count": 2
+    },
+    {
+      "word": "주택법",
+      "count": 2
+    },
+    {
+      "word": "세무",
+      "count": 2
+    },
+    {
+      "word": "co",
+      "count": 2
+    }
+  ],
   "yearly": [
+    {
+      "word": "재건축",
+      "count": 21
+    },
+    {
+      "word": "재개발",
+      "count": 13
+    },
+    {
+      "word": "한국주택경제신문",
+      "count": 9
+    },
+    {
+      "word": "시행령",
+      "count": 8
+    },
+    {
+      "word": "구역",
+      "count": 8
+    },
+    {
+      "word": "하우징헤럴드",
+      "count": 7
+    },
+    {
+      "word": "선정",
+      "count": 5
+    },
+    {
+      "word": "서울",
+      "count": 5
+    },
+    {
+      "word": "시행규칙",
+      "count": 4
+    },
+    {
+      "word": "매일경제",
+      "count": 4
+    },
+    {
+      "word": "입찰공고",
+      "count": 3
+    },
+    {
+      "word": "특별법",
+      "count": 3
+    },
+    {
+      "word": "속도전",
+      "count": 3
+    },
+    {
+      "word": "아파트",
+      "count": 3
+    },
+    {
+      "word": "통합심의",
+      "count": 3
+    },
+    {
+      "word": "땅집고",
+      "count": 3
+    },
     {
       "word": "중심으로",
       "count": 3
     },
     {
-      "word": "진단",
+      "word": "건설산업기본법",
       "count": 2
     },
     {
-      "word": "보행환경",
-      "count": 1
+      "word": "주택법",
+      "count": 2
     },
     {
-      "word": "종합정비사업의",
-      "count": 1
-    },
-    {
-      "word": "성과와",
-      "count": 1
-    },
-    {
-      "word": "과제",
-      "count": 1
-    },
-    {
-      "word": "전주시",
-      "count": 1
-    },
-    {
-      "word": "충경로",
-      "count": 1
-    },
-    {
-      "word": "사례를",
-      "count": 1
-    },
-    {
-      "word": "수요기반의",
-      "count": 1
-    },
-    {
-      "word": "주거생활공간",
-      "count": 1
-    },
-    {
-      "word": "실태진단",
-      "count": 1
-    },
-    {
-      "word": "청년가구",
-      "count": 1
-    },
-    {
-      "word": "거주적합성",
-      "count": 1
-    },
-    {
-      "word": "지표",
-      "count": 1
-    },
-    {
-      "word": "지수",
-      "count": 1
-    },
-    {
-      "word": "개발",
-      "count": 1
-    },
-    {
-      "word": "지속가능한",
-      "count": 1
-    },
-    {
-      "word": "도시",
-      "count": 1
-    },
-    {
-      "word": "구현을",
-      "count": 1
+      "word": "세무",
+      "count": 2
     }
   ]
 }
