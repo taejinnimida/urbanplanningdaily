@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import re
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -32,6 +33,24 @@ NOW = datetime.now(KST)
 TODAY = NOW.date()
 KEEP_START = TODAY - timedelta(days=400)
 YEAR_START = TODAY - timedelta(days=364)
+
+# Gemini 무료 API를 이용한 이슈 분석
+# 오전 8시는 수집만, 오전 10시와 오후 6시는 변경된 이슈를 한 번에 분석합니다.
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_API_URL = (
+    "https://generativelanguage.googleapis.com/v1beta/models/"
+    f"{GEMINI_MODEL}:generateContent"
+)
+AI_MAX_MATERIALS = 15
+AI_MAX_ISSUES = 24
+AI_LABELS = ("핵심 변화", "주요 쟁점", "도시계획적 의미")
+
+
+def should_run_ai_analysis() -> bool:
+    value = os.getenv("RUN_AI_ANALYSIS", "").strip().lower()
+    if value:
+        return value in {"1", "true", "yes", "on"}
+    return NOW.hour in {10, 18}
 
 HEADERS = {
     "User-Agent": (
@@ -114,7 +133,7 @@ PUBLIC_MAINTENANCE_CITY_LIMIT = 3
 
 OTHER_QUERIES = [
     ("법령", "법령·입법", "(site:opinion.lawmaking.go.kr OR site:law.go.kr) (도시 OR 국토 OR 주택 OR 주거 OR 건축 OR 토지 OR 정비 OR 재개발 OR 재건축 OR 공공주택 OR 교통 OR 철도 OR 도시개발 OR 도시재생 OR 공간 OR 지역 OR 농촌) (개정 OR 제정 OR 입법예고 OR 시행령 OR 시행규칙 OR 법률)"),
-    ("연구", "연구기관", "(site:krihs.re.kr OR site:si.re.kr OR site:auri.re.kr) (도시 OR 국토 OR 주택 OR 건축 OR 토지 OR 지역 OR 교통)"),
+    ("연구", "연구기관", "(site:krihs.re.kr OR site:si.re.kr OR site:auri.re.kr) (도시 OR 국토 OR 주택 OR 건축 OR 토지 OR 지역 OR 교통) -site:data.si.re.kr/photo"),
     ("기사", "언론", "(도시계획 OR 국토계획 OR 지구단위계획 OR 용도지역 OR 도시개발 OR 도시재생 OR 재개발 OR 재건축 OR 지역소멸 OR 균형발전 OR 공공주택 OR 철도지하화 OR 스마트시티)"),
 ]
 
@@ -257,7 +276,24 @@ RESEARCH_MEDIA_PATTERNS = (
     r"(?:행사|세미나|포럼|설명회|교육)\s*(?:개최\s*)?안내",
     r"(?:참가|수강)\s*(?:신청|접수)",
     r"(?:업무협약|협약식|mou|개소식|방문단|기관방문)",
+    r"사진으로\s*(?:만나는|읽는|살펴보는|돌아보는)",
+    r"(?:항공사진|거리사진|현장사진|기록사진|옛사진|과거사진|사진자료|사진전|사진집|사진공모전)",
+    r"(?:사진|이미지)\s*(?:다운로드|열람|검색|기록|공개)",
+    r"(?:19|20)\d{2}\s*년(?:대)?\s*(?:사진|풍경|모습|전경)",
+    r"(?:과거와\s*현재|어제와\s*오늘)",
+    r"(?:업무추진비|관서업무비|경영공시|정보공개|오시는\s*길|조직도)",
+    r"(?:예산서|결산서|수의계약|감사결과|윤리경영|인권경영|회의록)",
     r"(?:카드뉴스|홍보영상|기관동정|수상소식|뉴스레터)",
+)
+
+
+# 제목에 '사진'이 없어도 URL이 사진·갤러리 페이지면 연구자료에서 제외합니다.
+RESEARCH_URL_EXCLUDE_PATTERNS = (
+    r"data\.si\.re\.kr/photo/",
+    r"/photo(?:/|\?|$)",
+    r"/gallery(?:/|\?|$)",
+    r"/photoView(?:/|\?|$)",
+    r"/imageArchive(?:/|\?|$)",
 )
 
 LAW_GENERIC_PHRASES = (
@@ -397,13 +433,23 @@ def build_issue_summary(topic, basis_rows):
     return {"points": points, "note": note, "topic": topic}
 
 
-def exclusion_reason(category, title):
+def exclusion_reason(category, title, url="", source=""):
     value = clean(title)
     lower = value.lower()
+    url_lower = clean(url).lower()
+
     if category == "연구":
+        for pattern in RESEARCH_URL_EXCLUDE_PATTERNS:
+            if re.search(pattern, url_lower, flags=re.I):
+                return "연구 사진·갤러리 페이지"
+
         for pattern in RESEARCH_MEDIA_PATTERNS:
             if re.search(pattern, lower, flags=re.I):
                 return "연구 사진·홍보·행정 게시물"
+
+        if "서울연구데이터서비스" in source and "/photo/" in url_lower:
+            return "연구 사진·갤러리 페이지"
+
     if category == "법령":
         normalized = re.sub(r"[^0-9a-z가-힣]+", "", lower)
         if not any(keyword.lower() in lower for keyword in LAW_RELEVANT_KEYWORDS):
@@ -414,12 +460,22 @@ def exclusion_reason(category, title):
         for pattern in LAW_RENAME_PATTERNS:
             if re.search(pattern, lower, flags=re.I):
                 return "단순 명칭 변경 법령"
-        if re.fullmatch(r"(변경조문|신구조문대비표|개정문|제정개정이유|조문정보|법령체계도)(?:시행\d+)?", normalized):
+        if re.fullmatch(
+            r"(변경조문|신구조문대비표|개정문|제정개정이유|조문정보|법령체계도)(?:시행\d+)?",
+            normalized,
+        ):
             return "법령명 없는 일반 조문 페이지"
-        if re.fullmatch(r"(별표|별지|서식)(?:제?\d+(?:의\d+)?)?(?:시행\d+)?", normalized):
+        if re.fullmatch(
+            r"(별표|별지|서식)(?:제?\d+(?:의\d+)?)?(?:시행\d+)?",
+            normalized,
+        ):
             return "법령명 없는 별표·별지 페이지"
-        has_generic_phrase = any(phrase.lower() in lower for phrase in LAW_GENERIC_PHRASES)
-        has_law_name = any(signal.lower() in lower for signal in LAW_NAME_SIGNALS)
+        has_generic_phrase = any(
+            phrase.lower() in lower for phrase in LAW_GENERIC_PHRASES
+        )
+        has_law_name = any(
+            signal.lower() in lower for signal in LAW_NAME_SIGNALS
+        )
         if has_generic_phrase and not has_law_name:
             return "법령명 없는 일반 조문 페이지"
     return None
@@ -500,23 +556,37 @@ def is_relevant(title):
     return any(word.lower() in lower for word in RELEVANT_WORDS)
 
 
-def make_item(title, url, source, category, published):
+def make_item(
+    title,
+    url,
+    source,
+    category,
+    published,
+    description="",
+):
     title = clean(title)
     url = clean(url)
+    description = clean(description)[:700]
     if len(title) < 5 or not url or not published:
         return None
     if published < KEEP_START or published > TODAY + timedelta(days=1):
         return None
-    reason = exclusion_reason(category, title)
+    reason = exclusion_reason(category, title, url, source)
     if reason:
         FILTER_COUNTS[reason] += 1
         return None
     key = f"{published.isoformat()}|{title_key(title)}"
-    return {
+    row = {
         "id": hashlib.sha1(key.encode("utf-8")).hexdigest()[:16],
-        "title": title, "url": url, "source": source,
-        "category": category, "date": published.isoformat(),
+        "title": title,
+        "url": url,
+        "source": source,
+        "category": category,
+        "date": published.isoformat(),
     }
+    if description and description.lower() != title.lower():
+        row["description"] = description
+    return row
 
 
 def strip_html(value):
@@ -687,8 +757,19 @@ def google_news(query, category, source_hint):
             final_source = source_hint
         else:
             final_source = feed_source or source_hint or "Google 뉴스"
-        row = make_item(title=title, url=entry.get("link", ""),
-                        source=final_source, category=category, published=published)
+        description = strip_html(
+            entry.get("summary")
+            or entry.get("description")
+            or ""
+        )
+        row = make_item(
+            title=title,
+            url=entry.get("link", ""),
+            source=final_source,
+            category=category,
+            published=published,
+            description=description,
+        )
         if row:
             rows.append(row)
     return rows
@@ -815,7 +896,12 @@ def deduplicate(rows):
     for original in rows:
         row = dict(original)
         row["title"] = strip_source_suffix(row.get("title", ""), row.get("source", ""))
-        reason = exclusion_reason(row.get("category", ""), row.get("title", ""))
+        reason = exclusion_reason(
+            row.get("category", ""),
+            row.get("title", ""),
+            row.get("url", ""),
+            row.get("source", ""),
+        )
         if reason:
             FILTER_COUNTS[reason] += 1
             continue
@@ -899,6 +985,282 @@ def match_count(title, words):
     return sum(1 for word in words if word.lower() in lower)
 
 
+
+def issue_analysis_materials(basis_rows):
+    materials = []
+    for row in basis_rows[:AI_MAX_MATERIALS]:
+        item = {
+            "title": strip_source_suffix(
+                row.get("title", ""),
+                row.get("source", ""),
+            ),
+            "source": clean(row.get("source", "")),
+            "date": clean(row.get("date", "")),
+        }
+        description = clean(row.get("description", ""))
+        if description:
+            item["description"] = description[:500]
+        materials.append(item)
+    return materials
+
+
+def issue_fingerprint(topic, materials):
+    payload = {
+        "topic": topic,
+        "materials": materials,
+    }
+    raw = json.dumps(
+        payload,
+        ensure_ascii=False,
+        sort_keys=True,
+    )
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
+
+
+def reuse_previous_ai_summaries(issue_payload, previous_payload):
+    reused = 0
+    for period_key in ("weekly", "monthly", "yearly"):
+        previous_rows = {
+            row.get("topic"): row
+            for row in previous_payload.get(period_key, [])
+            if isinstance(row, dict)
+        }
+        for row in issue_payload.get(period_key, []):
+            previous = previous_rows.get(row.get("topic"))
+            if not previous:
+                continue
+            if (
+                previous.get("analysis_fingerprint")
+                != row.get("analysis_fingerprint")
+            ):
+                continue
+            summary = previous.get("summary") or {}
+            if summary.get("mode") != "ai":
+                continue
+            row["summary"] = summary
+            reused += 1
+    return reused
+
+
+def ai_response_schema():
+    return {
+        "type": "object",
+        "properties": {
+            "analyses": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string"},
+                        "points": {
+                            "type": "array",
+                            "minItems": 2,
+                            "maxItems": 3,
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "label": {
+                                        "type": "string",
+                                        "enum": list(AI_LABELS),
+                                    },
+                                    "text": {
+                                        "type": "string",
+                                        "description": (
+                                            "자료의 공통 흐름을 종합한 "
+                                            "한국어 1문장"
+                                        ),
+                                    },
+                                },
+                                "required": ["label", "text"],
+                            },
+                        },
+                        "note": {"type": "string"},
+                    },
+                    "required": ["id", "points", "note"],
+                },
+            }
+        },
+        "required": ["analyses"],
+    }
+
+
+def extract_gemini_json(response_data):
+    if isinstance(response_data, dict) and "analyses" in response_data:
+        return response_data
+
+    candidates = response_data.get("candidates") or []
+    if not candidates:
+        raise ValueError("Gemini 응답에 candidates가 없습니다.")
+
+    parts = (
+        candidates[0]
+        .get("content", {})
+        .get("parts", [])
+    )
+    text = "".join(
+        clean(part.get("text", ""))
+        for part in parts
+        if isinstance(part, dict)
+    )
+    if not text:
+        raise ValueError("Gemini 응답 본문이 비어 있습니다.")
+
+    text = re.sub(r"^```(?:json)?\\s*|\\s*```$", "", text.strip())
+    return json.loads(text)
+
+
+def call_gemini_issue_analysis(candidates):
+    api_key = os.getenv("GEMINI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY가 등록되지 않았습니다.")
+
+    request_rows = []
+    id_map = {}
+
+    for period_key, row in candidates[:AI_MAX_ISSUES]:
+        issue_id = (
+            f"{period_key}:"
+            f"{row.get('analysis_fingerprint', '')}"
+        )
+        id_map[issue_id] = row
+        request_rows.append(
+            {
+                "id": issue_id,
+                "period": period_key,
+                "topic": row.get("topic", ""),
+                "count": row.get("count", 0),
+                "materials": row.get("_analysis_materials", []),
+            }
+        )
+
+    prompt = (
+        "당신은 20년 경력 도시계획 실무자를 돕는 전문 편집자다.\\n"
+        "아래 이슈별 공개자료 제목·검색 설명문·출처·날짜를 종합해 "
+        "각 이슈를 분석하라.\\n\\n"
+        "작성 원칙:\\n"
+        "1. 개별 제목을 순서대로 풀어쓰거나 나열하지 않는다.\\n"
+        "2. 여러 자료에 공통으로 나타난 변화와 쟁점을 종합한다.\\n"
+        "3. 같은 사건의 반복보도는 하나의 흐름으로 취급한다.\\n"
+        "4. 자료에 없는 수치·원인·전망·정책효과를 만들지 않는다.\\n"
+        "5. 2~3개 항목만 작성한다. 근거가 약한 항목은 생략한다.\\n"
+        "6. 각 문장은 45~110자 정도의 자연스러운 한국어로 쓴다.\\n"
+        "7. '도시계획적 의미'는 공간구조, 생활권, 사업성, "
+        "공공성, 형평성, 도시관리 중 자료로 뒷받침되는 내용만 쓴다.\\n"
+        "8. 공통 흐름이 약하면 note에 그 한계를 짧게 적는다.\\n\\n"
+        "분석할 이슈 JSON:\\n"
+        + json.dumps(request_rows, ensure_ascii=False)
+    )
+
+    payload = {
+        "contents": [
+            {
+                "role": "user",
+                "parts": [{"text": prompt}],
+            }
+        ],
+        "generationConfig": {
+            "temperature": 0.2,
+            "maxOutputTokens": 8192,
+            "responseFormat": {
+                "text": {
+                    "mimeType": "application/json",
+                    "schema": ai_response_schema(),
+                }
+            },
+        },
+    }
+
+    response = HTTP.post(
+        GEMINI_API_URL,
+        headers={
+            "x-goog-api-key": api_key,
+            "Content-Type": "application/json",
+        },
+        json=payload,
+        timeout=(15, 150),
+    )
+    response.raise_for_status()
+    parsed = extract_gemini_json(response.json())
+
+    applied = 0
+    for analysis in parsed.get("analyses", []):
+        row = id_map.get(clean(analysis.get("id", "")))
+        if not row:
+            continue
+
+        points = []
+        used_labels = set()
+        for point in analysis.get("points", []):
+            label = clean(point.get("label", ""))
+            text = clean(point.get("text", ""))
+            if (
+                label not in AI_LABELS
+                or label in used_labels
+                or len(text) < 15
+            ):
+                continue
+            used_labels.add(label)
+            points.append({"label": label, "text": text})
+
+        if len(points) < 2:
+            continue
+
+        row["summary"] = {
+            "mode": "ai",
+            "model": GEMINI_MODEL,
+            "generated_at": NOW.isoformat(),
+            "points": points[:3],
+            "note": clean(analysis.get("note", "")),
+        }
+        applied += 1
+
+    return applied
+
+
+def enrich_issue_payload_with_ai(issue_payload, previous_payload):
+    reused = reuse_previous_ai_summaries(
+        issue_payload,
+        previous_payload,
+    )
+
+    candidates = []
+    for period_key in ("weekly", "monthly", "yearly"):
+        for row in issue_payload.get(period_key, []):
+            summary = row.get("summary") or {}
+            if summary.get("mode") != "ai":
+                candidates.append((period_key, row))
+
+    applied = 0
+    error = ""
+
+    if should_run_ai_analysis() and candidates:
+        try:
+            applied = call_gemini_issue_analysis(candidates)
+        except Exception as exc:
+            error = f"{type(exc).__name__}: {exc}"
+            print(f"[Gemini AI 분석] 실패, 규칙형 유지: {error}")
+
+    for period_key in ("weekly", "monthly", "yearly"):
+        for row in issue_payload.get(period_key, []):
+            row.pop("_analysis_materials", None)
+
+    return {
+        "requested": should_run_ai_analysis(),
+        "key_configured": bool(
+            os.getenv("GEMINI_API_KEY", "").strip()
+        ),
+        "model": GEMINI_MODEL,
+        "reused": reused,
+        "updated": applied,
+        "fallback": sum(
+            1
+            for period_key in ("weekly", "monthly", "yearly")
+            for row in issue_payload.get(period_key, [])
+            if (row.get("summary") or {}).get("mode") != "ai"
+        ),
+        "error": error,
+    }
+
 def issue_rows(rows, days):
     current_start = TODAY - timedelta(days=days - 1)
     previous_start = current_start - timedelta(days=days)
@@ -922,15 +1284,39 @@ def issue_rows(rows, days):
             trend = f"직전 동일기간보다 {abs(difference)}건 감소"
         else:
             trend = "직전 동일기간과 동일"
-        basis_rows = diversify_issue_rows(matched, limit=15)
+        basis_rows = diversify_issue_rows(
+            matched,
+            limit=AI_MAX_MATERIALS,
+        )
+        materials = issue_analysis_materials(basis_rows)
         summary = build_issue_summary(topic, basis_rows)
-        examples = [{"title": r.get("title", ""), "url": r.get("url", ""),
-                     "source": r.get("source", ""), "date": r.get("date", "")}
-                    for r in basis_rows[:4]]
-        output.append({"topic": topic, "count": len(matched), "trend_label": trend,
-                       "analyzed_count": len(basis_rows), "summary": summary, "examples": examples})
+        summary["mode"] = "rule"
+        examples = [
+            {
+                "title": r.get("title", ""),
+                "url": r.get("url", ""),
+                "source": r.get("source", ""),
+                "date": r.get("date", ""),
+            }
+            for r in basis_rows[:4]
+        ]
+        output.append(
+            {
+                "topic": topic,
+                "count": len(matched),
+                "trend_label": trend,
+                "analyzed_count": len(basis_rows),
+                "analysis_fingerprint": issue_fingerprint(
+                    topic,
+                    materials,
+                ),
+                "_analysis_materials": materials,
+                "summary": summary,
+                "examples": examples,
+            }
+        )
     output.sort(key=lambda r: r["count"], reverse=True)
-    return output[:10]
+    return output[:8]
 
 
 def coverage(rows):
@@ -969,7 +1355,12 @@ def main():
     for row in archive:
         category = clean(row.get("category", ""))
         title = clean(row.get("title", ""))
-        reason = exclusion_reason(category, title)
+        reason = exclusion_reason(
+            category,
+            title,
+            row.get("url", ""),
+            row.get("source", ""),
+        )
         if reason:
             FILTER_COUNTS["기존자료 정리: " + reason] += 1
             continue
@@ -1007,12 +1398,40 @@ def main():
         "quarterly": keyword_rows(archive, 90),
         "yearly": keyword_rows(archive, 365),
     })
-    write_json(ISSUES_PATH, {
-        "updated_at": updated_at, "coverage": report,
+    previous_issues = load_json(ISSUES_PATH, {})
+    if not isinstance(previous_issues, dict):
+        previous_issues = {}
+
+    issue_payload = {
         "weekly": issue_rows(archive, 7),
         "monthly": issue_rows(archive, 30),
         "yearly": issue_rows(archive, 365),
-    })
+    }
+    ai_status = enrich_issue_payload_with_ai(
+        issue_payload,
+        previous_issues,
+    )
+
+    write_json(
+        ISSUES_PATH,
+        {
+            "updated_at": updated_at,
+            "coverage": report,
+            "ai_status": ai_status,
+            **issue_payload,
+        },
+    )
+    print("=== Gemini AI 이슈 분석 ===")
+    print(
+        f"요청={ai_status['requested']} "
+        f"키등록={ai_status['key_configured']} "
+        f"재사용={ai_status['reused']} "
+        f"신규={ai_status['updated']} "
+        f"규칙형={ai_status['fallback']}"
+    )
+    if ai_status["error"]:
+        print(f"오류={ai_status['error']}")
+
     print("=== 최근 공식자료 ===")
     for source in ("국토교통부", "서울특별시", "경기도"):
         print(f"{source}: {current_status.get(source, '확인 불가')}")
