@@ -1,47 +1,58 @@
 {
-  "updated_at": "2026-07-26 07:11 KST",
+  "updated_at": "2026-07-27 07:13 KST",
   "counts": {
-    "기사": 2286,
-    "정책": 1607,
-    "법령": 1129,
-    "연구": 1111
+    "정책": 1609,
+    "기사": 2284,
+    "법령": 1128,
+    "연구": 1110
   },
   "period_counts": {
     "weekly": {
-      "기사": 254,
-      "정책": 51,
-      "법령": 12,
-      "연구": 45
+      "정책": 48,
+      "기사": 183,
+      "법령": 9,
+      "연구": 32
     },
     "monthly": {
-      "기사": 1030,
-      "정책": 251,
-      "법령": 173,
-      "연구": 522
+      "정책": 253,
+      "기사": 1017,
+      "법령": 171,
+      "연구": 519
     },
     "yearly": {
-      "기사": 2286,
-      "정책": 1607,
-      "법령": 1129,
-      "연구": 1111
+      "정책": 1609,
+      "기사": 2284,
+      "법령": 1128,
+      "연구": 1110
     }
   },
   "counts_period": "최근 1년",
-  "archive_size": 6133,
+  "archive_size": 6131,
   "coverage": {
-    "items": 6133,
-    "oldest": "2025-07-27",
-    "newest": "2026-07-25",
+    "items": 6131,
+    "oldest": "2025-07-28",
+    "newest": "2026-07-26",
     "days_covered": 364,
     "complete": true
   },
   "source_status": {
-    "국토교통부": "RSS 3건",
-    "서울특별시": "RSS 19건",
-    "경기도": "RSS 7건"
+    "국토교통부": "수집 실패: https://www.molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS: ConnectTimeout / https://molit.go.kr/dev/board/board_rss.jsp?rss_id=NEWS: ConnectTimeout; RetryError",
+    "서울특별시": "RSS 21건",
+    "경기도": "수집 실패: https://gnews.gg.go.kr/rss/gnewsRssBodo.do: ConnectTimeout; RetryError",
+    "추가 기사": "실패: RetryError",
+    "추가 법령": "실패: RetryError",
+    "추가 연구": "실패: RetryError"
   },
   "backfill_errors": [],
   "items": [
+    {
+      "id": "791bafdc904e6ea1",
+      "title": "&#40;보도참고자료&#41; 서울시 폭염 일일상황보고&#40;26.7.26. 기준&#41;",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462602",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-26"
+    },
     {
       "id": "e8e9f27a709cc4b0",
       "title": "홍준표 \"답 정해놓고 토론했다면 쇼…재건축 활성화해야\" - 한국경제",
@@ -230,6 +241,22 @@
       "id": "3152caf9b9ef7347",
       "title": "(석간) 제14차 정비사업 통합심의위원회 개최결과",
       "url": "https://www.seoul.go.kr/news/news_report.do#view/462410",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "3cff9005f3af0ddd",
+      "title": "&#40;석간&#41; 내 집 재개발·재건축 &apos;쾌속추진&apos;… 서울시, 전 자치구 &apos;정비사업아카데미&apos; 순회",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462459",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-24"
+    },
+    {
+      "id": "cdeb51bc68a555d6",
+      "title": "&#40;석간&#41; 서울시, 입체도로 기준 확립… ‘유연한 도시계획’으로 입체도시 연다",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462458",
       "source": "서울특별시",
       "category": "정책",
       "date": "2026-07-24"
@@ -975,30 +1002,6 @@
       "title": "“빌라 사뒀는데 알고보니 물딱지?” … 현금청산 부르는 ‘재개발 함정’(3) - 매일경제",
       "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1QWGl0d1RVTGhRcjU0ODVwYXZUa19QTlJ4aDhmcXRrMXVieHBRMllua3pTVy0yRnNocEh3eWRReG9GMjFPM3hjNDRjQWswd1lpWEtWQkpkYmY?oc=5",
       "source": "매일경제",
-      "category": "기사",
-      "date": "2026-07-23"
-    },
-    {
-      "id": "bb87a3bedb97c5e4",
-      "title": "“낡은 빌라 1채로 10배 먹었다” … ‘일확천금’ 재개발 투자의 모든 것(1) - 매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBORW9VRDdXVk5DMUlHTTdFa08wc2RDaHRyUkttdjRCNEZ5TWtYTVhMM204VU1sUGFudldHcHF6M0FiUG9tTXJxdms1UlpoUmxJdkxleFlFZDk?oc=5",
-      "source": "매일경제",
-      "category": "기사",
-      "date": "2026-07-23"
-    },
-    {
-      "id": "573370f7457c4fd4",
-      "title": "李대통령 “재건축·재개발 가구수 크게 안 늘어…논쟁있는 듯” - 동아일보",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBwTTVKN2dEc2JxRzNhbUE5RWxKZnZhS3NIb19QWTlVOWJJMTI4SjBodkUtX0s2VFdhOG1vbTZtdnBURjFDS2ZjSzV2cklGWUdYSnBxMmNwTTRHRmt2dzFodVVWVXBIODFSQUstVlJmMU1ESElBOUtR0gFmQVVfeXFMTUtMX3hoSHBjeEpWQUd0TkhrQXZZSjd5ZEg4Q0RYSENtcktkenZ3d2V2YllNRGY2TVJqRXhQTHlSNi1MWU5adnhiSVdYSXVFY2lCa0hJSG5nNGV4bDhYN19GalhkSG9B?oc=5",
-      "source": "동아일보",
-      "category": "기사",
-      "date": "2026-07-23"
-    },
-    {
-      "id": "81aa4a35e87382a2",
-      "title": "“재건축-재개발, 가구 수 크게 안늘어… 서울 택지 찾기 어렵다” - 동아일보",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE16THRYTTBXRXVXNG9jVUNSb3kxX0lWNE40Nm5abzV3OU1WVWJ5TlVHZXd3SXNqS0xXSEpXSE1JUTYwOHowOHpzc2lBeFFTeS1iZm5YMXBjS0daSUZFOV9uYXJiY2cwY082eEFsUFM0eVR2bjE2QWfSAWZBVV95cUxPN3V6aDE4UUFxd0wzMzNWdW91aVlBNWlQYWJvR3ZGOFNrWlhmaW5zb3lzMHhJbHJUT09qelVZbm9DUXJCMWJmOUlrdkw0RjBLTHRDVmppcDBVdFVGQmhOY1NXc3hzTXc?oc=5",
-      "source": "동아일보",
       "category": "기사",
       "date": "2026-07-23"
     }

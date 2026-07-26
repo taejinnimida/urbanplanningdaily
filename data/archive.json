@@ -1,5 +1,13 @@
 [
   {
+    "id": "791bafdc904e6ea1",
+    "title": "&#40;보도참고자료&#41; 서울시 폭염 일일상황보고&#40;26.7.26. 기준&#41;",
+    "url": "https://www.seoul.go.kr/news/news_report.do#view/462602",
+    "source": "서울특별시",
+    "category": "정책",
+    "date": "2026-07-26"
+  },
+  {
     "id": "e8e9f27a709cc4b0",
     "title": "홍준표 \"답 정해놓고 토론했다면 쇼…재건축 활성화해야\" - 한국경제",
     "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE92ME1sRDloZzVpRU1VT0pxQmpXakRKVm5RMi1NUFQybUZrdXBpblFidElMa0xNbHJDX2VOTURxRDlEdUt5b0pkUHMwdnZmN3FmaVF1bmR3b3ZnQQ?oc=5",
@@ -187,6 +195,22 @@
     "id": "3152caf9b9ef7347",
     "title": "(석간) 제14차 정비사업 통합심의위원회 개최결과",
     "url": "https://www.seoul.go.kr/news/news_report.do#view/462410",
+    "source": "서울특별시",
+    "category": "정책",
+    "date": "2026-07-24"
+  },
+  {
+    "id": "3cff9005f3af0ddd",
+    "title": "&#40;석간&#41; 내 집 재개발·재건축 &apos;쾌속추진&apos;… 서울시, 전 자치구 &apos;정비사업아카데미&apos; 순회",
+    "url": "https://www.seoul.go.kr/news/news_report.do#view/462459",
+    "source": "서울특별시",
+    "category": "정책",
+    "date": "2026-07-24"
+  },
+  {
+    "id": "cdeb51bc68a555d6",
+    "title": "&#40;석간&#41; 서울시, 입체도로 기준 확립… ‘유연한 도시계획’으로 입체도시 연다",
+    "url": "https://www.seoul.go.kr/news/news_report.do#view/462458",
     "source": "서울특별시",
     "category": "정책",
     "date": "2026-07-24"
@@ -51742,13 +51766,5 @@
     "source": "Naver Blog",
     "category": "기사",
     "date": "2025-06-25"
-  },
-  {
-    "id": "7c7ab31f2219a922",
-    "title": "연구보고서 - 서울연구원",
-    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE9MNHRBd0MxN3NVSDRTX2I2Wk9RYWxjSTZJZGlUd0U1bm9NNktXaGhhdHM4c3E4VTZJeXRwbk1xaWVlbFZqNW9sejZnaGFqTXRUV0toR3UwLS1XTFJWSHcyOHFHMnd4SldXZjFSSlMyU2h0Zw?oc=5",
-    "source": "서울연구원",
-    "category": "연구",
-    "date": "2025-06-21"
   }
 ]
