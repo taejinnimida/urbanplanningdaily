@@ -1,47 +1,311 @@
 {
-  "updated_at": "2026-07-30 07:14 KST",
+  "updated_at": "2026-07-31 07:19 KST",
   "counts": {
-    "기사": 2394,
-    "정책": 1645,
-    "연구": 1190,
-    "법령": 1143
+    "기사": 2432,
+    "정책": 1658,
+    "연구": 1208,
+    "법령": 1150
   },
   "period_counts": {
     "weekly": {
-      "기사": 151,
-      "정책": 62,
-      "연구": 29,
-      "법령": 11
+      "기사": 156,
+      "정책": 58,
+      "연구": 30,
+      "법령": 12
     },
     "monthly": {
-      "기사": 1000,
-      "정책": 266,
-      "연구": 576,
-      "법령": 151
+      "기사": 998,
+      "정책": 270,
+      "연구": 586,
+      "법령": 120
     },
     "yearly": {
-      "기사": 2394,
-      "정책": 1645,
-      "연구": 1190,
-      "법령": 1143
+      "기사": 2432,
+      "정책": 1658,
+      "연구": 1208,
+      "법령": 1150
     }
   },
   "counts_period": "최근 1년",
-  "archive_size": 6372,
+  "archive_size": 6448,
   "coverage": {
-    "items": 6372,
-    "oldest": "2025-07-31",
-    "newest": "2026-07-29",
+    "items": 6448,
+    "oldest": "2025-08-01",
+    "newest": "2026-07-30",
     "days_covered": 364,
     "complete": true
   },
   "source_status": {
-    "국토교통부": "RSS 8건",
-    "서울특별시": "RSS 17건",
-    "경기도": "RSS 3건"
+    "국토교통부": "RSS 6건",
+    "서울특별시": "RSS 16건",
+    "경기도": "RSS 5건"
   },
   "backfill_errors": [],
   "items": [
+    {
+      "id": "f108ba6df6a8c597",
+      "title": "잠실5단지·은마아파트 사업시행인가 의미는 | “재건축 바로미터 30년”… 재건축의 역사에서 미래로 재탄생 - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE8yRERVUkVSaWxVWmZ1d3ozOVVFM2tlaEEtaHMtY3pqSTlCeE5QSm9fWDdFZXp5QkgzTXFxb0FEa1c0amtBeE1nSElkMVdEWW1OalB0djVYUWJDc2tyU1g4eW81dk9FUGtu?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "10f540ac4f8c5f8f",
+      "title": "‘1조1,118억원’ 목동8단지, 재건축 시공자 선정 착수 - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1Ya29iSXhpSjhYY2YzQ0MzMHpyTkVRWno0NGVyQjROTS02VG1IYWVzMEJ5c29jTDdLQlJrV0xLMzhIcFl2VG1idk54WFVNS0toNFM1dXY1Z0lJaHc4M251WkFkWU9wYnlj?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "9047c74e0aff3427",
+      "title": "오세훈표 정비사업 속도전…서울 재건축·재개발 어디까지 - 한경매거진&북",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBRbWRTSVFKb1dXMVNkR3JMWF9FUW4xSHcyNmEtcVl2VktzNEZTX3lVNTA1RjVpd0RBdEZsWVVlRkdDQlExZTFRRUxGS0p6MlRadGd6RjNqakF6UzkzWm91UDZBY25nODU5aXBWNQ?oc=5",
+      "source": "한경매거진&북",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "293dab0194bea7ba",
+      "title": "“용적률 올려 분담금 낮추던 시대는 끝났다”…‘재건축 이후’ 설계할 때 - 한겨레",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBBVWdsY0lWTlYyYmk1ZEJkMDVPUVBYcndyd0pOTHo1ZDZjWUNCMXBpZl9Pdl9mU01ma1ZnQjhyQkpiSUFIeFA4MnpncF96N1R5SWpWTnFCS0RjUGZWUmZoc19JalpwdEhHcHc?oc=5",
+      "source": "한겨레",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "b20ac491cd54a41e",
+      "title": "[동서남북] 부산 북항 재개발, 돔구장에 갇히지 마라 - 조선일보",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxObU8wdTlQRDBWRldIcF9MTmZIeEE5ek5UTHl6ODY3VWhwX3hZam84allReDRxUk93VzBFVmtBX191a2lSamhMNUVSY1dwUWZkR2I2eXRqbHJvbDZHcE01Q2VmOURteHlyWGhVZkpfR2Fxb0xhUU5PcE00endmQUxYcjRXRmhzaDdoQnJV?oc=5",
+      "source": "조선일보",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "9a5398fb538c9c5a",
+      "title": "제주 탑동 도시재생, 국가시범지구 도전…내달 12일 공청회 - 연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9UbG93YzJzcTJYQ1p2dWh6VFNYaU52M29XZTdfMGxIQnUwMDdTc2R0NEpXd0haSy1fem5BRVBzZzdYU2kzNlBYTzRBME4tM0wyalRiT244X2tubVZRbnpxVdIBYEFVX3lxTE9UbG93YzJzcTJYQ1p2dWh6VFNYaU52M29XZTdfMGxIQnUwMDdTc2R0NEpXd0haSy1fem5BRVBzZzdYU2kzNlBYTzRBME4tM0wyalRiT244X2tubVZRbnpxVQ?oc=5",
+      "source": "연합뉴스",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "f34081d9bdc82177",
+      "title": "SH, 재개발 임대주택 3천421세대 청약…내년 2월 입주 예정 - 연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE4tWS16MHp1ZThQeWpEQ0xmRlFMMnF4YzJJZm1sWS1EWnlUeHBkaW1rcHdjWGI3Q2Fwd1U3RkxKeGtaN3FWSkRSb1RobDJ4ZFM0OWl4QWRQeWVnSXNHR2xJTtIBYEFVX3lxTE4tWS16MHp1ZThQeWpEQ0xmRlFMMnF4YzJJZm1sWS1EWnlUeHBkaW1rcHdjWGI3Q2Fwd1U3RkxKeGtaN3FWSkRSb1RobDJ4ZFM0OWl4QWRQeWVnSXNHR2xJTg?oc=5",
+      "source": "연합뉴스",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "636807a031cfcc0a",
+      "title": "한국수자원공사, 하남교산 공동주택에 국내 첫 '세대별 수열에너지' 공급 - 에너지데일리",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oWGZxbHBRUm43Wjc5TlVocjlTYWN1NTIwelpWd1hZTWxhMVl3MWhSaXR2bG5MMXc3RnFFMmloS2Q0UHFUQWdGd1VtUkFvSmFlSFZJSjVxNDVSREJFcTY3MHk5VW9CcEJYa0lXSE5mRWt1dw?oc=5",
+      "source": "에너지데일리",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "008da7d4be1855e6",
+      "title": "&#40;석간&#41; &apos;G3 서울플랜&apos; 안전환경분과 첫 현장은… 건축공사장 동영상 기록관리 운영 개선안 모색",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/463030",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "498ab30d9008a03e",
+      "title": "&#40;보도참고자료&#41; 서울시 폭염 일일상황보고&#40;26.7.30. 기준&#41;",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/463038",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "d6280f316af68b0f",
+      "title": "(석간) 제12차 도시계획위원회 개최결과",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462973",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "e5068e7b4a08ef50",
+      "title": "서울시, 도심과 한강이 여름밤 야외 영화관으로… 이색 야외극장 운영",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462971",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "331191e7c15f5c93",
+      "title": "대상지 금호산 - 서울연구데이터서비스",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1tRS1nMFNHNDJSejIyQ1R6ZGZjUEU5QTlUVExtdXhXYVhrQzB4Z0xVRWtaRWdSa1BUemdGcFE5SlZXVVdYVnNqUE1fdmdjYVp6c3lNMA?oc=5",
+      "source": "서울연구데이터서비스",
+      "category": "연구",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "368f0115d4aab87c",
+      "title": "서울 중구 “도시정비형 재개발로 주거 2911세대 공급” - 문화일보",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE05YmNVaGFNb1lGSk81b1NnbjRySU9KWDJaZ001Y1pvQzNjdUktdTlGbzh2Uk1RR1R6YmE4aHdoSm1vdXdhaTJ6cGd1OWxGeUxW?oc=5",
+      "source": "문화일보",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "fb58fb7c1065da91",
+      "title": "서울주택도시개발공사 “재개발임대주택 3421세대 청약 접수” - 문화일보",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBIeWRMYm5id0tvbnRETElidVEtOUVBMFFHUkppYktOZzQ4ZWNtenpfSVQzWm8xWU41Q19ON0pyLUpBblZuZEY5RWRTM243VHhh?oc=5",
+      "source": "문화일보",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "0b18b577a9a342e3",
+      "title": "[기자수첩] 재건축·재개발, 주택공급 ‘정답’일까 - 매일일보",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAyTUcxelNzTmt0RkJCMlBUSlpUOWxxSDhSeUVwV0ZhWW1aM0xVb014MGdhNk9ySlBENHQyaW5wZnlNczdXRlgwaVN6TEx2bGhrUy1HeUliSjB5TlBKWEczZnZWMFQ?oc=5",
+      "source": "매일일보",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "f71f4b304f10282a",
+      "title": "오장동 도시정비형 재개발 본격화…중부시장 품은 고밀복합개발 추진 - 디벨로퍼뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE44cEVCRk0xM3NoZjVqODlBNEo3NUVFQU9vc2cyMTN2bmowX0EyR0otcVA5RGdhZ2tVb0pyY2dYOU5KRHdlc19QWnRnS1lHaFdoTng1RlVONjRENlhoU0NldlhYSGd2WVlj?oc=5",
+      "source": "디벨로퍼뉴스",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "29f28ecf5615c78f",
+      "title": "“재개발·재건축으로 성남 대전환… 첨단산업·교통까지 함께 바꾼다” - 동아일보",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE44S2h1Wl9pYUFvZnF1R1dqVHpqODdrVUFnOGdKYVhVcVBNZmtJbEhYTVlsbWZtOFctY0RrUFBnNTJVQ3ZJZTBVQWw3Ry11QVdRemtVNW0tSDZZWlczSDRPVEFnSUdxUdIBZkFVX3lxTE44S2h1Wl9pYUFvZnF1R1dqVHpqODdrVUFnOGdKYVhVcVBNZmtJbEhYTVlsbWZtOFctY0RrUFBnNTJVQ3ZJZTBVQWw3Ry11QVdRemtVNW0tSDZZWlczSDRPVEFnSUdxUQ?oc=5",
+      "source": "동아일보",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "2b392bda9a6e22b8",
+      "title": "“성남 원도심 재개발-분당 재건축 속도… 15분 전철 시대 열것” - 동아일보",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE80NkVRX3BXZ2otZGh2NzRnalIzem10U0FSU0lFQlpUcm1CQ2djUkxjYmRYdjA0akctb3V5SXF0X25wakJBQ2EyUC1LemFHNzd6bWNWX2hiYkV0MTFIZDhTR0Q1cVVZT2QwTDQwZjRub0FDY2VWRWfSAWZBVV95cUxNdnhaWDlJTXMxU2ROaml1Wk51a2lFX2lheUhMbXNQYkE5bmJXbkU4SmM2VW42MmFhckF5NERvZUtaZ2ZEZ05kVWNHVVJVYlRWUEItNUFYQy1aTm1UbGV4S1RBWktYTHc?oc=5",
+      "source": "동아일보",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "6dc12178fe277676",
+      "title": "목동 재건축, '동시다발' 입찰에 건설사들 셈법 복잡 - 더구루",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ua01xQnVtR0pYYmh4OG5WVGtBVEhGWXhjQTZ1ai1qVkNsMC10WEFFdkk4TzNZZjlEcHF5NkpJV1hLSDdRLXVSVXVIS01ZOEpZYTUxSzFHZjFLbUx3MzZDeA?oc=5",
+      "source": "더구루",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "35cac2ab75d01684",
+      "title": "음성군, '준공 이후'를 준비하는 도시재생, 지속 가능한 지역활력 모색 - 대전일보",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE8yemFSRWQzS0FweTBxSmZ4QkFtSFgwcXFGX0Zwand4OFVSV3FjckFBQ25XVEtkYzBIdTBHRmZQdGdLZERsS3pxMDZVcWYwcDc0QkhhYjBIVzUtQ3Z3QTJtc1dmX0NLQ1gxTjRkN0JPbDU1TmfSAXNBVV95cUxPMnphUkVkM0tBcHkwcUpmeEJBbUhYMHFxRl9GcGp3eDhVUldxY3JBQUNuV1RLZGMwSHUwR0ZmUHRnS2REbEt6cTA2VXFmMHA3NEJIYWIwSFc1LUN2d0EybXNXZl9DS0NYMU40ZDdCT2w1NU5n?oc=5",
+      "source": "대전일보",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "1cc9e9dc2e214fb3",
+      "title": "중구 오장동 148-12번지, 재개발사업 정비구역 지정 - 뉴스핌",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5WTE5taWU0aTJENGRuMXNvYktYdTdlY2FUZ09LZkhkeHROUlZJS1dBNXkyeHpwNFhZN2xkLVBNRUVuRHBPdm5DRXJTRGhZczdHemJualNGeHd5LUhL?oc=5",
+      "source": "뉴스핌",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "2d20367550bd4f16",
+      "title": "[월간 국토] 2026년 7월(통권537호) - 국토연구원 전자도서관",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNX0hjaEItNVlFbzB3NG0tMGpLZFBaYndfMXNQNlpSNkZ6cjVuVnhtWVo0STVIVGpRd2JxQkRIRTR5ZE5QeDlqdGxfVmVkZWpWMWRZbGNkbzZLTTRvV2xGZVBHNXQ5czg5a09VdHlwaUZiUnZNNy04c01mVEJIS1BTcWZtOHcxR0JaSnl3T0VDZ2Nqa1lteWJjRXZB?oc=5",
+      "source": "국토연구원 전자도서관",
+      "category": "연구",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "31dc9dc1bbeae5a3",
+      "title": "‘26년 6월 주택통계",
+      "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092274&src=text&kw=000004",
+      "source": "국토교통부",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "293d41a418fb957e",
+      "title": "1.29 수도권 신규 주택공급 확대 방안 관련 인근 부동산 이상거래 기획조사 결과 ···위법 의심거래 346건 적발 및 통보",
+      "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092273&src=text&kw=000004",
+      "source": "국토교통부",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "8150eae839d25cdc",
+      "title": "서울 재개발 임대주택 3421세대 모집···내년 2월 입주 - 경향신문",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9lYnFSQXFGWTIxSWRYV0xIaWlEXzluX0F0TmR6Vzh3d3pucVJVbTE1QW9XbzVHUGd1LWRCeDRSR1pRN0VaOHRiMlpRWXZ5bTdYanJPNUtmalBtUdIBX0FVX3lxTE1qZzlNRHVLM0F3aWwteWFtTGd6Z3I0THpkUnR3Rk5nNkJ0ZXpya0Z4QjBMSmJ4WUJSbThnOTAzbXJZLU5XcTlwcEI1MDFuazBnWnZfUVRsZXFyMDVua0Rz?oc=5",
+      "source": "경향신문",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "39fc1201037544db",
+      "title": "경기도, 팥배나무 추출물의 탈모 완화 가능성 확인. 특허 출원·제품 개발",
+      "url": "https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=S017&number=71104",
+      "source": "경기도",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "5abd4a357d65500f",
+      "title": "경기도, 소규모·임대주택까지 층간소음·공동체 활성화 현장 자문 확대",
+      "url": "https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=S017&number=71102",
+      "source": "경기도",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "2d4174e7ec6836f4",
+      "title": "7.30.(목) 17시기준 폭염일일상황 보고입니다.",
+      "url": "https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=S017&number=71106",
+      "source": "경기도",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "78dcc8f4b8b1326f",
+      "title": "경기도, 폭염 장기화 대비. 31개 시군과 대응 방안 논의",
+      "url": "https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=S017&number=71105",
+      "source": "경기도",
+      "category": "정책",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "ba6fbd2a8176d68a",
+      "title": "세종 공공주택 무산 파장… 시장 이어 정치권도 \"철저한 원인 규명\" - v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5MNjFwa1phaFpxTVJwUjRhMHNPMWlOYkJva1h2OG85elNSd0RQVFhOcm9TeWpkRnItYkRJcWQxUFpLUG1DclZLbTJLNzJSNms?oc=5",
+      "source": "v.daum.net",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "2bf757e868560ecd",
+      "title": "수원 우만 재개발 물꼬 텄지만 일부 주민 ‘동의율’ 놓고 반발 - v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBzRFZhYUgzN2dacDdRNFIzb1JXak84MmtndlBscjIxM0czNUNxRy1VMThwYk5Tam54OVVPekdBM1ltV19SVmlaOGFKRVgtWE0?oc=5",
+      "source": "v.daum.net",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
+    {
+      "id": "da4c27bbcac474ca",
+      "title": "창원 신월2구역 재건축 조합장 성과급 20억 추진 ‘후폭풍’ - v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9WX0FwSU5wbXBxMzl5UHZ0Q0JlazBQcFRjLTZFdmg0UUFQdXJ1am1PdjVmT3loWEF3ckhCZTNmMUh5U1FlSUIyVDdFelBxYUE?oc=5",
+      "source": "v.daum.net",
+      "category": "기사",
+      "date": "2026-07-30"
+    },
     {
       "id": "b4ed278018fadbbe",
       "title": "강서구, 재건축·재개발 등 정비사업 아카데미 개강 - 한국주택경제신문",
@@ -75,6 +339,22 @@
       "date": "2026-07-29"
     },
     {
+      "id": "eb32e809ac953b10",
+      "title": "논현동현아파트 재건축조합추진위원회 정비사업전문관리업자 선정 입찰공고 - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE85OHNPR0ZZY0MwYkpGQXJPLTNOX0MxbTZaREcyNGRyak8ydWVvSTBFWGlDWjlmbmlWRlp6Q3Y2Rk83RFJQcldXTEFwckYzaGpiSmlLVjUzWDFwRUtvazVDbi03NEJTcVR6?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "52dfefdc80995fbf",
+      "title": "용호12구역 재개발조합추진위원회 정비사업전문관리업자 선정 입찰공고 - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0xREczUC1NVmg5SmxFM1lBWXd2QWtkcHhHOF9BVzFCX0M3NWdHX2dzb0k3ZmJXNzdjVlhNMlI1S1BWcEdyNzg4eFlOWkJxc0MwNllzNnBhQnVOTnFueXFMN1pXcVhFZUVh?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
       "id": "9d29aa9d03e6e3c5",
       "title": "서울 재건축 연한 아파트 쏟아진다…고층 많아 ‘공급 기여’ 한계 - 한겨레",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAxTjYwc0RqcU5XSkNYRmpSN0tDRFlGSjRybVN4bHBFaUZIYXpudWtERDZYdjlOOG1BOTBOZFZoOHE1YzFTWWlKcncxaU5fSE1xOEo3Z0hOb3hTLVZPTjM4MEpBNmNxcVh3aVE?oc=5",
@@ -103,6 +383,22 @@
       "title": "“지속 가능한 도시재생”…음성군, 사후 모니터링 · 중앙부처 연계사업 추진 - 음성타임즈",
       "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5PODdXVmlfOFRQaGluYVZuV3pDanY0TXRyT3NnVmcwQjNTVjBxOF9RendnMWxYZWZhMjhzcGxfSFdIZ1FTSkZmQjZjMGtrMUI1WHU1RndJNjhMSThRU0w5aHl4NW1QcXlnSVE?oc=5",
       "source": "음성타임즈",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "c75af2135f84a699",
+      "title": "강남구, 재건축 '신속추진 전문가 지원단' 출범 - 연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5oSVREYU0xc082aWdFY2FrbkxxX3U3M2wtcnlOUXVGdV9reTdKdlhPZkZWTl80blhHQWREdE1QTFhBYWp1bi04SWVVWi1wbUMzSXQ4QlBud0pjaUXSAWBBVV95cUxOS1Rfb2FkVW5EbjVTOC1HYWF2WWRBSzdncUpKenFrSWZSOG1YZHJDTkRkajByZTFIZ0tKc3IzNG9EOVM1cllEemMyT0llQmlIVVBHSVhsWFl5cm9EaXQ0Umc?oc=5",
+      "source": "연합뉴스",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "793cdf2069fc455b",
+      "title": "같은 땅 놓고 ‘모아타운 vs 신통기획’···자양1동 재개발 갈림길 - 시사저널e",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1vWExOT1VReXVSNVFMUTlmUnhmeWt1QWF5VS1DY25sdmlqclRuRVZuNDliQ0k4cjVvdzhMNzJmTzFIRERvSGxBV01CcGhWMVNSX1VmdUl3WHF3WFVDSHpPZ082T3B1UHhPQUZPc294X3llZ9IBdkFVX3lxTE1jZjg3MldOM3pIekFjWlVEVWlJdjlKWmJ4MkNSeG5oNFJzSTFjYlNfZ2dHejJ6OVZqZ2VkYzN4S0cyeGE3dlJxTGVLMi1OQVRVc3hkWjVQY0pQQTNUVWJGTWVucWZSU0E3OEVUMzlHTTQ0Z3BFRFE?oc=5",
+      "source": "시사저널e",
       "category": "기사",
       "date": "2026-07-29"
     },
@@ -155,6 +451,102 @@
       "date": "2026-07-29"
     },
     {
+      "id": "b08f97647207c0a3",
+      "title": "(석간) 서울시-대광위 협력 결실…모두의카드(기후동행패스) 9월 1일 출시",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462949",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "91138063a693ce62",
+      "title": "(자료제공) 서울시장 사후동정 - 휴가 중에도 폭염 취약계층 살핀 오세훈 시장…29일 종로구 어르신 무더위 쉼터 점검",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462935",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "3de1ee53416426e7",
+      "title": "(자료제공) 서울 동남·동북·서남권 폭염경보로 격상… 서울시, 폭염 대응 총력",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462912",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "c3de33d37383716b",
+      "title": "대상지 시흥무지개아파트 및 주변 - 서울연구데이터서비스",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBtbWwxQldZQnVPakZMeDAyVWp4dFNxelB4U0FZaXlDUm1TWHVpTXpqUFJCOWllcWVVdWRsY3g4aXJ3YXM0bGs3c0JkSWpxeWgyNEZwMGtB?oc=5",
+      "source": "서울연구데이터서비스",
+      "category": "연구",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "df842dc368466e9e",
+      "title": "대상지 충현동 일대 - 서울연구데이터서비스",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE10TGpCVnFIRE82V25QdlVyRmoyY0pKcFE3MGVNb3BDdEZpaXlpQVIyT2xzcEpWc0NuQlE3a2lWV09jT2NzR2NLWVl0d3dMM3NCWmV5NQ?oc=5",
+      "source": "서울연구데이터서비스",
+      "category": "연구",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "a0258a4aba37a04c",
+      "title": "대상지 올림픽공원 - 서울연구데이터서비스",
+      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE40SWE1MU1OaFFySXVkWXJ5MXl4SWMxeXh0NzNPSnpmcERmUl9YYVJ2UWhXTFdRT0kzQktHTGNSSUlFRklLVlVxR1hQV0M3aC05bFpsTTduRk93cGYybVJHUURB?oc=5",
+      "source": "서울연구데이터서비스",
+      "category": "연구",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "c1be4df84a0b69e4",
+      "title": "대상지 맞은편의 관철동 - 서울연구데이터서비스",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE92Q0VGZFppNWVTV3FyMjJ2UDAyRmF6UXhzYXFGT0wxcC1VaVM4RWJ2N1Q2Ny1hYnFyNXJyVGZWQnY4Vkgwd2E5VWt6YVpuVjZMYjNQaA?oc=5",
+      "source": "서울연구데이터서비스",
+      "category": "연구",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "7f241d5e95b955d2",
+      "title": "[단독] 준공업지역 공급, 지구단위계획 등 서울시 권한이 ‘마스터 키’ - 서울경제",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1fR3E3OUxuSjQ0TTZ3MHdqRzBmSEtvUnlVVm8zZHNTTVo5bFBCQWtrT1ZvRjBBYzA5ZUVPNTNud3U3OHVTcWp6U3RBbVVkYmVqN3fSAVNBVV95cUxQeGlKNnNrb1A3QXdudG4yNm1TbHRTM2ZKV1ZZT2w0M2ViUVNSNnlBajlHNE1tWEZhckpfcndDc2pRZTBVaG1IYnA2NmM2M2kzNjQ3OA?oc=5",
+      "source": "서울경제",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "413f9baa831aae89",
+      "title": "강남구, ‘재건축 신속추진 전문가 지원단’ 출범…“재건축 속도” - 문화일보",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBEV0ZiMVhHUmxjd00xT2xOem5Ba0dRVXVaLXdMUGVDX3g1Q0pac0xyeURSdFFqRHRKZm0tUnQ5ZjR4d0RLbDBaVTZEZkgzZUIt?oc=5",
+      "source": "문화일보",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "103afc42ba170fc8",
+      "title": "강동 명일동 재건축 속도…5개 단지 정비구역 지정 완료 - 머니투데이 - 머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1DdHFDYjRzNmxVMDBzbHpLQnBTQTVqVW1sU1QwYko5ZWtlLUxvTmhYQkwyMHJuMHZkS293NkNROWNneDRBODNDbVNMQVlxMTREQUFOdlBiT3RrMzNheGptWFVlbWFNRTh4ckHSAW9BVV95cUxONHBYeVROZU50RFdPbG9uaGdZVG1QbnZTVnpsOWFDZmtVbE1NbENERnUtQWpiRHVVNWxQdHJKY1N6a3A3S0xZY3pGX3ROTFVJaW9SdDhJT2xIWFk1MGthclcwOHFoM1VVM1NINm5RX1E?oc=5",
+      "source": "머니투데이",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "2503a30b1b23101c",
+      "title": "강남구, 재건축 속도 높인다…'신속추진 전문가 지원단' 출범 - 머니투데이 - 머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5WZ3pLdXZSZVl5RUlUNlJKa0hUSUxwUTdVSG1Oa0dsUER5a3VzYlpVdHZtZHhDa1VnYTdRMlVqZmJUYXpEejNqNDVMTFZjWWJuOXhscXM4RHgtanQ5S3Z5UVc0djdQcVg4UEHSAW9BVV95cUxOV3lEcjVXa2FZZzE5d3l1NGcwM1k5bnYwQ2JDUF9oX214NTdxdVNBOGJ1c2hQSkRtQzBYS2NuVUlLV3NOTVNKU1ZONl9IaTBRTFBkS3JucmJiU1YxVDJHUjZFaUpjX2pRVTRpVzMwOTA?oc=5",
+      "source": "머니투데이",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "511451b4a18d2c34",
+      "title": "\"웃돈 거의 안 붙었다\"는 용산 재개발 '이 동네', 실상은… - 땅집고",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE05WU1zV2xvNFdhWWRGN1dOYUpfRlI2T0p3VU1VRUdoRGFXQUNQVHBjQy1RaFZHTVVSbEdYb1E2UndzUnpNQ0ZTY3p3dEl6MTRaSjliekFjYTRiRXhJWnhZMUFHVkY3OHRXSXVxZTN4MlhYanJEankxSTNoMjRndzjSAXNBVV95cUxNZktackVjNUlBNDlUQjZqZDNoOEo0cWcydEtjMnAtR2MtempGVC1yYVY0eEVQNmJBMzZOQzlDUzRsMS1oWWlRSjl1dHV5bnpGWDdKanlvQmk1d0xXdF9nOG5PRjJGSE05ZEpHeU1oSGExLUN3?oc=5",
+      "source": "땅집고",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
       "id": "88e15a7da56ac662",
       "title": "'서래마을 1호 재건축' 삐끗…대우건설, 시공권 잃어 - 더구루",
       "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9qdlp4REJ3MjJKaUswS0JscWRHdkYwZTRINXBOLWdJeHMwbnNWMTR3SVp1QTlmcWkybEVTQ29sM2tQUHBBeGJNSWdOQzAtaWJaX0lpNExqTzRHUGt6dnRQNFV0TQ?oc=5",
@@ -167,6 +559,14 @@
       "title": "‘재건축 최대어’ 은마아파트 CM 수주전 불붙었다 - 대한경제",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9QUUtqRFU0NklCN29VNkdieGVPZTlPSWdpa3VXQmg0cVlla1l2UzByZFFDbFpTU1NBQjg1aWhJRFIzOGJXY21DYzRQc0ktRENDckVCUmtDTnNXcWQyeWtydUJ1Q0EwUXVIckprN2gzQ0dWb2c?oc=5",
       "source": "대한경제",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "66a63a74b5948a61",
+      "title": "서울 강동구 '명일우성' 정비구역 지정...명일동 일대 재건축 속도 - 뉴스핌",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9YU2FMTHpkdXVwUkw2d2FBNE5XWTlBaGIxMnVhd3U4MnJsVkZLa0tnU0JNc1pMcUJTMkhyaWRucHozT0ctOXFILWlLZHhTdldLenl5Zmp1UGZFQWJ1?oc=5",
+      "source": "뉴스핌",
       "category": "기사",
       "date": "2026-07-29"
     },
@@ -267,9 +667,25 @@
       "date": "2026-07-29"
     },
     {
+      "id": "a618324c26d6ec77",
+      "title": "[인사]건축공간연구원(2026.7.29. BBS) | 언론기사 | auri 소식 | 소식 - 건축공간연구원",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQM0owa1AwMmV3OEtvdWpCTlBac28tVGRyVy14RlhMMVdDMjN5dUtvQi1TT0F0aWNac0ZENEp1QzdMTGcwZzJwV0F2ZDFZQzExaGtkSEhhU3FkWjhBS2x6MGJ5NTMyYzM2MWo3cGdCMVA5RDZyaC1IUHFnZzJfdjRqaFdmdndyQQ?oc=5",
+      "source": "건축공간연구원",
+      "category": "연구",
+      "date": "2026-07-29"
+    },
+    {
       "id": "f0f76e20fe8d594e",
       "title": "강동구 명일동 재건축 '속도'…2036년 1만5천호 새집 공급 - v.daum.net",
       "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1neGdXUnBncFZqWkl2Z19Iam8wdC1kbHhfdzZkYnZfVHB4RXZVeUlyLVY1MzktUkhsRHRZVjNVamJGMDd3Y0dTbDY1NVlBSWs?oc=5",
+      "source": "v.daum.net",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "edec0bc5bd3b5012",
+      "title": "용산구, 재건축·재개발 '갈등관리조정관' 위촉 - v.daum.net",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE42eGQ2TjlNV2dWX01wTjYxN2Ewb3lWWmkwTDNERkFKV1ltOXJLeDM3QmNTX2x2bnhkbzZKSDh3Vng5aHYtVEJvTlA3dXZ6dDA?oc=5",
       "source": "v.daum.net",
       "category": "기사",
       "date": "2026-07-29"
@@ -303,6 +719,14 @@
       "title": "논현동현아파트 재건축추진위 정비사업전문관리업자 선정 - housingherald.co.kr",
       "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9KZVpGQ0dUZWtkLU5HX214S3BWQ1Z1T3JfM0NJRlg4eVc4UHJDa0hoMTFvSkNneER4bFJfbFE5WTNxQmJySUdyV0RQQ00zNUtIMlFRbkNTSGhQZGwtTlZpcmJMeHpLLVNmZW5tZktkSDFlTzg?oc=5",
       "source": "housingherald.co.kr",
+      "category": "기사",
+      "date": "2026-07-29"
+    },
+    {
+      "id": "9bb30c9860a78ff1",
+      "title": "서울 강동구, 명일동 재건축 속도 낸다…2036년까지 14,502세대 조성 - BBS불교방송",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFB3Z2NpblFhc1FMUl9pdEp5eVl0N0YzdlFUeWY3SGYwSHhBSmdoaElEM0tRdUc5N09xaDlrTHhVMFhSblRoUW51ZGpxX3dJZkc5WHpoTzZMWUUtT3E0VXY0eHQ1b2VNejdzMjlj?oc=5",
+      "source": "BBS불교방송",
       "category": "기사",
       "date": "2026-07-29"
     },
@@ -387,6 +811,38 @@
       "date": "2026-07-28"
     },
     {
+      "id": "d85cc773aa85e50a",
+      "title": "법원 “재건축 분양제한, 실제 거주 여부로 동일 세대 판단해야” - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBTT29WTHpWTlVCa0RKMmlrM1JjdG9JYVdJaHR1M0duVDZ5NVIybVR5TkNrTnZwNk5VcTdlZFBSZGtzUTRvWWRzRkd1V0d2WnEyUzBFTy1RalhCRUtvQlo5S2E5ZGpTVkxK?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "fea3561934031788",
+      "title": "서정3구역 재건축조합추진위원회 건축설계(정비계획 수립 지원)용역업체 선정 입찰공고 - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5NdlVMRndnTVoxeW95Vkc1Z1J1SzJ5RUkzLS1UWDNuOGgySjQtZHY5SWRXSVItU0E3SHJ6ZWlKQy1ZQ0VLTFFPR2dmODRBT0Jmd0VHTmRVSDJtaDhVUkNjanRid1JvZ3ZY?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "6ecc820897422f69",
+      "title": "작전역 인근구역, 재개발 추진위원회 승인 - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9hWEZHc3BnTHcxZkQzcDlZR1dKYUU1T2FvUmdVeTg2Z3RoTVV3aTJpZ296RkJiakl5eDY2ODNKZUdUNk83QnZ2bVhISGlCeFFNYnVuU1RKSHNIeFBhak9BQnU5eXhFY0RC?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "6a7eefda70a0e983",
+      "title": "울산과학대, 울산·경주 도시재생 우수현장 벤치마킹 프로그램 운영 - 한국대학신문",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBpeEs3VGdLMDUzdFBKdnl3Ri1yVmdMT3Z2UTdnOURaRXlFMGoyYUNOZWxfWXVVT3loTkxaVXg3VzJyYUxjdUVQQ1dtSlNMcVRQcFpIVGdQczJzRFZfV0Rra1A1TmZ1QQ?oc=5",
+      "source": "한국대학신문",
+      "category": "기사",
+      "date": "2026-07-28"
+    },
+    {
       "id": "6de703154edb80bf",
       "title": "\"수수료 내더라도 속도가 우선\"…돌아온 신탁 재건축 - 한국경제",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xcnBzdWZFaDB4dFBVallIOHB3cGhSal9aZ1VBVVppWVNUNjYzLVIzMTVIRV8zenVsMVIyU2kxaXd4cjJMTUVaUmtsUXV6NXp5ZG4yYmgtVzFSUQ?oc=5",
@@ -407,6 +863,14 @@
       "title": "태릉입구역 주변, 지구단위계획 결정(변경)(안)“수정가결” - 하우징타임즈",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5Wcm1jN3JrTDFtM1R6aVIzUkRaWkwwbTVXd0tuek0tdFIxOG1vNW5nOENCZFRYNERSd25YSjBPa0ZPTC1RY2dvSHZDOWhybHlfcTZXNzN2RjBXWVg1bFlETHBwQm5wNkpIVGJMSlNKeFM?oc=5",
       "source": "하우징타임즈",
+      "category": "기사",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "b2498f6735dd090a",
+      "title": "\"이주비 대출 규제 풀고… 재개발 지역엔 비아파트 공급 확대\" [정비사업의 명과 암 下] - 파이낸셜뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5mX0xZUXNhLS1SbFlGWHNqWmdPMU9tNEpubTFJajFnT1BudVFDUHBfV0dNV2xvZW8wbjVabHliMlJCSllZU1Zfd3Q2R2NZSXFIbExnbk55eUg0UQ?oc=5",
+      "source": "파이낸셜뉴스",
       "category": "기사",
       "date": "2026-07-28"
     },
@@ -483,6 +947,46 @@
       "date": "2026-07-28"
     },
     {
+      "id": "11f7a95252768e90",
+      "title": "(석간) 폭염 잊는 도심 속 시원한 발 담그기! 서울시, ‘2026 청계천 물 첨벙첨벙’ 개최",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462837",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "d253127d839ec163",
+      "title": "(석간) 서울시 지역사회서비스 교육, 비대면 64% 확대",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462835",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "d564060993029456",
+      "title": "서울시, 폭염 식히는 '시원한 아리수' 도심 곳곳에…아리수 나눔 냉장고 본격 가동",
+      "url": "https://www.seoul.go.kr/news/news_report.do#view/462803",
+      "source": "서울특별시",
+      "category": "정책",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "0a999f8febc4e8cb",
+      "title": "대상지 마포구 도화동 재개발 구역 공사현장 - 서울연구데이터서비스",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5uZWhIUHZzNlBlcWhFMUJPb2lfQUZWR3lZUVFuWnl2NWZBRXpWbEZkbzNvOHRUTndqT0xrWU1WM3RfYzhNZ0xBdkxnb3JoQmdYTWRwYw?oc=5",
+      "source": "서울연구데이터서비스",
+      "category": "연구",
+      "date": "2026-07-28"
+    },
+    {
+      "id": "e835ac5f5d6830f2",
+      "title": "대상지 대림시장 - 서울연구데이터서비스",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9hYy05dEpaUUJrdGFOTHJ3UER0cjhpTnZ0RXJpX1RDU1hsLUNabGsyQWhsWXdrX1lRMTFreUVxb21CcXA5X3UwWlBmTHA5YmZLeVJxZFZR?oc=5",
+      "source": "서울연구데이터서비스",
+      "category": "연구",
+      "date": "2026-07-28"
+    },
+    {
       "id": "2bac6093ad8c9650",
       "title": "강동구 “명일동 재건축 속도 낸다”…5개 단지 모두 정비구역 지정 완료 - 문화일보",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9qWWFiSTlOZXlXTXh5TUc5OU9VZDVVM3NxWk0tUWhTa3RUdGJ3WFYzaS1TeEhqd3BpVGJkMVFSU1JHWjVzUURlLU9YNEY1dG9V?oc=5",
@@ -497,510 +1001,6 @@
       "source": "땅집고",
       "category": "기사",
       "date": "2026-07-28"
-    },
-    {
-      "id": "290a1e4da61d4e09",
-      "title": "[단독] 자양4동A구역의 재개발 ‘묘수’…구역 내 재건축 조합 ‘해산 합의’ 도달 - 디벨로퍼뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBJWU1EZmZOVkw1VnJiay1JdDJFWG5LckJoZEJCbzR4dW1JTGlkY19nRW8xWXI2eUxBT3dEdEZUYXo0OUc0S1lmamhUSkN5N1l5VzRQbGxSR1VwbGlyU3E5MVc3SXdzWDBu?oc=5",
-      "source": "디벨로퍼뉴스",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "40f9080975941d1a",
-      "title": "은평구 최대 재개발 ‘갈현1구역’, GTX 연신내역 품은 4,467세대 대단지로 > 뉴스 - 더코리아",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1QRTBIcXpWejRNRTdWYmNJSjBqNkI2UGNxODdVWmFGNWhHbUtHemNHbEZnTlNTaDZlUk16cElUNE5kZTVsYTZOMlZoLTFBU3VGSE9EdkJRdUxfTUV3aHAzRDFMczFXMFM5NzUtUUxNV0w?oc=5",
-      "source": "더코리아",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "1dfbb71146a48852",
-      "title": "[단독] LG CNS, 태국 최대 개발기업 아마타와 AI 스마트시티 프로젝트 '시동'…동남아 AX 맹주 '군침' - 더구루",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBKSkJOVkRPQU9yXy15dFFvenJjRC1NWGwyVnA4djhLem5tcHBrRjNzdWhDeFJxXzZLY0kyeVdkUVRDLUlXYVVobFRRRWEtLXFOWjBlX1Z2X3hhU3hnNHJ4MF9JVQ?oc=5",
-      "source": "더구루",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "11da64cea9993222",
-      "title": "‘1등급’ 없는 농촌고교 여전…“인재 유출·지역소멸 더 부추긴다” - 농민신문",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9xeXYxSG10ektabW93eFM0VXQxZDJLTFdNdGxXa0NOUHJSRFBjTm52UzVtbGtXeE16VGVYclRTWW5pU0V5X1RPdl9iNXZRV21SeXlZQ0JYVC1Fdw?oc=5",
-      "source": "농민신문",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "51ea67f4a1d2dfa7",
-      "title": "- 국토교통부",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Ub2dnRXdYbjFST0tBQWw5SUM5UjRaSnN4M3Z5VXZrVmpDQXhXdUw1dUNkSjV2VmJrdkM4Mng4cWxYZ1lieTlXR1hDOGVtOVRKNGx0a2RWOUU3M2hicWN4V1lsZ0lEc2RJ?oc=5",
-      "source": "국토교통부",
-      "category": "정책",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "48ccc19e4f071b01",
-      "title": "’25년 말 기준 토지소유현황 통계",
-      "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092261&src=text&kw=000004",
-      "source": "국토교통부",
-      "category": "정책",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "92e1e32f20c1114e",
-      "title": "[설명] 주택공급대책 관련 내용이나 일정은 정해진 바 없습니다.",
-      "url": "https://www.molit.go.kr/USR/NEWS/m_71/dtl.jsp?id=95092262&src=text&kw=000004",
-      "source": "국토교통부",
-      "category": "정책",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "4aac738330046405",
-      "title": "국토의계획및이용에관한법률 - 국가법령정보센터",
-      "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNMG5objNJb2d2S2VsaHo0YTFzdFI2UllpU2xDRkNzZjNORFBSUEdvZDVIQlF1MkZJTTNjY0FJQW9jVV85a3hZRkllZjNiODRrX2QydENDcmxlVHRrOHVQcjJnUVVOYkhUX0NZN1AtRjZrZnBaVWdfVk0yNTdiekxKRWpIMGw4UlRjY3NvaWZGZDBuWlpGYnVCN1JDQjgxbFRYWDgycnFQYWxKczlXR1JQR0hmQzJ6RFl5Y0tFem5hMEttc3hpNnhmazdWb3ZTd182RzNqalUxdTZDNDV1QWZRNUNpbmlZb19CdjRCcU1BSWtuQjhaRmNnc1hvcUZZb3BXVlBwb1lVb1ZIVFU?oc=5",
-      "source": "국가법령정보센터",
-      "category": "법령",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "8d86a5a962cfff4e",
-      "title": "도시 하천유역 침수피해방지대책법 시행령 - 국가법령정보센터",
-      "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNT0NpQzlvVUVGU09aenZHR1dUWEZBanNwRU1Ra3RNMmcxaEpoMUhHRDVYaU54NTRpVE1zOHZ0SUN0SUlOZWdMTmFTN0FyaUhnMWh0Vk10MEpKMjU0OVIyelB5blZVZWR3TGI4dEpHeTVlNkw3dzFreFhxV2Ytb2J0U0trWENEdGY5X0pnLW5PaWRlaUpEMkJCcnVwTm13c2xzeTFrcXhjdVdsUEV5Nmo1UzRFY3A3ajlrQ3FKNnExblplU0tteDhMQVZVMzV3TjV3dTNyY0luZTRGQlRROE5UNGlzNy1QY1JYNVpHY2tocDNjcjBZS0lGSDRJMFBGbFMtalRQSVl0M0wxRDZETDMtX05IUHhqci1UTE1pd3h1MGZVdjlKeUdtNjlOc2Y5NFB1WUtJejFxYw?oc=5",
-      "source": "국가법령정보센터",
-      "category": "법령",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "877fedacb5d5a85b",
-      "title": "도시하천유 역 침수피해방지대책법 - 국가법령정보센터",
-      "url": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOcGREQTdIRFl3aDBiOW1GLWY5SDdrNlZjelJiMFBycUplMnlTcTVMTlhFZHBxamE0R0ZrWEhjZnAtQ1BqcV9ZVUNaalRqSkFJOERUOTlER3cwNXVGM1lTWWJGNDJsenlpdk1Fblp4UTBSWl9reGswdXdGM1M5T1dac0t2ZlZlemotVDRJc1I3am1vcVJYZndNY2ViaGNTWmUyTTFDZ1NlN0Y5bjJzaThsaVBDUk4yeUdvTFpaREQwMi12dUktM2xvUTFMdjkxdUdneFM2UzV4UG11SElkbmtJbDdFdWNfMkpVVUp6Q080Wk92SU84bUp0ZzJBSGdMWVNBYi1ydVlZRXhxT3dqXzFv?oc=5",
-      "source": "국가법령정보센터",
-      "category": "법령",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "0e91834ddcec9ca1",
-      "title": "항공교통이용자보호기준 - 국가법령정보센터",
-      "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxONGJkemtLUjFHR0l4TV84YnhhcGxjYnZMVHVwU2hNUVhtX3hsZjFxNWZRNUhFbkF6cFJYMHRSX1o0RnZUSXdVTGVCc3o4S2czTXNKMjZLdEphYkVYZ3BLVXVsVWlfRVF4Tzl2b1JkN0tIb19XaGs0Zy12TXJCTUZtWHNid3JZUjRzQWdrVWlQenlRV01XeUtzRWZ6ZVVkalZ2UUgtdzl2LU04U1pETnllcVZIS3ZSUlgzQ2ppeFhWMm4zck1KUWtMaWNvV1hWVi11T0lPVW1QUXhfT1h3dmVrTHdXUlhGT2t6T2wyNVIwaw?oc=5",
-      "source": "국가법령정보센터",
-      "category": "법령",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "0311dafadf97343e",
-      "title": "경기연구원, 3차원 지도로 골목 단위 폭염 취약지역 짚어내",
-      "url": "https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=S017&number=71076",
-      "source": "경기도",
-      "category": "정책",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "fe4a122d9333fc03",
-      "title": "7.28.(화) 17시기준 폭염일일상황 보고입니다.",
-      "url": "https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=S017&number=71085",
-      "source": "경기도",
-      "category": "정책",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "b8b1b409841e7d8b",
-      "title": "추미애 지사, 민선9기 도민청원 1호에 “경기남부 광역철도, 제5차 국가철도망 반영에 모든 행정역량 집중”",
-      "url": "https://gnews.gg.go.kr/briefing/brief_gongbo_view.do?BS_CODE=S017&number=71084",
-      "source": "경기도",
-      "category": "정책",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "999174ee4ffeefd3",
-      "title": "국민의 삶과 연계된 건축의 새로운 도약: 건축산업 및 건축규제 합리화 방안 | 세미나/포럼 | 소식 - 건축공간연구원",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPcWxCdkRYbXdDemdTNC0tOWZDNHZpUExuZlpZNldHandRYlRtcWdIb09xVUo1dHhJdkRjaFpBbmxYd0hmWUxvYjhRZkFOVkJ6cVRQNWV6MHZ3WTNXa1lOdWR6QkkyajVUV1U4Y3VFVHFfQWpvWGhWVXg4WFd2T3JSM1p6aUhDQW43anVvWlJ4RXZNOXZLaUhwVGJJbHJzTVZHWHl5WXNhUUc4VHJKMXp1XzhZNUtjRXctanc?oc=5",
-      "source": "건축공간연구원",
-      "category": "연구",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "e3a87b0688b9f945",
-      "title": "대우건설, 3천억원 대 서래마을 재건축 시공권 잃었다 - v.daum.net",
-      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB6cl83NGdCTnJkOW5XMDNuOFlxc3FIZmk1WXJHZTV0bzVHb1ctUVFyZkxhN1ZRalh5Ymt2SnlJQjhnVDA1cFV1U0t6WHFheDg?oc=5",
-      "source": "v.daum.net",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "339d194112a9f8ea",
-      "title": "대구도시개발공사 대구대공원 부지 남부수종 시험식재지 조성 - kmib.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5jUVhuallKaWVPYjFiRS1GeWl3NzdkRFM4X0dMZkJiaGQwblpvRHFFQjhOajhsYWVCU185MTd0eE92WTZ4NUd2em1KUnNoNEJ5YVhwUmZUeVlrNW1XN0Nza0w0Wmdyamk1dEgxbtIBbEFVX3lxTE5jUVhuallKaWVPYjFiRS1GeWl3NzdkRFM4X0dMZkJiaGQwblpvRHFFQjhOajhsYWVCU185MTd0eE92WTZ4NUd2em1KUnNoNEJ5YVhwUmZUeVlrNW1XN0Nza0w0Wmdyamk1dEgxbg?oc=5",
-      "source": "kmib.co.kr",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "d94f852e752ee0b5",
-      "title": "7월 재개발·재건축 시공자 선정 동향(2026.7.13.~2026.8.9.) - housingherald.co.kr",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5KbVZlakdwTHc0bFZZYkdNbGNESlNJNmNZTFZHTEhvaXFOWjBZRUxnNUVjWEo0dFJGNmhEUVFVcURnUDFUclF3MnpzTTN0NjdRdVdFal9XMU5pSW1hVFhjUmFNUVA5NFgtMXh0VW9XV3pKNms?oc=5",
-      "source": "housingherald.co.kr",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "64f94033cc3c2484",
-      "title": "분담금 1.7억 줄자 동의율 91%… 사업성이 가른 도봉 재건축 속도 - 조선비즈 - Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYVZ1RWkyS3AtVlpGX1A1VTZnS1VkNzB4Qy12V3BVMC0wYmRuMVNfLTF2VDlIbDE1eFd0VDNOVFNhUjlUV0xVdmZjS0h3alhQcnMwQ2x6eEVwa1NlWEctMko5QnUtcHhvaXlQRG8wNVNoVVBCX3hlNUVadXJhZE1taUZxQk9tLW1CNl9DRGtCTU03ZnVWa19PQ9IBrAFBVV95cUxOX1NxLW9xOThhNmZTT3pMOWdvRXpJcFI2c0FuUlFPWXh3cm5pWWFwVlNYMC1BYkloTXExTk1VSmsxNTZxNFJOclpJN2RWYlN2SG05N1hkamh1Y3RlSzA5QXYyZkZKVFV1RnB3Y21Sdnp6cXBuOFVIQTlQM0JMWEtiZkJKckdGOEdGOFR4Z0tVWTMyd050ci14S1djVjQ2RnVxWHRUem5xVVp4YU9p?oc=5",
-      "source": "Chosunbiz",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "a1d97c117c8821f7",
-      "title": "[팩트체크] 재개발하면 집 줄어든다?… 서울 6%·전국 54.4% 늘어 - 조선비즈 - Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMVlrUGFoVVh1UHpRZGlKc0lLTllSdmtjRnpzV2h5SUpPY2duZC01VGI3LW54VUV0bjlSU1dCQ0dNWllxNXhJMTFvMXVBdW12ejI2NnREYkRKQlJIYXI2OG5GWkdwcnVXemFRVkkwajZEX2Z1bEdCbEFTN0pUd3REZFc5UnhwbUdaY0lOOWtPRnRSUF9BcjQ3dtIBrAFBVV95cUxQU2xRdDhVWmJJVm16cVdDVHI0ME1XdnVEZXBCd1haWXZxdUJPYzIyYVAwaDMwbmRyN09qdU9Nem5NVkNKQ3Nwdk15ZzNfcDJtUVhFejQtWUhKYWpjNllkRmtocldmWXhQOGFObDlOZ2liYUVDVDFIRURIS2o3QjRTbW9uTHhDUVdQRE9DeVhMaG8yWFItd084Y1hmb0lHN2hBNUNsWklyTk8wZU9S?oc=5",
-      "source": "Chosunbiz",
-      "category": "기사",
-      "date": "2026-07-28"
-    },
-    {
-      "id": "48ce9f2364969a20",
-      "title": "서울시, 입체도로 기준 확립… 유연한 도시계획으로 입체도시 연다 - 한국주택경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1UTW9RUEdNUDJIaTdJclRwVHZ5WHJLWmx4R2FhcXRjSmk1czBHLS1DSGVpWjlXZjlSZTUzNXFYS2p4dmsyazd6SExPTlhEQndNbEgyLTVmWUxqVzF4dVRSTk5ZWTVyTXAt?oc=5",
-      "source": "한국주택경제신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "708fbcfd8dca51d6",
-      "title": "서정3구역 재건축조합추진위원회 도시계획 용역업체 선정 입찰공고 - 한국주택경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5kQTlmcE1jMWFJSENuTTgxcjlrUlhjWVV5U1VEWUdPVU9zbVdUMC1Vcm9IQ29PN1BhMHNhUktNS3JvS0VXdU52cHlSX1RXb1RFNkRjRG4tbFEyT1NJY1lRU2lwODBleFlY?oc=5",
-      "source": "한국주택경제신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "dc48f0944a5bcb60",
-      "title": "설악마을 재건축추진위원회 도시계획업체 선정 입찰공고 - 한국주택경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBYcTJMX1lsQ29QUWJwRXZhLVNERXR3cVVYQ0FaMUw0QTktV0l2T3daUlRnQU0xSTBQUU13VWpnUWNONDRGcEE3aTdocFZ5NVlTZk5uWk5maUdKYVM0SGFNTTZzaEhySmt5?oc=5",
-      "source": "한국주택경제신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "efa5075f994ed2e3",
-      "title": "목동7단지아파트 재건축조합 도시계획 용역업체 선정 입찰공고 - 한국주택경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBBLXBLY0E3Vk8wVnEwT2hwUDVnekM2d29vMnVQLVhMVzdvdlpmd2VacUg2NHNYRUkwNUduX0htQ2xsd29OUENoV1RPczhjNDdoVmYwV2RFOXZZSHQ5clN6cEFrZmNsNmlM?oc=5",
-      "source": "한국주택경제신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "9274552cec4ad7b7",
-      "title": "낙원아파트 재건축조합 협력업체(정비사업전문관리업자) 선정 입찰공고 - 한국주택경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFAySmZBR0dkZXdlYlBrTE5jbC1aRlBjLVZDd3FFcUV2RW9PQmJnd0w5c3FGN250OGFfTTFSQ2xGWURFOXBJaDgtc0FQeGFGR0hUcmJqelpHVDR1b0tTdHZQYVpzTHh2Y2JT?oc=5",
-      "source": "한국주택경제신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "96873b1b18959723",
-      "title": "창동주공3단지, 정비계획 입안 준비 완료… 대단지 재건축 추진 임박 - 한국주택경제신문",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB4bTRlalhGa1BiV2xRaE9ObUxfaGNDUVZoMDVHZU5CcWV6el9sZnZZOU1LX3BDRE5XWXU4ME5IZEd6YVVYTVdtZTJXeE9EXzEycU9pQjA1dTZkaW5EaExFV2hOWGY0Tlhi?oc=5",
-      "source": "한국주택경제신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "16a6bf739688c0fe",
-      "title": "서울시 \"재개발·재건축 궁금하면 누구나\" 8월부터 시민교육 - 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBqYXdCQkstX1dzaWZUMHEwcGJkYlFGUFVUc19yTVlSdjBCZkRMMXdiMmRYWW9sSm9yUUJMcnFqZjFBV3BLWENZSWZwU1I3T0t5YjNZSmtyQ0ZKUQ?oc=5",
-      "source": "한국경제",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "86b6d5f4674e697f",
-      "title": "쌍문동 일대 재개발 '잰걸음' - 한국경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1XdnI0VDZ3dU5hZUdNQjQ0UkM4a1F1RUFET3ZqUVhQQTUxRDJjNzFnal85b2FQV3lWTVZIeF9CbFlzd0NOU21sd0ZZSWNDOFB4MTlPbmhuWXlKdw?oc=5",
-      "source": "한국경제",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "b4c9399b00179720",
-      "title": "아이에스동서, 대구 남산4-7구역 재개발 시공사 선정 - 조세금융신문",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1RSjQtN3JscDFZaWVUdE9CNU9ITlVXYkdjZHFKZGpfMnZVZTBmUWc1ZDhCczZJNWFKZ0VZaHFSMXo4QW9CTlZoYzhqby05eHRqNVZVMnRlajhEWEVlVEFFVF9mVQ?oc=5",
-      "source": "조세금융신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "0146e9e9a630a7b8",
-      "title": "재개발 막히자 가로주택정비사업 속도…전주 원도심 곳곳이 바뀐다 - 전북일보 인터넷신문",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1wNXZGUzJZOUpsXzl6LU14OHJia0NJQWFiM3lTWVRWN0F1WXBwWURQUFQwb2w3Ry1mR3pZeENpM3YxLVY5M3o2VWNwblUzN05HNTNuUXoyODfSAVhBVV95cUxNcDV2RlMyWTlKbF85ei1NeDhyYmtDSUFhYjN5U1lUVjdBdVlwcFlEUFBUMG9sN0ctZkd6WXhDaTN2MS1WOTN6NlVjcG5VMzdORzUzblF6Mjg3?oc=5",
-      "source": "전북일보 인터넷신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "cf14a27e94cb4cd2",
-      "title": "도시재생사업 성적표 공개하자 - 원주투데이",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE00UHBuMElWejc3QkU0bTY3Uml6TmZSR3cxVWRCcE10OUV1YmJyUGNNQXVkdWxqVnZxRV94MU9sMi0yNVFETDNydE5XZkFfbVU3UjlOZ3lTd0djWmtpV1FmV1JPNGJwSGlGQk9oN1RPU1g?oc=5",
-      "source": "원주투데이",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "01f58a9a61f2c8d3",
-      "title": "\"재개발·재건축 질적 공급 신호줘야\"…정부 비판 커질 부동산 2차 토론회 - 아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5RdHZBZ2FuY0d6c0t6RC03Vm8tc1JYTGZlSWY1V0hGZHo5anlaek1TVG1zaTRTRWV4WHBqMGNrVmhWVkxiOFg1LTczNEczMExSQnFKQnhxX1hQVGQ4THRXTw?oc=5",
-      "source": "아시아경제",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "7ca986291c384335",
-      "title": "​[기고] 주거지역 내 데이터센터 건축승인, 도시계획의 원칙에 반한다 - 신아일보",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9JcWNhelpVWmt5YmZBQTh1UkZvVmhQSkpBWGt5X0VpaEJlV0lhN3YyYzhaRlRURHlXaGVtVldDXzFVNG1UZ2NzUnhUSmRwWWpRLVI0Q1FMR1RMc2szQ1VGRHhQQmtwaHVPMlhDTFJ5bE4?oc=5",
-      "source": "신아일보",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "164fa107ceab5608",
-      "title": "성북소방서, 정릉골 재개발지역 민ㆍ관 합동 소방차 출동로 확보훈련 - 소방방재신문",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE0tZzlpbWxQQXI0Y2tORmhaRXhQWUJGc1lGODFQbDY5ZkNJbHU4bkV0N3E1S0ZMLUxYNk5qZHVGRUtRcm1QQkE?oc=5",
-      "source": "소방방재신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "3abb47d4c305da09",
-      "title": "&#40;석간&#41; 서울시, 제3차 도시철도망 구축계획 시민공청회&#40;2차&#41; 개최… 7.29. 열려",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462746",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "07c600be3c305e8a",
-      "title": "&#40;석간&#41; 서울역사박물관 어린이박물관에 독서 공간 조성… 삼성출판사 기증 도서 선보여",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462743",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "f0565f181375c0b1",
-      "title": "&#40;보도참고자료&#41; 서울시 폭염 일일상황보고&#40;26.7.27. 기준&#41;",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462772",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "06af1a724a9dd61d",
-      "title": "&#40;자료제공&#41; 서울시 행정1부시장 직무대리, 돈의동 쪽방촌 폭염대비 현장 점검",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462719",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "21169dd722a45da0",
-      "title": "장마 뒤 본격 무더위… 서울시, 취약계층 보호부터 도심 열섬 저감까지 폭염 대응 총력",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462665",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "9f752aa37482c65a",
-      "title": "(석간) 서울시, 제3차 도시철도망 구축계획 시민공청회(2차) 개최… 7.29. 열려",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462746",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "e384900c4a490860",
-      "title": "(석간) 서울역사박물관 어린이박물관에 독서 공간 조성… 삼성출판사 기증 도서 선보여",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462743",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "16d5ad1d188e2cb3",
-      "title": "(자료제공) 서울시 행정1부시장 직무대리, 돈의동 쪽방촌 폭염대비 현장 점검",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/462719",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "1ec59bbe472d3ba8",
-      "title": "대상지 석수역 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE1aR0hWdHNEZVJYeTRDbVMySEstdWJuZjBkQlBLQnpfM3ZLRkJ4VUJmNk5BMHdZOEZ1cTBCY3M5MTFMMVI2WWVZ?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "36481af2effaab17",
-      "title": "대상지 금천구 공군부대 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTE8zcU1YOXYxb3FTUWZWWHlhbGo0OVdEQ3Jvc0hCUmo0X0NOTUNpZjZFeTlWeEZfUGlQRl8tVzk4S21JVm4yNndz?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "d6a342ebb7010d75",
-      "title": "성남시, 분당 양지마을 사업시행자 확정…6839세대 재건축 본격화 - 비즈월드",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBfaFdPZ05sZ2JBaGx3OEZESDVOdzI5YzFLWHhwUUk4TmZoX0lWUS1TYXBDNVFycUZBZHVqeVh3ODhlYWZJRDB4RURCR2MxbXJHNEt1QzZ0SDIzVUJGX0E2UEtaOVdxZWZ6Umpn?oc=5",
-      "source": "비즈월드",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "77d3cd1d56f66847",
-      "title": "부동산서비스산업 진흥법 일부개정법률안 - 법제처 국민참여입법센터",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9UbEQzMW5sSVdHX3hKT0cxVEkwUkota0RNOURVWmc0LVZ4dEZxTlNpc19zZDNGNnhDVzQxUGQwTVdRZER2S3Rra2dHSmxmcG51ZVNWSVlkTlQyOU9mQ2RCb1dwQnprei1FN1FMQW9URFIyS0tZ?oc=5",
-      "source": "법제처 국민참여입법센터",
-      "category": "법령",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "8fd70a433be419dc",
-      "title": "\"분당 재건축 입주권 끝\"…성남시 양지마을 사업시행자 고시 - 머니투데이 - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE16WW83cDZwdEp2X0RfU2FnbHRZVk1DSXZuVGhUdGFhSjdMbXVDVDk5QkVOckE4YmIxMTgtSkdoYlBGZ2F5bUJWRWtwSmw2TUZpcFBjY3VhTEhxdzNQUjg0T2pHSHM5Yjd6b2fSAW9BVV95cUxQZWF5R2l3SGlDNmZLc1B0Z1BaRkc0TWh0UVUxYW9OYmlUa3dNR2lOVE9GazF4bXFQWTRHdmZMc0U5TllWVVJ6OGpaOUo1THJhdEhKaDdrRHdpdW1ac0lSMlpQZUVqaThzVWNJRElKbWs?oc=5",
-      "source": "머니투데이",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "dc484926e786d20c",
-      "title": "서울시, 정비사업 아카데미로 재개발·재건축 '쾌속추진' - 매일일보",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9zY3dsZEJEeHVKaE1UN1p3RVhuNml5Y1ZEVEpoU25wV3kxUDV1Q21DZ2l1WjNpSTYyOV9jNFUtMVF0S0RwSXpjNzQtNEtvX0ZyWUJkT1VvTlk3Mmc0eDZWZTFWMnE?oc=5",
-      "source": "매일일보",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "2688f2bd3280c984",
-      "title": "주공 재건축 끝낸 과천, 이젠 원도심 재개발 - 매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9rRmlBWTZ6RFViS0c0Zkh2cmhBUVZmWFM5VHpOVTFUQWdQaVFnNVNhbm1QanNDSDdTUzBkb1hHTUx2X1JISGRXZW5OQ0pFekNyaUdRS1doN2g?oc=5",
-      "source": "매일경제",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "54c9ecb8faa82db2",
-      "title": "우리 동네 재개발, 뭐부터 알아야 할까? - 마을신문 금천in",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5mNFc5cUJId1VDTktGaWNic0dXb1hRdUVQd29vcVo3bGx4ZjZyeFBueW9CdFE4WjFzRjJVTDh3VzZfQ0RZT3JPR3RmakZKZEU5bzA4UFBzN1JZOTBxN20yanBYcmgxakxMbEE?oc=5",
-      "source": "마을신문 금천in",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "0171eab21867ab9c",
-      "title": "대통령이 분당 재건축 아파트 팔자, 매매 불가...물딱지로 전락한 사연? - 땅집고",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5WcVlOeC0xY2l3NjNndGlIUzhyOFlwZTFHemNlbV9hZFg5a3NWZDJuZDZlanZxS1dfOE1RU2tLcUY2NUtqNGNSODdmRG9vd2kyRVR6T2JBSDlSVVluY0VlZnpLXzE3aEhMOUlwSEEyU3dVYi1YZWVyQnJ1VElkSE3SAXNBVV95cUxPdWVxZGJTWW5hbXI5cEFfbGNYUG0zZE9XWldGaXBERXhlUmJJVDBXVFJadlc2dzg4eU91UUlUUUl2dU1IOHB5RndFamF2ekFIR25qb2JhaEx6dlhzY0FnR1VGX2VvVjJiSGJ6N3FsTkRmcC1F?oc=5",
-      "source": "땅집고",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "d966f72fc9b1d7ba",
-      "title": "정비사업 진단ㆍ통계 ‘엇박자’… 시장 혼선 - 대한경제",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE4tSW5sMURWRVFaWWUwRHlicTVGY05JRHdkUmR3VkF1RFp0Mm54aTN0OTRZSzlKeWFRam8wMm01Ui1lWWRaMTFNRzc3dk1Oc2RWeDN2UG9OTG8wVDZvZ1ZQejlZbmFBNzRyVFRTR0daMlNQdWc?oc=5",
-      "source": "대한경제",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "8a74465a5c1953f0",
-      "title": "\"재개발·재건축, 무엇이든 물어세요\" 서울시, 정비사업 시민 아카데미 개최 - 뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBTdzhKbjVPbDVjcGJiNXVZSk5mMlpQRGplRWV2QWJqRHdiNTZCdVFaWGk2cVNpVUhGa19tc0prS04zODdUdVdZazJJUWRKMWlSdEZPOU5JYUltNmJG?oc=5",
-      "source": "뉴스핌",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "162ba7ea352f554d",
-      "title": "이주비 대출 숨통 트일까…재개발·소규모 정비 '4억 이상' 허용 주목 - 뉴스핌",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9nWjJCTmxrZ2tpX1dBaUxLQXM2aWtpUXFQNEUwMUtOMjRZejNNeVZYbkFjS2lSQ0hodTZkRktsUkttN0Q3bzFsbkswRXV0TG1YLXVVZUU4NF81ZHQ2?oc=5",
-      "source": "뉴스핌",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "8ec2fa7afacaa035",
-      "title": "분당 양지마을 재건축, 사업시행자로 대신자산신탁 지정 - 뉴스웍스",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9LTXFMdVFhRl96WnJrTHFfTm9GWnY0a084dVhfVDJuZWNNUEo4aWNuLUF3RkVza0JUcW5MQy01ZHByOU5IUTlRZzR3TWFwTmNkeGhaYVcwWnQxb2RxazVtSTBOSlJsNFQzVlZpUTVKVdIBc0FVX3lxTE1DT2dDak5PLWthVEdQZWNqZ2tjZkZwUTcwbEdQdlo1NWIzV0J3RnRJMjlpMlBvYV9WaE93ekI0YllJaG9YcERCN1pkRjNTUk0zWFVLa0dLQWYwX2JNOURBR3RPS1NPR1F0UnJLRENXR0VnNzQ?oc=5",
-      "source": "뉴스웍스",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "1e3881654306ee1f",
-      "title": "‘GB 해제 취락’ 지구단위계획… 예고 - 남양주뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE1IVkdONlZXWkx5R0NnaldVWURTRnJkT1JxaEd2ZmI0QVpUbU5zamFmOEFiaHhTYmRTOFFQdWNhUWRFZw?oc=5",
-      "source": "남양주뉴스",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "4775b8b0d679ee25",
-      "title": "보령시, 제16기 도시재생대학 수강생 모집 - 굿뉴스365",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA4VEk5UExjbmVlQl9CSXRXUWF1anhhaDI3Y1JrY0hlaGJoU0ZGZ0dHTHlhclU4N3BzbWo4LUxvVlQwTFpydjVNNldNS1lhUnZTUGpJNkw5b25NVGF1ZTQ4VzkxNWt6Nk5wTDdtdE1GOHVXWWtsbWc?oc=5",
-      "source": "굿뉴스365",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "7cc596fdc9833d4d",
-      "title": "보 도 자 료 - 국토연구원",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1Eb05CbTk3VnBMTGVzRGJ0dGVFR0NDSVZIdm9nT0xFYWhiUEs3ekxDZ2JSUkkxbEVoR3hWa20xU1ZCdGVXMlk3eFFGd3RjNDdZT2Z0X1JXMW94Y3ZRc1RWOXZQYzE2bmRRX0FSOGJKTkZwRnh2RE9wUk13?oc=5",
-      "source": "국토연구원",
-      "category": "연구",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "129079908e00b624",
-      "title": "변경조문 - 국가법령정보센터",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZFljZjRFT0tHbTNsVWNHTnJZYkhGM25VS0xTdi0wd3hrU3NqTzNvSGlPdTQyY0tvSURiRV9rdGxaeXdLRVNOTUZzWjVlN3M0V01HMVVhaU9KZ0pjZ0ZOcG9FWW1nWGZXUXByeGxkRW5RMHBGa3dudXRvY3dGMS1vclZSNW1CZWNJZG1RSkRwSDFiZDkzMHV5ODdySG5fWlZmd2VhaGVEbTV5Q2NJ?oc=5",
-      "source": "국가법령정보센터",
-      "category": "법령",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "6d0a4c51c97eb716",
-      "title": "성남 분당 양지마을 재건축 사업 본궤도 - 경기신문",
-      "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBwVU5OX2NkSVFXV2E2SXJDZWl2dXZNZ3kzMmdpWHZSNkZBSFZQTWxWeGVJMXJtWklENTRxSVdyOW83Y2NoOVg0blhXS19NVnp1TVZidGpzQnFUUGQ5ckRfUURB?oc=5",
-      "source": "경기신문",
-      "category": "기사",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "ff060d32b2654e36",
-      "title": "추미애 지사, 김윤덕 국토부장관 만나 경기남부광역철도 등 40개 사업 국가철도망 반영 요청 - 경기도뉴스포털",
-      "url": "https://news.google.com/rss/articles/CBMimwJBVV95cUxNZjJDa05FU3g1RWZSby0xNHVhZWg2X1dVSFZRLThTSnZWRHBJVmZOdFdVWFQ3ejlaV1p1NnpBMzdIRWVScjJra0dMaVhRVG0yUDFVU2pFZDVabkR4ejZ4OHhuSlk1RW53RGxGSVZlZklieHROTTNLUTNHeVpNT0VHanZpRWk1UFJfTmxDbG50akNCbXRXWUdPa2l5bVJPdkgtdU82RVc1QTZFNGduSy1PSFN0cUp5Vm5CMHlsRkNXUl9DeDI4NFZicDloUVN6TVFrQUQ1T1N3TlVpcmlrYnE1UUhfV1A2Q0YyZHRFMHRxOFZPWFhMUWlrb2duX0h3YzU5cHktRmhnc0ZRMXhOZGlPZnZtQ1V2VDBfeTF3?oc=5",
-      "source": "경기도",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "3c2fa29e3ce0a1c6",
-      "title": "7.27.(월) 폭염 일일상황보고 입니다.(17시기준) - 경기도뉴스포털",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOYWduWFpSeEVTLVFWR01oYTNYTHpVMTdfRC1VNThQUzhzY25naDI1NjdkeU50RHhqRzhzMUNHcThEZVJ5Y3l1aDZ0RkFCb0FqWm9sbFlxa3RaTUxOTmNQQ0RuUVZHNTlRTzRFSzNyS0dOV0tIWExJMHdjazNIbzJfb1hPR3Q?oc=5",
-      "source": "경기도",
-      "category": "정책",
-      "date": "2026-07-27"
-    },
-    {
-      "id": "c818c29eb0a91cfb",
-      "title": "초고층 빌딩에 학교가?…오피스·초등학교 ‘동거’ 성공할까(2026.7.27. 경향신문) | 언론기사 | auri 소식 | 소식 - 건축공간연구원",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOblh1U3JGbF9JcU53ZUd2bXA5VUs0SXhkUlc4SmNEWF9hZnJMY1VETHRnckxwNlMyVE5xY2dOZWE5cWhLRXotaEZ1WTJNUEFkZ0ZEUFI3UW9WcWRPUV9IXzlkZENQa2ZTX2dXcFEyTzVlN1Z6ejdlcDBzYmpMVG14OFUxc2xDUQ?oc=5",
-      "source": "건축공간연구원",
-      "category": "연구",
-      "date": "2026-07-27"
     }
   ]
 }
