@@ -1,72 +1,76 @@
 {
-  "updated_at": "2026-08-06 07:28 KST",
+  "updated_at": "2026-08-07 10:02 KST",
   "weekly": [
     {
       "word": "재건축",
-      "count": 59
+      "count": 70
     },
     {
       "word": "재개발",
-      "count": 40
+      "count": 46
+    },
+    {
+      "word": "하우징헤럴드",
+      "count": 33
+    },
+    {
+      "word": "대상지",
+      "count": 33
     },
     {
       "word": "서울연구데이터서비스",
       "count": 33
     },
     {
-      "word": "대상지",
-      "count": 31
+      "word": "kr",
+      "count": 27
     },
     {
-      "word": "하우징헤럴드",
-      "count": 27
+      "word": "머니투데이",
+      "count": 26
     },
     {
       "word": "선정",
       "count": 22
     },
     {
-      "word": "kr",
-      "count": 21
+      "word": "폭염",
+      "count": 20
     },
     {
       "word": "구역",
-      "count": 17
-    },
-    {
-      "word": "폭염",
-      "count": 16
-    },
-    {
-      "word": "머니투데이",
-      "count": 16
-    },
-    {
-      "word": "목동",
-      "count": 13
+      "count": 14
     },
     {
       "word": "단지",
       "count": 13
     },
     {
-      "word": "국가법령정보센터",
-      "count": 13
-    },
-    {
-      "word": "com",
-      "count": 13
-    },
-    {
-      "word": "arunews",
+      "word": "연합뉴스",
       "count": 12
     },
     {
-      "word": "mtn",
+      "word": "국가법령정보센터",
+      "count": 12
+    },
+    {
+      "word": "서울",
       "count": 10
     },
     {
-      "word": "연합뉴스",
+      "word": "re",
+      "count": 10
+    },
+    {
+      "word": "목동",
+      "count": 9
+    },
+    {
+      "word": "한국주택경제신문",
+      "count": 8
+    },
+    {
+      "word": "apos",
       "count": 8
     },
     {
@@ -74,70 +78,58 @@
       "count": 8
     },
     {
-      "word": "지정",
-      "count": 8
-    },
-    {
-      "word": "daum",
+      "word": "일대",
       "count": 8
     }
   ],
   "monthly": [
     {
       "word": "재건축",
-      "count": 402
+      "count": 415
     },
     {
       "word": "재개발",
-      "count": 315
+      "count": 327
     },
     {
       "word": "서울연구데이터서비스",
-      "count": 265
+      "count": 254
     },
     {
       "word": "대상지",
-      "count": 247
+      "count": 240
     },
     {
       "word": "선정",
-      "count": 143
+      "count": 147
     },
     {
       "word": "한국주택경제신문",
-      "count": 133
+      "count": 135
     },
     {
       "word": "구역",
-      "count": 129
+      "count": 127
     },
     {
       "word": "하우징헤럴드",
-      "count": 98
-    },
-    {
-      "word": "국가법령정보센터",
-      "count": 97
+      "count": 102
     },
     {
       "word": "머니투데이",
-      "count": 76
+      "count": 86
     },
     {
       "word": "연합뉴스",
-      "count": 75
+      "count": 82
+    },
+    {
+      "word": "국가법령정보센터",
+      "count": 82
     },
     {
       "word": "공급",
-      "count": 73
-    },
-    {
-      "word": "daum",
-      "count": 70
-    },
-    {
-      "word": "net",
-      "count": 70
+      "count": 79
     },
     {
       "word": "오세훈",
@@ -145,15 +137,23 @@
     },
     {
       "word": "서울",
-      "count": 65
-    },
-    {
-      "word": "폭염",
-      "count": 59
+      "count": 68
     },
     {
       "word": "kr",
-      "count": 58
+      "count": 68
+    },
+    {
+      "word": "daum",
+      "count": 68
+    },
+    {
+      "word": "net",
+      "count": 68
+    },
+    {
+      "word": "폭염",
+      "count": 64
     },
     {
       "word": "입찰공고",
@@ -161,21 +161,21 @@
     },
     {
       "word": "단지",
-      "count": 48
+      "count": 51
     }
   ],
   "yearly": [
     {
       "word": "재건축",
-      "count": 1144
+      "count": 1165
     },
     {
       "word": "국가법령정보센터",
-      "count": 960
+      "count": 957
     },
     {
       "word": "재개발",
-      "count": 909
+      "count": 923
     },
     {
       "word": "서울연구데이터서비스",
@@ -183,23 +183,23 @@
     },
     {
       "word": "경기도뉴스포털",
-      "count": 715
+      "count": 714
     },
     {
       "word": "kr",
-      "count": 488
+      "count": 498
     },
     {
       "word": "한국주택경제신문",
-      "count": 477
+      "count": 479
     },
     {
       "word": "대상지",
-      "count": 462
+      "count": 464
     },
     {
       "word": "선정",
-      "count": 446
+      "count": 453
     },
     {
       "word": "go",
@@ -207,23 +207,23 @@
     },
     {
       "word": "구역",
-      "count": 399
+      "count": 401
     },
     {
       "word": "seoul",
       "count": 391
     },
     {
-      "word": "조례",
-      "count": 316
+      "word": "하우징헤럴드",
+      "count": 315
     },
     {
-      "word": "하우징헤럴드",
-      "count": 309
+      "word": "조례",
+      "count": 315
     },
     {
       "word": "자치법규",
-      "count": 301
+      "count": 299
     },
     {
       "word": "서울특별시",
@@ -231,15 +231,15 @@
     },
     {
       "word": "연합뉴스",
-      "count": 237
-    },
-    {
-      "word": "국민참여입법센터",
-      "count": 222
+      "count": 244
     },
     {
       "word": "서울",
-      "count": 217
+      "count": 224
+    },
+    {
+      "word": "국민참여입법센터",
+      "count": 224
     },
     {
       "word": "daum",
