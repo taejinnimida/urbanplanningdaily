@@ -1,47 +1,207 @@
 {
-  "updated_at": "2026-08-17 06:35 KST",
+  "updated_at": "2026-08-18 06:42 KST",
   "counts": {
-    "기사": 2975,
-    "법령": 1277,
+    "기사": 2988,
+    "법령": 1300,
     "정책": 1808,
-    "연구": 1432
+    "연구": 1443
   },
   "period_counts": {
     "weekly": {
-      "기사": 206,
-      "법령": 54,
-      "정책": 40,
-      "연구": 33
+      "기사": 154,
+      "법령": 65,
+      "정책": 36,
+      "연구": 25
     },
     "monthly": {
-      "기사": 1032,
-      "법령": 169,
-      "정책": 281,
-      "연구": 334
+      "기사": 1018,
+      "법령": 190,
+      "정책": 277,
+      "연구": 332
     },
     "yearly": {
-      "기사": 2975,
-      "법령": 1277,
+      "기사": 2988,
+      "법령": 1300,
       "정책": 1808,
-      "연구": 1432
+      "연구": 1443
     }
   },
   "counts_period": "최근 1년",
-  "archive_size": 7492,
+  "archive_size": 7539,
   "coverage": {
-    "items": 7492,
-    "oldest": "2025-08-18",
-    "newest": "2026-08-16",
+    "items": 7539,
+    "oldest": "2025-08-19",
+    "newest": "2026-08-17",
     "days_covered": 364,
     "complete": true
   },
   "source_status": {
-    "국토교통부": "RSS 7건",
+    "국토교통부": "공식 RSS 연결 실패, 공식 누리집 검색 5건",
     "서울특별시": "RSS 18건",
-    "경기도": "공식 RSS 연결 실패, 공식 누리집 검색 4건"
+    "경기도": "공식 RSS 연결 실패, 공식 누리집 검색 3건"
   },
   "backfill_errors": [],
   "items": [
+    {
+      "id": "9b6c8ee442cc2b51",
+      "title": "주택공급 방안, 정비사업 주요 내용은 | 주택공급 한 축 정비사업… 재개발·재건축 ‘속도전’ - 한국주택경제신문",
+      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5adnFzTmdqa3NYcnp4am56Rk16YUxOXzVveU94NTZnSEM5VldxT3JYbjg3U1JxdFQxVldJN1ZnSl9FZy1Sd2ZNbnRTQTRJS3lEN1JWWVZGWExOdEF3c3BqZC1OODk3X1lq?oc=5",
+      "source": "한국주택경제신문",
+      "category": "기사",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "1b79137eb9cd0588",
+      "title": "서울 상도동 214 재개발 확정…최고 29층 1840가구로 탈바꿈 - 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBzQWhHQUZVWWlnRGt2aF9obzR3V08zQTdXYjJydlJaMHQwUU83R1dlLWdfUE5oNXNzVUE0YzE0cnFfUVhRazZvbmNBWDBocEdLbDRrZl95M2cxQQ?oc=5",
+      "source": "한국경제",
+      "category": "기사",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "c506fe4787e3dbaa",
+      "title": "LH, 공공주택 승강기 냉방·침수안전·속도 전면 개선 - 전기신문",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9yRWlxandqTEh4RW9peGtDT1hhSTJOWW1sUVlBbGZUVG1JaFlqOFNGMGdPeDJrOGJKUEE0VUxxcjRaSlJhaUgwU1JGLW9rdEhkVVMwOUFLd3BpcF9oSldNbkJCbVRCSnk1SjU4UVNvNkHSAXBBVV95cUxPckVpcWp3akxIeEVvaXhrQ09YYUkyTlltbFFZQWxmVFRtSWhZajhTRjBnT3gyazhiSlBBNFVMcXI0WkpSYWlIMFNSRi1va3RIZFVTMDlBS3dwaXBfaEpXTW5CQm1UQkp5NUo1OFFTbzZB?oc=5",
+      "source": "전기신문",
+      "category": "기사",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "254cbc6b020b1b6b",
+      "title": "재건축·재개발 빗장 풀리나…정부 지원 확대에 건설사 ‘활짝’ - 아시아투데이",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5LeUdqYXdqcE1PWllTa2xGTHZ3dUFjWmdGQ3k4dVN1V0oxLXJJWXJpT2RxWXlscmJiRlpYdFI1NDJxdXFYOHpGMGVTaUExRno5ODUzYUwtR2FDWWZEYXhQLWNOMkd2LVJCOHZweHBB?oc=5",
+      "source": "아시아투데이",
+      "category": "기사",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "5720aba3d415cdef",
+      "title": "“학원가 못 떠나”···'재건축' 은마 세입자 3천가구 ‘발 동동’ - 시사저널e",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE9lWFJ1NjlBd19mOU4yNFkxM28tSnlab0d5TGFIelMtWXRtY0RfVVZaSHhqN0wxOHJpMV9YU25tQnVwcFNHalRBSkVEemhBYUtNSlZxcHU1R0R6eGxqWThFMml2Q3JkWlNlN0dXekwxS2xuZzloZXfSAXZBVV95cUxPZVhSdTY5QXdfZjlOMjRZMTNvLUp5Wm9HeUxhSHpTLVl0bWNEX1VWWkh4ajdMMThyaTFfWFNubUJ1cHBTR2pUQUpFRHpoQWFLTUpWcXB1NUdEenhsalk4RTJpdkNyZFpTZTdHV3pMMUtsbmc5aGV3?oc=5",
+      "source": "시사저널e",
+      "category": "기사",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "869861402491f80d",
+      "title": "대우건설, 목동 8단지 재건축 수주 본격 나선다 - 대한경제",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE44el9SQ0xuaUR6UGN2LXdDN3JJQ0U3ZFFxc092ZDRranREWUliaWJBckdJX3JmOURKS2k5dExZVVpmeWExanJxOXIteG1Ra3Q0a1I5RmJUekFkbTJ5RWlZSkdmRGdlT1NPaVUyOUhCak45b3NS?oc=5",
+      "source": "대한경제",
+      "category": "기사",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "5ecfa2771d3bd734",
+      "title": "한국주택금융공사법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZHlHSG1zTHdZMmI5RzFmUG5WbUQ5c1ZfN3VzVVpGT0Q1dHpvdVhBRFdQeTFPQUJQSWIxUG56WHBZXzJrZ3U1MjlMM1ZYd21wYUlBNHFfU21yczFiNGVzYkVYdTBjLVRacFhHSVR6LWxTSHNBR2tibHp5S1NzTzlBVFZ3R3B2cnNGbHFqbTV6el9VeUlRbTJoekFkN0pTdlZtMlpSNUF1SW5VR3laRTFLY1ptTDhCdS15X1hQZjVCYnl4UmxOLUZtNWpRRFY2WVpTTWtLN3hLRmUwUFE?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "58a22828eca4d1bc",
+      "title": "건축기본법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObC15WjBxY3FhMWJfaW1tc29LdGFmTWowRENlX1FIMU4yY0dyaldGWENuTC1EaGRDUjd1WmpkMG5BaWRhQlBlRHk0cFRHYWt6UXIwQzNra0NfZGoxVVJRZ1RQcS1ENVFNVnJKVlEwSU8yU0t5OWRKSUR4Yi13eW9FMzk4MnA4WTBScWdHRmJMbWNWSThjRkczSE1ZNHVFcTdoWl8wWklQd2RlMnc?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "ab18beb513d25c57",
+      "title": "주택임대차보호법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPb0pXdFFwUTNoeHJiaG9IVkFfcjBkcmx5SFcwUjRxT05nWThwZFV0dG80VGNENFNCQ3ZXYkZTQmZCeG1HWTZhMVk3MlB3NzVCX2FqVkVkOG13WFlOLTlfZWVTTHgtcnh4TjhJT2JtZ0ZWbDZsbjI3ajRQb0J5b25UdVdRaHpkWndhd1NkNG8yU1JGNU1PS1YzU1p2Mk8zYVRMS213NUhhUTVKRWdEVzgtSTFpdHBYa1paRFM5Mk9xeTFLLW1kSi14UVZYd3MwUQ?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "a60fbf7184333a63",
+      "title": "해상교통안전법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPNUk0Z3dvVDBzU1FnTTFZdUp0T2huZ2dNeXZPcEh5OFZUZ3FSeEg0SENPMVBLMVpqNEhUTFN1T19JVXc5aXJIQWtGdGRGTkp5N0NwdHpPbm9qU1lEYkpPSlUtXzF4Sk10UlNhNzlqaUVxVkJmOFYyZGpxbk9HNDdBdlBnOGp4WDJhM1d0aTZXaV9nSEh3d2FaQUJwdGF0T01zZjZGY2ZuLVhkUjJDcTRxclFvb2lHQk54ZW9YM1pmdDdOQ0k?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "82fdc35f371a7362",
+      "title": "교통사고처리 특례법 시행령 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNNTEwVkhxcUhrVjZCMG9XMTB4dW5STFpORU1rZGVWaU5tajgxNEJkdWw2Sldha2Y4ZTA0Z0s4bGtQUUJwN19rMDI1TjVPdGJKenN1blRyWWtVb3QwejBIQV9FbUV6cGd3TVRCd1liT3lMZld5V2xHYm1XX3NpUGIxYnlBNjlOUHlwbDNJUkphaHQyMng0ZGF3bmNNUENLRnd3a1RUbHVSTF83UUd4MmlaY04xMmV3b0xXMndsaS1uQVZqalhMT202T2NpWmkzbE10WkYwT3djdWlycE4wNzRjVjJXeHlfZWVBaEFoampuUEpua0l6YTBuaHJoa3JaWm9raDFHWVdR?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "ed5907ebf7a85f68",
+      "title": "국토의 계획 및 이용에 관한 법률 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMinwJBVV95cUxNVFlnaktUSU44TGxSVWt3Sm1iVERyUHlLUG5nb25CSzExRVN1blQtSm1UQ3kxRXRLOXBCYmlLMU5nOUFYUGhVekRlUzV2NjA0WEpoUEg0eUdvclhTaXptTHc1VEdybTlQRi1FUkxiTTBNVW1Vd1h4S0R4TDNXMkhTREZqTEdZZ3V4eUtnRjdlV09EQmNCcUh1Rm82aEJadGpIZFU4WDNlaWFmNzF3dVFxbC11aDIydEJva3NqRjY0WmtRdVVZbExibFdLRlJEa081WUxZMXo1MlJFT3BWcllWdUtEaEx6d1dMV2ZTNjE4TGNHdkxmeTlFS1E4WGtkd2ZIY2xCY2VsZWNGNVFiUGYwTkxyZW1jV2NNTk5mZHRRbw?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "824503f5c8ffcb09",
+      "title": "민간임대주택에 관한 특별법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNczRRZkh1T01rbm1Xc3VaTV9wVFlsWm45SUtKRC01a2ZOeHY1V1ZHWlh5YnlDN0huY1lMQkV3ZWFVRnd4VEJjVmxrTk1LRkVqbEJJTGFiUVBFa3pxaFVMbnB1ajJGU1ZCNzJIeUxTbldYN1dMSTVZcUhqTGxvSUVkX3FzV3IySUdiS1Radk52UFZlZnhBaFFwa0dhSWZmZTZJRkNRN1NCYWVPZFJYdVVZSXdxeGlqQW5PM0dWcTh5Sk40ZEhSc3A4SnNIem01Qk1jd0RRQ2N4VkJNOGJ4WVB3UHRobzdxRUUtbkxObEY2S1BWcGFUOVNIdWhDZ0FFNDFUWmtteFZHWQ?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "0748c39c64be639a",
+      "title": "주택건설기준 등에 관한 규정 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOZmxlbW5MYTAzZWdXQWNyYVRTYkVsQXFla1hWcGhpRGtnY3BBZkhBRXRvcTJTZzZyWktrVVU3M0VRQkFDNXRaaU9IRFVsUXE5Ulo3V3BXWFNCU05Edml5ZHA4VGRfZEt0cnRaRTRPYi1OOTY1SEcwd1RGbkdDRTI3YzlBUzVROVprUENlQ0ktdExUcG5QdWtmb3UwLWJSMENSdkJ2eXIyclo4UGFGQXloMWcwMnZuSUpCQU9TTENBOEZlRDk1WkVWVEoxSVlPUmNROXV2Z2tUU1R4MWF6MnBVRHdla3dhdWZEMTNzZDRUVzAteTl0QWUtVzlFaUZFazZhT0NwVUVJZVhyX2duNkgwTi1mbXcyUGtW?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "288e98210cb237bd",
+      "title": "국토교통부와 그 소속기관 직제 시행규칙 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxOVUlvajVCLVdZVmY4SWFOaTV3REpSSGg5TGx5VUtWcjVyZzRrblBqSTFQaHRpMFpwZkpZYTIyQWhmTThBVjdmOUNZNEpsWGVDVzZtVS1NaUlpWnE2RGNWOFZtS1c3b3IyRWdzdS1sVW4xMU5TSGFsSDhxdWJBOThvTTh6dVpNeFBQc0NUVGVmQkNLUUY3QzdfZklZa1pPZUVjWThzd1JzdnJLSDlhWV9EYlZtNXpERU5DOGJTWEJHTnV5dThOSXV5QWpxUmJFZ3NaUTJSZkNHcS04Mzc1bWUzY24yY0xQX1ctSGpyZkVPYmkwQzZIQ3B1VG1HUDJ0REtBNVA4X2RVTEJwXzVIajBSOXNId2JDVVFpUnNhVGZUXzQwWnlEZjNxaTMtSmRYTklnWWVJVTdTaVlORmV6QU0zdVdxTmhveWNHT1E?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "0f2b0e7a9a89196a",
+      "title": "공공주택 특별법 시행규칙 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxQdm9JRDdGNjlyZmN1NzdOQV93dmhVV1JQR1J1X3RHLWdWOWZJWUdpdDBiU0szeFV4dnBCTnJ0WU1LZXZ0bEZDRDlpR1FzWEJ6RGFEQlpIeElNaG9zZGxXZTRwNENrMDVJajlWS1dYcVNBZkFGXzBqZDJiMklmeVpKSjFfUzlNVkhPeWQtN1FfWHQ3MUJCeF9IOGNzWTFjQ2Q2djc5WTI5cVN3T3dYV0RHLURKSlE1dUJLY0tuYlJMS09QdGlTV3hoQ1lRaENveVdtenprLXBYanBQaVdqdFpmM3hDMXFXQUpPVko5WUZpeVhPYWJhR3A4UGdsZ2JVTUJSQzBMU01reVM?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "824a4b7f01dd7e68",
+      "title": "국토의 계획 및 이용에 관한 법률 시행령 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMixwJBVV95cUxPV0Zxc2VUSUVTT1h4enhLaEh2cGZJRXRVZHI3eVJvODY5MFBKc0RqR1hYZHJMY0F0by1WejJBY2FoVnFJN2lIWEhrSFJRWEtIYmdBVElVNGlfSS1qQjc1WWJGbGljWXktYW5uNmJnNmQtdG9ZMWloN2p0WDNPcXBxdS02NUtMSm9EaUl2ZjdGN0dSbkpOb25pOXJieHlSUThnWmNkNUFNTXJEd2JCaUg2eHBaMFRGVzdyaHBMRzBvQnYyMW95U2hrSVVLbUJEY2IxZXYzZU52eDdfTDRiWTJudVBtYkcyVW1ZQm5vekFpeXhyWTdLZng4UU05S3JWbi1WUmsxMG1LSFFsUVVBempaYXR0NWh0ZFNwWHZKby1SamNGdzlCc2gzODJ6aTdjYXZjSlJlVkl6T1ZOcVBCd3hqc1FZazhCaUE?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "55587a5ef7e56137",
+      "title": "선박교통관제에 관한 법률 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxOQmFqcUM0TlJMTXN1WW9hbXh5SGZFU19HYzFfM0MxY1c5bXhmbWU0LTJVbW1LdUR6S3hWczU2WGpvaEdxcHhlZFRRUjZWUVhleVdnT3NzY0p0a1Z3LUJrZ2sxTGlITDdhNUY3bFNJRHdPN3hZb2hjVEhITUllNE90LTFGMjZIclVHZ0JVNVlUQjFKcUptZmZ4V3FiaG5RS3VEVnJRRkJRVmRfQVlhbkhIeDUwcEQ0YjFCTzFHRkxXalFpdDJ2T2lsT1hOVnFlSmZRZTBmTzhiNGt2MnRrV3hXTjF3RFpUU1ZnbXNTaGhockZPbFNrTGhfRUxR?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "5823f260bfd2ebdc",
+      "title": "도시재생 활성화 및 지원에 관한 특별법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxPR2pMNmZVcERxTUtkUlZ1eUUzYkJTTnl1Q3VRQkxuNTlVSkhNTW9jZGg4SmdCaGlsLThPRlRPdXlMc0RYU2h1TE5RU0JBMUozSkJXaUt2VnJoZy1UbzNXazR2VVZIRkQxb0JVVGY2YlpvOUtoT0ZpWlNZU2ljU015ZXZJTW00bUdKY242WWlQTXBnSV90d19BYWdxOFZGZXNXT1NVVFluTHpNNnB0YTEtbXBnNmtVRllIcUxEbXFiblhTcC1mZmN4ZnpxWWNtR0tIY2tRaEZsS21uN2ZBczJwMm1PN2pzZnJIei1ZekpzQlFTV3lOdHR5SWFKOXgzR0s5Sms4ZHVmVWxWeWc4bFVPZTloMnFZV3dLOFdKeS1xaDZfNVBvOGhoTUZwMjh6QUpQMklmM1pBdEtHU1dqalhXaktOZw?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
+    {
+      "id": "4da5223dabd006b2",
+      "title": "도시 및 주거환경정비법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNeDE1dVlFN1hJNW5RZlRQbFdHNG93TzZFcGZtS0liNkN6U2w1SlRUUHVCLTFkZHZmVUxscTlDRHBYUDlkT3daRTBscS1mMXZzQWI0MDVrdzl4SFJLVVRrV2E2TEJEeE0zQjJKVkZacmMwZWo2alc4alltOGRRQ25xWm5kTjRLdWhnMUxwSmtveUM5QmZXRzBiVlFPQU9kU2lDMmlvZTUzbkRGdjlyQmEzeWNzaS13Z0R1T015TDYtekR5enJZd3I1WHB4N1JVazBlYTNlY0RlTC1sRHhPRFBUdEdGTlFjNTU5OG9LVTRZY2VFSmpSaHIyOG1XNXp4dw?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-17"
+    },
     {
       "id": "caef7ffa1f00d696",
       "title": "\"인천시 '지구단위계획 인센티브', 규제 완화 아닌 정책 유도형으로\" - 인천투데이",
@@ -55,6 +215,22 @@
       "title": "신규 공공주택지구에 서울 그린벨트 포함될까? - 연합뉴스",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9DTDhmR1RnWlBFcEJwT3JJSEc0aHZJbGFILW4wQXRVdVZoUFdCSnpSSmtxNGhwcExDVXFtc1dwNDJlUGdqMXFHWEhmUjhJM3ZveDNELWhWV21QMy1iNTdia9IBYEFVX3lxTE9DTDhmR1RnWlBFcEJwT3JJSEc0aHZJbGFILW4wQXRVdVZoUFdCSnpSSmtxNGhwcExDVXFtc1dwNDJlUGdqMXFHWEhmUjhJM3ZveDNELWhWV21QMy1iNTdiaw?oc=5",
       "source": "연합뉴스",
+      "category": "기사",
+      "date": "2026-08-16"
+    },
+    {
+      "id": "e300e08bcdf4a133",
+      "title": "'종묘 앞 재개발' 본격화하나…세운4구역 내 유적 보존방안 심의 - 연합뉴스",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9VNklsWmxiQktHSmFTbGZ4YWcwN1VDT3daQTdKRGp0ME5GQm1ycHU2cFhVOTVBOFNQTjJXRGY0OEhTOTVCRW1hZDlwejJ5RWs4RWNpWTBoWFhaTUHSAWBBVV95cUxPQVRXR2hKQVBjalVEbmhWUm1aYVZkUEhqbXg5Y2hwS1JTRmV4bV9MUHRIN0l4cFFXZHBQRFdmVTE5UVo4V2U1Y29Pd2dqUkYtMEROT2ozb19HZWI4Z2NHcE4?oc=5",
+      "source": "연합뉴스",
+      "category": "기사",
+      "date": "2026-08-16"
+    },
+    {
+      "id": "c384f631d284fb68",
+      "title": "현대차, 인도네시아 스마트시티 이동형 의료 서비스 실증 - 에너지플랫폼뉴스",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE50bE4yZ3ZXcFhaaVpDempKM3RrUllMVlVqQWUyNXBDYUdBeXcyanlwRnJOYWtwT2tLc2daQlNPbGZSVzg1MXRBazZpQTExaU9qY3NhRTZmOGVsRnFCVFhkanZwNEpKMDZSaUpyb9IBcEFVX3lxTE44SlZBcUxuX1RDRXpDaVNHWWJZT1ROVWMzbXJ3SXl3QlNsY0MteHRTdWlLUVdKVnd3Tm8xaDBPY0QtSU5EMkRnLWRkOXg4aEJ6V2Z2bXZZTVJGOWxzUkUyLUNrQjdRU2pJSmJCX3NUeTA?oc=5",
+      "source": "에너지플랫폼뉴스",
       "category": "기사",
       "date": "2026-08-16"
     },
@@ -86,6 +262,30 @@
       "id": "7998492e4209623b",
       "title": "교통정온화시설설치및관리지침 - 국가법령정보센터",
       "url": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQbXBvblRoS3UyWlhfWU9uRWFnRjF2c2hCYUxtZm1uN0E0eDBGQnRTaFpIREdIazBlYy1BcWxPT0lOMHNFZEtnQy1TY3cyY3UxdXktdmZka3RLWHFzSXpJZ3l4VUJSSk5tb2lTNExJOW05dzBzSTB4ZEotT1JLOUp2bjF1QmZ1NUN4eWtubWM2Z2R2X2ZRYXhncHFDdTd6YTBrTS1NaF9CXzhJTGZEQTZtLXE5R3FmODhoWFhvNEhmT1oyNUw1ckJsel9JV1ZfM1V4ZWlGT1ZKbmdwZ2pnSWxjUktubG1ZZVlPZmlLN2NwVzNpVTlnbGVZS3R4ZG1KVGpOZG5hcDVnX0NpUjZFMW5oR1ZoSQ?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-16"
+    },
+    {
+      "id": "d28928f5c051d4b7",
+      "title": "건축기본법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNM3hwYlQwWDFKUE1sQTFPU0ZRaDJ5MTlrUDdHalhsdFZrdk9Bekhoc0VEdFZIMkdXYkxUNWNvNndEYWJoY2tqMW9IRTR3VUR1QzZjOTRJQWNPZXpVbk5WNnZlSjNqOExrU1ZtME04N0gxVmN4Nm5vNmh4ZDBhdkxjaXRYZXMtYktETXBpQTdBRmF6NkNCWEJ4Nl84a3NiSUo0UHlIeENDSWxxZw?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-16"
+    },
+    {
+      "id": "fbd82b80ad6ed73f",
+      "title": "교통사고처리 특례법 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNVUg3ajItSEwxeUc3U3VMYm9EQVR3cG5Na2RRSjVWM0stTmNZUmE0eEpXSThVcWN6aThjSW9jbXZOc3BTVm55WVlXeHVSb1Nsb3ExVkJpVENMdk82X0lsQ3JvVkNtQjU4dHNCUEo0SklKWGlLTHg4Sm0yT2NhZWlEc1B0SVFOZHVqUnV6VUN2T2stV3M4VENqeFpZOF8zQkdKLWthem9MVGx2Rzk0Q245S2NhZjFWcm1Sc2w3TkF0azhDX2tndHB0YndYa2Rkb2lPbUNqZ3duR1VFNWlSOHc?oc=5",
+      "source": "국가법령정보센터",
+      "category": "법령",
+      "date": "2026-08-16"
+    },
+    {
+      "id": "ec6395acf6af4f85",
+      "title": "선박교통관제에 관한 법률 시행령 - 국가법령정보센터",
+      "url": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPZlZoY3NsZVlyZEc2VnZvVF9MZlQtZHZXZ2c1TmtERFB1c25qZlNSWDhNZWxVRTVMNnktLURJNEctNUg0WFc3bm92NEt6STlUaHdkenk0bU51LV9jWm91Q2luTl84S1ZJOGpTTGlRNXZxS2ppcjFGVmJ6bjJIQXd6VGtpOEU2RzhDczB4bDFWMTJQTjlycXdBbkh4Nk9vU2FpLXpXaF9jZWdPLWRJWDhZemRpcFlXMm1oMVJsY0FSSHAzei05U3UyeUo5WVlCdG8zN3pvbWNtTDNvZGNKNVpQMEpIVl9RZG9hMTc3YkxxZ1FOY1lvdlhNWkd0ejNvUHpwSDNtZlh5Rmd1aHk3b0ZyQ3BfLTVfR2paclVSMi1oT1oxSE0?oc=5",
       "source": "국가법령정보센터",
       "category": "법령",
       "date": "2026-08-16"
@@ -155,6 +355,14 @@
       "date": "2026-08-15"
     },
     {
+      "id": "123c390f186fda36",
+      "title": "수도권 23만가구 추가 공급…신규 택지·재건축 ‘속도전’ - jnilbo.com",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1wZVV3UExYSHJQeE5nUVZNcnh5X1hHSVNhLVhZLXNURTZBS1drald5cGNKNEZsR0xCaWJxZ0JuVW9HaHR3WlVvallaQUdlQTVGdEkycjRWWmJMc2VrUWRwMk16QWd0X1VlNk1saVlpWQ?oc=5",
+      "source": "jnilbo.com",
+      "category": "기사",
+      "date": "2026-08-15"
+    },
+    {
       "id": "2e0029436a88dc52",
       "title": "재건축 앞둔 집 전세 사는데…나가라면 나가야 할까[똑똑한부동산] - edaily.co.kr",
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxObGVISV95Nk9uX1B2Z2lfLTZ5WTh4Zm4yNUtPV1dlc25tS21yRlgxTXVqQk8xMXd1T0tZZzhuSnlLdnM2MjFiZVJFUjNESnNTVTNvMUtfVTVuTzVPUDA1RmNtLXl3N1hFblZORGtTQjM1R0tLUnFvd28zQjNzd3lsNg?oc=5",
@@ -206,6 +414,14 @@
       "id": "11e2db172ecbe482",
       "title": "'재개발 알짜' 신림10구역 속도…서울 5만가구 공급 앞당긴다 - 한국경제",
       "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9XOVkzdTBWNVE5a09xSU1JbkNLTWdFQUJvVnlIZnN4OFJ0S1RCOW8zSXRoaWw2TlJKWVhqekhoWnNWaTg5aVFfMHVhMHlZeGZEU2RDZnNkWjg1QQ?oc=5",
+      "source": "한국경제",
+      "category": "기사",
+      "date": "2026-08-14"
+    },
+    {
+      "id": "a6697e62123f8190",
+      "title": "재건축·재개발의 위험…\"새 아파트 무조건 받는 것 아냐\" 경고 [이송렬의 우주인] - 한국경제",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9EdkhBaXZhRXJCWk5OTEllS0tHM1RhaUhZLVpOU3pjS0cxVVhoVUo5c3dUM3JEckFfNzNLckdlaWlQdWo4YVlTUXBCTW9Kek9HS0FkWjFFOWZpZw?oc=5",
       "source": "한국경제",
       "category": "기사",
       "date": "2026-08-14"
@@ -435,6 +651,14 @@
       "date": "2026-08-14"
     },
     {
+      "id": "d78141ec3e024d78",
+      "title": "[반론] 청주 석곡지구 로비 의혹 관련 금실도시개발 입장 - 굿모닝충청",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE90cm9ZLVdJenR6VGl4SF9kMUJYUjl3b1kwclIyZ0xyeUZOQmsza2NvX3dLelduRWFnb3RlSTlaYUZKcjJzQTNWVldrS2xqSWNMRnB6Q1pqVXpEOTVPSGpranZKTXVIS2JDZFlLZWltenc0UQ?oc=5",
+      "source": "굿모닝충청",
+      "category": "기사",
+      "date": "2026-08-14"
+    },
+    {
       "id": "8394c8a4e6037465",
       "title": "제1회 OECD 지역개발정책세미나 개최 | 공지사항 | 연구원소식 - 국토연구원",
       "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcjhWMjhsVWt5SmMtQjN2VFJWa0s1b25EeDl1YXhjMFJGaHpybno5Q3dJMEVlbXdTZlR2c0ZSX1VyYVR6VFZSVDVhZDNMY25OTFhScjF0amdYa0tpSXJVSFFrMWs4LTB1MHY0b2pUSXpzamp0c0pvb3JmN1FVNWtBMVk1LWJIdy1QdnlqVERoSTVRRE02M3c?oc=5",
@@ -543,6 +767,14 @@
       "title": "재건축 미정인데 시설 인력부터 정리? 서울신문 외주화 논란 - journalist.or.kr",
       "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBmNzVqcEJadTJyMUtIX0tROGhMTng1QUlTazFNLWxPaVJ6RXlTU3hPclZkTEp4UVJZUlN4bWVDU3QzSk8xMDMzeG9vQWtJa29DY0swQkxncnlHWmdzLUhpSTBHWUo?oc=5",
       "source": "journalist.or.kr",
+      "category": "기사",
+      "date": "2026-08-14"
+    },
+    {
+      "id": "1f6ef80a1546d537",
+      "title": "‘8.13 공공주택 공급’ 토지주들 반발 - ctnews.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE16b09EdkJaMWJrT3BnTlJrVHV4NC1oQjZfdjF1TE5FV0pTV0V2b2E4M3hCTVJnUVQ5UzRWVFh6QTNxZ0U?oc=5",
+      "source": "ctnews.co.kr",
       "category": "기사",
       "date": "2026-08-14"
     },
@@ -767,238 +999,6 @@
       "title": "서울시 “재개발·재건축으로 8.7만호 순증”…그린벨트 대신 도심공급 강조 - 에너지경제신문",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFA1dGEwVkdTTjA1ak0tRVhidVBFeDZzN1JIX3ZhaGJDWkxmNmxIVzU0WExfaEJ3UFpvaUtJUmUtNWN2YXhzN29tNEhBX0VUX1JPWU9zOXlaMldROFU?oc=5",
       "source": "에너지경제신문",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "45f7512182d8793e",
-      "title": "동후암3구역 정비업체 선정 착수···후암동 재개발 밑그림 속도 - 시사저널e",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE95ZUpxeHRvSjl3dkdObHlZOElzOUctMmFwTUZsbTJnMmd5dENfU2dCdDl2aUFreGxObExJQTVQbEprbFpHSTJEQ0pnYkQ3OHg0Y0xuQWVRYzVZZkpLZXZGbF96ZTRtUXI5aUtKZDFNbV84NTE0a0HSAXZBVV95cUxPeWVKcXh0b0o5d3ZHTmx5WThJczlHLTJhcE1GbG0yZzJneXRDX1NnQnQ5dmlBa3hsTmxMSUE1UGxKa2xaR0kyRENKZ2JENzh4NGNMbkFlUWM1WWZKS2V2RmxfemU0bVFyOWlLSmQxTW1fODUxNGtB?oc=5",
-      "source": "시사저널e",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "07d12c6256d393a5",
-      "title": "(엠바고14시)(자료제공) 서울시, “정부 정비사업 규제 개선 일부 진전… 추가 규제개선 필요”",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/463895",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "5e46e69d9650e0a5",
-      "title": "서울시, 올해 첫 &apos;일반주택형 미리내집&apos; 128세대 공급... 14일부터 입주자 모집",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/463882",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "a9afee7a94f04620",
-      "title": "&lt; 서울시청‘하늘광장 갤러리’2026년도 두 번째 전시 개최 &gt; 사라져가는 도시의 풍경을 기억하다...‘서울의 흔적’회화전",
-      "url": "https://www.seoul.go.kr/news/news_report.do#view/463881",
-      "source": "서울특별시",
-      "category": "정책",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "97cc244161122ba3",
-      "title": "대상지 항공촬영 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9wd0lzU0Y2RlVFYmdKSGExRThXa01RMms4bzh0anFsVUkwUmFlTk5IdTdfWGRKM18tcGp3Y0RrSUdvaGIzOU1OMkZCQ0N3MzI4N19Mbg?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "0390eb5020103c34",
-      "title": "대상지 동남권유통단지+문정법조타운 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9rVjFjem92WFBYWktUcUtjbjFwQ0U2ekVQSU9fOGF1Z09tRnZRdGtGUFA5ZDBndjMyQzJ3azBVVzE2bnhobnkySXBmdk05QTFhQldJRg?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "6a7837c97bab6a4a",
-      "title": "대상지 천호대교 인근 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE95QmZaQ1ZFellqc3pyQ25LYkpHeWFRNU44VDRqajRjQjVpRjFxY1A3c0tFS1FzLXNRYlFPbkljOWpmYXhucW9kNUdUTE4zUl9iU3BTWg?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "201205bc5135e0e6",
-      "title": "대상지 정독도서관 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1PSzhBdGJ4TjU3ZHY1STQ2X1JUVThqRVVoM3dlanVna0hYQWE2NGh5TGpfTlB6ZEt1VFBHLV9mclFWRVhhM2Qxa2U4LUFTWS1mWGVqbQ?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "b6a7fc99f817d376",
-      "title": "대상지 구 영릉 석물 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBNT3VBRnBPZ0oxVm9QVTFDNVZ0ZWtLNjJXMl9OU3hQeGJwdFdrRmRhYkhaV2JGQWdYaEFVNWoxdWxaa0JwdU1MV19BTHZBcFpDYjA1Sm5n?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "d7c6b28c010fa2b5",
-      "title": "대상지 용두동 산업단지 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9IcmtEX2dlQUhzTXN2QkQzRW1KaU9xbXBKeGpGVFNzZF9hdlhvWFFsclNiMDFHblVGM25Fck5FaHRuZ3RKUS12Mkh2UTRoV1MzV3FDQw?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "f5c3e3d7ed92c168",
-      "title": "대상지 서울시내 간판 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE56MkNmby1VVWNSc2hpbFl4X1NpcWNWbVVRZFliNTdfVTVXbl80b1Z6aWYxYUhJSWVNckJNZG92d2NKdlhYV2FkREwybFRyLXhQUkU0TA?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "b0f2273ddb9145b4",
-      "title": "대상지 중랑천 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5nZmJPMC14amZSWkJpMTJfNndSQVprem9pYmxVd0lyRDVwR1hJWWdTeFNXakl3OU9fMUNfV3g0M3Uwai1rcVZsOGRqZEpnSWx6WktlUg?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "eb0d260c86249757",
-      "title": "대상지 학도암 - 서울연구데이터서비스",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9kRDVQWi13N2htS2pnckNPVGZBbURmbE9COXlfU282VUZiSEUtMGl0MGVqc1c3UmY4cmlKOVFCNVFSbmNuOXBfQlJqMVpBSUlxYkdnTTNR?oc=5",
-      "source": "서울연구데이터서비스",
-      "category": "연구",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "18c9c99a9db5bc6d",
-      "title": "김정재, 재개발·재건축 규제 완화 '도심 주택공급 활성화 3법' 발의 - 서울경제TV",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBWN2I4YW1SbjFfOFNpaVhfRmtXVnl3dUFuSkNsMTlHUEpRdHV6OWNPdjY1bzc3aXY3dUdDajRjbXVydXJzUjdzOTM0dEl2VzJfZzcwbGZqd2ZFVnE4Y1VBazFRVUY?oc=5",
-      "source": "서울경제TV",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "e8d3eb09a17d533f",
-      "title": "[8·13대책] 재개발 조합설립 동의율 75→70%…정비사업 속도 높인다 - 서울경제TV",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9yVy1wV29hWnpzc1hQX29hUXF3T2gtNG5ZSEJJSzFncmduaElCbVQ5a0dUV3RvbUJZbnZTdWN2QVV6cl96d2tPWVRzd2dZclFUVmFqb29xSE9hQkUybzQ1dnlvcGg?oc=5",
-      "source": "서울경제TV",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "6a5ab7f483e34a4d",
-      "title": "재개발 조합 동의율 70%로 낮춘다…2030년까지 23만 가구 착공 지원[8·13 부동산대책] - 서울경제",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvUXBRNDN6YVlyQTVicVphQWdaanRtN09jQ0I2X1JYbDludWdzMWY2cFNGYV9EcWR3WkVYV1k2a19oeU9CQ2tNNDI0SDB4V2cwWFE?oc=5",
-      "source": "서울경제",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "9e6ad95c2eaa928f",
-      "title": "이주비 대출한도 늘어난다…재건축 '완공 후 가격'으로 산정 - 비즈워치",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5idGdJd3NtWERSR0huV3VVS3N1bGdNc1dtdnhqa0NncGNHaFNCRFVENU5pVjFwNXBnRDAxTWJ3aXdlSWJ0MXctUVZCdjEydzluOXh6OVc3Y2RlWHRkY2JVa1BvSHVPTnZ6dk1v?oc=5",
-      "source": "비즈워치",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "60d650f258de8d6d",
-      "title": "[8·13 주택공급]재개발 조합설립 동의율 70%로 5%p↓ - 비즈워치",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBsY1ZPWUJneUZleVhHdmU5MTZNRUpKXzBRVHlGY1lwWFFEQkNuUlB3SGFqZ3M2TzFMQTBwYm5kSGk0SUtDeTMxU1A5dGpkVmR6RjVqS2k0alAyYWdjbTVFLWJVbEgxSktINkdySW0ydkg?oc=5",
-      "source": "비즈워치",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "ea3fe52adcaebe6d",
-      "title": "[8.13 부동산 공급대책] 재개발 동의율 75→70%·사업성 보완…민간 주택공급 총력 - 브릿지경제",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBSS3NYSWpPaUl3SGtCai1pMzZSR1YxcTNpSUxud3BwRmR0Wl9nam9Kc28xUExyU3Nzai1tSi05NlZOUlFKQVVHbGZhYUlsYlZrcFRyMVRhY0JTQQ?oc=5",
-      "source": "브릿지경제",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "7b3ac32d7f206d30",
-      "title": "녹색건축 인증 기준 일부개정고시안 행정예고 - 법제처 국민참여입법센터",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE1ZdjZtZEJ3ZmY0UmtveVo1NHFXRGpSSzFyenhhaUw0LVdIdVlaSEJhMkZXdDNwVUd0eEZPWU9UcUl5WFA2MWhYU0JRbmpDMkJoMThCSFpKOVp4WEp0?oc=5",
-      "source": "법제처 국민참여입법센터",
-      "category": "법령",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "42b78219141be75c",
-      "title": "도시 및 주거환경정비법 일부개정법률안 - 법제처 국민참여입법센터",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5yOVJRNmlXLTJhSl9JdXpzVHpfWl85OF9IOEFIM21JazhQUnVYcWMzbFIyNGU3Uk1mTkoxNHRHNU1nSkF4WVhCRzNsMkI5T3BtV1hkSnFBSkt0MmZ2b3dINFAxRDFjb0dieUNqUkZxUDdPZ1c5?oc=5",
-      "source": "법제처 국민참여입법센터",
-      "category": "법령",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "828abecde86f539f",
-      "title": "「수원시 교통약자의 이동편의 증진에 관한 조례 시행규칙」 전부개정규칙안 입법예고 - 법제처 국민참여입법센터",
-      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFAzR3pjNDZzTXBaeVYzRnVqUEdocFV1WlByUThKWnZZTXFvNDZVQ25tZVZ0MkRHZjVna2V5b2Y0ek0xMl9tQ3IxVHVlOVRGMVM0WERla2dQR3JldXFUR19J?oc=5",
-      "source": "법제처 국민참여입법센터",
-      "category": "법령",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "89e9fb59a205c03f",
-      "title": "효과 없다더니…재개발·재건축 규제 풀고 대출 확대 - 문화일보",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ZdWxwb0Q4SjdRZGVpeHROMHRuNkVFUGs5X3lxOEt0WVlBcWwzUXRFYjlqc3kzRGtHX1NYLVk0bEI4MzV4WGVSVmxhYjN4SlFY?oc=5",
-      "source": "문화일보",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "45af56ccfc340bc7",
-      "title": "서울 ‘택지 영끌’ 1000가구뿐… 결국 재개발·재건축 ‘속도전’ - 문화일보",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE44T0pQMW56UG15NE9VSHh3TzQ5X0sxTF9KRmZSazJaVnpNSkM4blZQV0JRcGlMM2hRbDV2MHZOUGlDZWU2Y2syeDVGR3MtNENn?oc=5",
-      "source": "문화일보",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "eb850bbde9503555",
-      "title": "靑“용산공원에 사람 너무없어…공공주택 지어야” - 문화일보",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFB1OXZwWElCRnRhcnBoaFRXNlFOb20wWDk0Y0YycExyOEk5TXdWbWUyWl9QMC1xdzhDS0tXM2wteG5YRlBPSGpQMUdKZEc0U2pV?oc=5",
-      "source": "문화일보",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "f6be4fc9dc97b2f9",
-      "title": "[사설]재건축·재개발 빠진 닥공 대책 효과는 - 머니투데이 - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9TN3VCTjh3cF93MDFDRW5PdWRxRFI4NlNfZlVVeVFQenh2WmlnLWpsVXREWlliQWpDNEE3VGxaeTg2R25FaUxROHp2YTVEUEItMWpRMXVHV0RUYjZGNFhsNFJvMGM1Mmwyd1BV0gFwQVVfeXFMTUFJalZWWUZNeFAxd3ZoM3NJbFptRzVOdUxOcm51Y3J3RlRGMFptRHVPYjJLR2lMSm1CQWNUSHhFN2xBUWFtSk5xRl9kMUdQQktnRmpieXM4SjVnVjV6WERCLTVrTkR5QU1VeXNROEJydQ?oc=5",
-      "source": "머니투데이",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "430616ac44201ffb",
-      "title": "\"그럴듯한 설계, 실제로 되나\"…강남구, 재건축 설계자 선정기준 강화 - 머니투데이 - 머니투데이",
-      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBfRXB0ZzhiMy02OWJTMkhpMENwR0tlLUlLWkhITDNBR2VZeEcweU5oTWVwQ25Jdjh5N280ZzlwRWJ5Sk96eXIwNjgwSnVoYmwxUkh6OGtVWHNaaWF4eURycnpVX0JTVU9hVHfSAW9BVV95cUxPRVpfdElTRzVubFVuWlpGQ3R3TzBTb1RINXFvQk1hNnREN2gyZXRidFF2R1pXc1FPQmdTdFpHQlRBR01VSnlrOGo2U09PVjRWRElweWpIWXJnVmhuVTRlZUJmeXB6bzlMSmYyRGlaS0U?oc=5",
-      "source": "머니투데이",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "76e907eff1d3182c",
-      "title": "재개발 동의율 75% → 70%로 낮춰 … 서울 年 3만가구 착공 목표 - 매일경제",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBCOTBFbkdHWXhMRXRCcXN3cVVKMnYydENjbV9vdkw3NmdUazk4YVp1OVVkSmI0aE9HTDNCOFJ3Smp4dVFFSVJGVXcySFBMaE9LTFlnVF82SjE?oc=5",
-      "source": "매일경제",
-      "category": "기사",
-      "date": "2026-08-13"
-    },
-    {
-      "id": "9dc7f9b80cd1bb81",
-      "title": "[정비사업 문턱 낮춘다②]재개발 조합설립 동의율 75%→70%…정비사업 최대 3년 단축 - 디벨로퍼뉴스",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1OMi1EU1YyX0U0eUV2WkNQMUNoeE5HQzB4QXl6LWJweHJVUHpzaDFXR1JHUy1keUpHSXh3RGQxcGRBSzd5T3ROT0FmYl9sbENVbjdhai1nTnd4MnpKXzl6bmtRbEFEMnhJ?oc=5",
-      "source": "디벨로퍼뉴스",
       "category": "기사",
       "date": "2026-08-13"
     }
